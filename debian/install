@@ -1,0 +1,6 @@
+bin/sched usr/lib/sched
+wrapper/sched usr/bin
+bin/schclean usr/bin
+bin/crd_noneg usr/bin
+catalogs usr/share/sched
+setups usr/share/sched

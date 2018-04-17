@@ -1,0 +1,26 @@
+Source: sched
+Section: science
+Priority: optional
+Maintainer: SBourke <s.bourke5@gmail.com>
+Uploaders: SBourke <s.bourke5@gmail.com>
+Build-Depends: libpng-dev,
+               libx11-dev,
+               pgplot5,
+               debhelper (>= 9),
+               gfortran,
+               csh
+Standards-Version: 4.1.2
+Homepage: http://www.aoc.nrao.edu/~cwalker/sched/sched.html
+
+Package: sched
+Architecture: any
+Depends: csh, ${misc:Depends}, ${shlibs:Depends}
+Description: VLBI scheduling tool
+ SCHED is a program for planning and scheduling Very Long Baseline
+ Array (VLBA), High Sensitivity Array (HSA), Global Very Long Baseline
+ Interferometry (Global VLBI), Eurpean VLBI Network (EVN), Long Baseline
+ Array (LBA; Australia), Korean VLBI Network (KVN), VLBI on the Karl
+ G. Jansky Very Large Array (VLA) and other VLBI observations. It
+ writes VEX files that describe the details of an observation and are
+ becoming the near universal format for distribution of schedules to
+ VLBI telescopes and correlators.
