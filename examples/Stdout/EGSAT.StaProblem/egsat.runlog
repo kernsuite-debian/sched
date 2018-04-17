@@ -1,0 +1,21 @@
+ 
+    Welcome to program SCHED.  Version:  11.00  Release of Feb. 15, 2013
+ 
+The manual is at http://www.aoc.nrao.edu/software/sched/index.html
+Unix users should set $SCHED to the base area where SCHED is installed.
+Most run time messages will be in sched.runlog
+ 
+Some useful commands to give now if running interactively:
+   SCHedule=<filename>    :  Specify input file.
+   PLOT                   :  Invokes uv, xy, rd, and uptime plotting.
+   FREQLIST=lowF,highF    :  Make frequency list (MHz).  Then exit.
+   EXIT                   :  Leave program.
+   /                      :  End of inputs - run program (or EXIT).
+ 
+RDSET: Reading setup   1  egsat.set
+RDSET:   Reading setup file:      egsat.set
+STREAD:  Reading station catalog: /users/cwalker/files/sched_work/catalogs/stations.dat
+STREAD:  Reading locations file:  /users/cwalker/files/sched_work/catalogs/locations.dat
+SRREAD:  Reading source catalog:  /users/cwalker/files/sched_work/catalogs/sources.vlba
+GETFREQ: Reading frequency file:  /users/cwalker/files/sched_work/catalogs/freq.dat
+INPUT:   Found    20 input scans.

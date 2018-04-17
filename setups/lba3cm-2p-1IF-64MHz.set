@@ -1,0 +1,21 @@
+pcal     = 'off'
+bits     = 2
+pol      = dual
+freqref  = 8393
+netside  = usb
+pol      = dual
+bbfilter = 16
+nchan    = 8
+freqoff  = 0, 0, 16, 16, 32, 32, 48, 48
+/
+station  = ASKAP, ATCA, CEDUNA, HOBART, MOPRA, PARKES, DSS43LBA
+bbfilter = 64.0
+nchan    = 2
+freqoff  = 0, 0 
+/
+station  = DSS34LBA, DSS45LBA
+bbfilter = 64.0
+nchan    = 1
+pol      = RCP
+freqoff  = 0
+/
