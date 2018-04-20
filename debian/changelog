@@ -1,4 +1,4 @@
-sched (11.4-1kern1) xenial; urgency=medium
+sched (11.4-1kern1) xenial bionic; urgency=medium
 
   * Initial package
 
