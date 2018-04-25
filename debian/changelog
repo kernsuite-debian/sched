@@ -1,5 +1,6 @@
-sched (11.4-1kern1) xenial bionic; urgency=medium
+sched (11.4-1kern1xenial1) xenial; urgency=medium
 
   * Initial package
+  * Upload to KERN-3
 
  -- KERN packaging <packaging@kernsuite.info>  Wed, 25 Apr 2018 14:50:45 +0200
