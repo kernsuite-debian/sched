@@ -2,4 +2,4 @@ sched (11.4-1kern1) xenial bionic; urgency=medium
 
   * Initial package
 
- -- SBourke <s.bourke5@gmail.com>  Tue, 17 Apr 2018 13:57:33 +0200
+ -- KERN packaging <packaging@kernsuite.info>  Wed, 25 Apr 2018 14:50:45 +0200
