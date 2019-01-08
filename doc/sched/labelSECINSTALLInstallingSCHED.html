@@ -7,19 +7,19 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 13858--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 13871--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECRUNSCHEDRunningSCHED.html" >next</a>] [<a 
 href="#taillabelSECINSTALLInstallingSCHED.html">tail</a>] [<a 
 href="labelCHPSYSTEMINSTALLINGANDRUNNINGSCHED.html#labelSECINSTALLInstallingSCHED.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">4.1   </span> <a 
  id="x34-3020004.1"></a>Installing SCHED</h3>
-<!--l. 13860--><p class="noindent" >This section is only needed if you do not have access to an installed copy of <span 
+<!--l. 13873--><p class="noindent" >This section is only needed if you do not have access to an installed copy of <span 
 class="cmcsc-10">SCHED</span>.
-<!--l. 13863--><p class="noindent" >It is important that users obtain and use the latest version of <span 
+<!--l. 13876--><p class="noindent" >It is important that users obtain and use the latest version of <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>when scheduling observations.
 <span 
@@ -31,7 +31,7 @@ email exploder. At institutions where there are several VLBI users, someone shou
 charge of making sure that the latest version is available. When that option is not available,
 the user should check that he/she has the latest version before attempting to schedule a
 project.
-<!--l. 13874--><p class="noindent" >The <span 
+<!--l. 13887--><p class="noindent" >The <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>software, catalogs, auxiliary files, and documentation all reside in subdirectories under a
 parent directory. Installing <span 
@@ -45,12 +45,12 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>is installed. The <span 
 class="cmcsc-10">PGPLOT </span>subroutine library is required. See below
 if you need to install it.
-<!--l. 13884--><p class="noindent" >The installation can be tested using the <span 
+<!--l. 13897--><p class="noindent" >The installation can be tested using the <span 
 class="cmsl-10">Verify </span>script in the <span 
 class="cmsl-10">examples </span>subdirectory. That script runs all
 the examples and compares the results with results obtained at the time the release was
 created.
-<!--l. 13889--><p class="noindent" ><span 
+<!--l. 13902--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>is written in FORTRAN 77 using only a few common extensions from the standard.
 Development has occurred on a variety of machines including VAXes, PCs, SUNs and Macs. Current
@@ -66,7 +66,7 @@ variety of machines. Note, however, that all current testing is under one or ano
 unix. There has been no recent testing under other operating systems. This will only change
 if there is pressure to do so. Please inform the developers if you install it on something
 else.
-<!--l. 13905--><p class="noindent" >Note that the usual fortran compiler on unix machines (including Macs) these days are those from the
+<!--l. 13918--><p class="noindent" >Note that the usual fortran compiler on unix machines (including Macs) these days are those from the
 GNU Project. In the past, the compiler was g77. That works with gcc versions 3 and lower. But
 development of g77 is long finished. For gcc 4 and higher, you must use gfortran which was written from
 scratch. We are in the process of switching the support of <span 
@@ -80,15 +80,15 @@ provide configure scripts or test before releases. It is likely you could still 
 also need to migrate the <span 
 class="cmtt-10">spice </span>code for spacecraft tracking before we can abandon g77
 completely.
-<!--l. 13918--><p class="noindent" >If you plan to support <span 
+<!--l. 13931--><p class="noindent" >If you plan to support <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>under more than one computer architecture, you may wish to have
 subdirectories under bin and point to the appropriate one in the PATH environment variable. Or you
 may wish to have entirely separate installations.
-<!--l. 13923--><p class="noindent" >To install <span 
+<!--l. 13936--><p class="noindent" >To install <span 
 class="cmcsc-10">SCHED</span>, the following steps can be followed. Users of anything but unix or linux (who don&#8217;t
 exist as far as we know) will have to make some modifications.
-<!--l. 13927--><p class="noindent" >Users of Mac OSX will need to have X windows and the compiler installed. Also for full
+<!--l. 13940--><p class="noindent" >Users of Mac OSX will need to have X windows and the compiler installed. Also for full
 functionallity, pgplot should be installed. There are some more details at the end of this
 section.
      <dl class="description"><dt class="description">
@@ -463,7 +463,7 @@ class="cmsl-10">README</span>
      installing
      <span 
 class="cmcsc-10">SCHED</span>.
-     <!--l. 13970--><p class="noindent" >Note
+     <!--l. 13983--><p class="noindent" >Note
      that,
      after
      this
@@ -857,7 +857,7 @@ class="cmcsc-10">SCHED</span>for
      to
      function
      properly.
-     <!--l. 14010--><p class="noindent" >Robert
+     <!--l. 14023--><p class="noindent" >Robert
      Mutel
      provided
      the
@@ -1101,7 +1101,7 @@ class="cmsl-10">Makefile.master</span>)
      variables
      being
      truncated.
-     <!--l. 14033--><p class="noindent" >There
+     <!--l. 14046--><p class="noindent" >There
      is
      some
      oddity
@@ -1161,7 +1161,7 @@ class="cmtt-10">Makefile.MacOSX</span>.
      don&#8217;t
      understand
      it.
-     <!--l. 14039--><p class="noindent" >Note
+     <!--l. 14052--><p class="noindent" >Note
      that
      the
      Makefile
@@ -1224,7 +1224,7 @@ class="cmtt-10">Makefile.MacOSX</span>.
      as
      <span 
 class="cmcsc-10">SCHED</span>.
-     <!--l. 14045--><p class="noindent" ><span 
+     <!--l. 14058--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>can
      be
@@ -1278,7 +1278,7 @@ class="cmcsc-10">PGPLOT</span>
      already
      have
      it.
-     <!--l. 14051--><p class="noindent" >There
+     <!--l. 14064--><p class="noindent" >There
      is
      also
      a
@@ -1490,7 +1490,7 @@ class="cmsl-10">testruns.out</span>.
      for
      concern.
      </dd></dl>
-<!--l. 14074--><p class="noindent" >Some VAX FORTRAN features that are commonly supported by other FORTRAN compilers remain in
+<!--l. 14087--><p class="noindent" >Some VAX FORTRAN features that are commonly supported by other FORTRAN compilers remain in
 the code. These features are supported by all of the compilers that we are aware of that are being used
 for <span 
 class="cmcsc-10">SCHED</span><span 
@@ -1502,11 +1502,11 @@ SLALIB (STARLINK) routines for precession, etc. These routines use long variable
 this non-standard feature would not be easy. (email permission to use the FORTRAN SLALIB routines
 has been obtained from P. Wallace, although the version under the GNU license was installed in March
 2013).
-<!--l. 14086--><p class="noindent" >If the code or any other files are moved from a unix or VMS machine to a machine using DOS or
+<!--l. 14099--><p class="noindent" >If the code or any other files are moved from a unix or VMS machine to a machine using DOS or
 Windows, beware that the end-of-line characters are different. At least on SUN and Linux, a pair of
 utilities unix2dos and dos2unix can be used to fix the files. As of Dec. 2009, SCHED under Unix and
 Unix-like operating systems can read DOS format files.
-<!--l. 14093--><p class="noindent" >We are always interested in hearing about people&#8217;s experiences installing <span 
+<!--l. 14106--><p class="noindent" >We are always interested in hearing about people&#8217;s experiences installing <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>on various machines.
 If you have problems, or even success on machines other than those listed earlier, please let us know
@@ -1518,7 +1518,7 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>was supported under VMS and DOS in
 the past and the coding style hasn&#8217;t changed, so a port to such operating systems would probably not
 be difficult.
-<!--l. 14102--><p class="noindent" >A recent experience installing <span 
+<!--l. 14115--><p class="noindent" >A recent experience installing <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>on a MacOSX 10.5.4 system showed the need to be
 careful about compiler versions. That version of OSX uses version 4.0.1 of the gcc compiler.
@@ -1534,10 +1534,10 @@ Appendix&#x00A0;<a
 href="labelAPPMac2003InstallationonMacOSX103in2003.html#x54-376000B.8">B.8<!--tex4ht:ref: APP:Mac2003 --></a>.
                                                                                 
                                                                                 
-<!--l. 14114--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 14127--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECRUNSCHEDRunningSCHED.html" >next</a>] [<a 
 href="labelSECINSTALLInstallingSCHED.html" >front</a>] [<a 
 href="labelCHPSYSTEMINSTALLINGANDRUNNINGSCHED.html#labelSECINSTALLInstallingSCHED.html" >up</a>] </p></div>
-<!--l. 14114--><p class="noindent" ><a 
+<!--l. 14127--><p class="noindent" ><a 
  id="taillabelSECINSTALLInstallingSCHED.html"></a>  
 </body></html> 

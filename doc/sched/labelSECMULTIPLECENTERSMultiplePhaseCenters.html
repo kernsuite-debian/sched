@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 3757--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3770--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECGEOSEGAutomaticInsertionofGeodeticSegments.html" >next</a>] [<a 
 href="labelSECREFPOINTReferencePointing.html" >prev</a>] [<a 
 href="labelSECREFPOINTReferencePointing.html#taillabelSECREFPOINTReferencePointing.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECMULTIPLECENTERSMultiplePhaseCenters.html">tail</a>] [<a
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECMULTIPLECENTERSMultiplePhaseCenters.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">2.7   </span> <a 
  id="x18-350002.7"></a>Multiple Phase Centers</h3>
-<!--l. 3759--><p class="noindent" >The DiFX correlator has a capability to process many phase centers within a primary beam in one pass.
+<!--l. 3772--><p class="noindent" >The DiFX correlator has a capability to process many phase centers within a primary beam in one pass.
 It does this by cross correlating with high spectral resolution and short time integration, then splitting
 the data paths out for each desired phase center, shifting the delay and phase for the new center, and
 integrating in time and frequency. There is a price of about a factor of 2.5 to do the large transforms
@@ -27,14 +27,14 @@ involved, but there is very little additional burden for each phase center. The 
 time between 20 phase centers and 200 is about 20%. Up to about 500 phase centers in a field have
 been tested. This mode is expected to be popular for surveys and for in-beam calibration at lower
 frequencies.
-<!--l. 3771--><p class="noindent" ><span 
+<!--l. 3784--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>supports the multiple phase center mode by providing the details of all the desired phase
 centers to use for a given pointing center in the output <span 
 class="cmsl-10">.v2d </span>file, which is used in correlator setup. In
 the future, this information could also go to the VEX file when the standard and the readers can receive
 the information.
-<!--l. 3777--><p class="noindent" >To invoke multiple phase center processing, and specify the centers, the user should provide a list of all
+<!--l. 3790--><p class="noindent" >To invoke multiple phase center processing, and specify the centers, the user should provide a list of all
 the sources to use with each pointing center. To do this a <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1660003.1.2"><span 
 class="cmtt-10">PCENTERS</span></a> section should be added to the
@@ -49,7 +49,7 @@ class="cmtt-10">SRCFILE</span></a> and
 <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1980003.1.2"><span 
 class="cmtt-10">SRCFILE2</span></a>.
-<!--l. 3790--><p class="noindent" >To tell <span 
+<!--l. 3803--><p class="noindent" >To tell <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>to use one of the named lists of pointing centers, specify the name of the group from
 <a 
@@ -63,7 +63,7 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>will allow that one-to-one correspondence between pointing centers
 and phase center lists to be relaxed if and when the information can be transmitted to the
 correlator.
-<!--l. 3801--><p class="noindent" >When using this capability, the user should specify the size of the FFTs to do on each baseband channel
+<!--l. 3814--><p class="noindent" >When using this capability, the user should specify the size of the FFTs to do on each baseband channel
 before splitting the data for each phase center. This is done with the (new) second argument to
 <span 
 class="cmcsc-10">SCHED</span><span 
@@ -83,12 +83,12 @@ respectively. For the 1.4 GHz case, the above two criteria give 3063 and 5004 ch
 MHz baseband channel width. A specification of 4096 channels would likely be reasonable.
 With the RDBE, much wider baseband channels are possible requiring many more spectral
 channels.
-<!--l. 3824--><p class="noindent" >See the Wide-Field Imaging section of the <a 
+<!--l. 3837--><p class="noindent" >See the Wide-Field Imaging section of the <a 
 href="https://science.nrao.edu/facilities/vlba/docs/manuals/oss" >Observational Status Summary</a> for more information on
 delay and fringe rate smearing.
                                                                                 
                                                                                 
-<!--l. 3830--><p class="noindent" >There is an example, <a 
+<!--l. 3843--><p class="noindent" >There is an example, <a 
 href="examples/egcent.key" ><span 
 class="cmsl-10">egcent.key</span></a>, with an associated catalog <a 
 href="examples/egcentsrc.dat" ><span 
@@ -98,12 +98,12 @@ class="cmcsc-10">&#x00A0;</span>examples
 to demonstrate the use of this mode.
                                                                                 
                                                                                 
-<!--l. 3836--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3849--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECGEOSEGAutomaticInsertionofGeodeticSegments.html" >next</a>] [<a 
 href="labelSECREFPOINTReferencePointing.html" >prev</a>] [<a 
 href="labelSECREFPOINTReferencePointing.html#taillabelSECREFPOINTReferencePointing.html" >prev-tail</a>] [<a 
 href="labelSECMULTIPLECENTERSMultiplePhaseCenters.html" >front</a>] [<a 
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECMULTIPLECENTERSMultiplePhaseCenters.html" >up</a>] </p></div>
-<!--l. 3836--><p class="noindent" ><a 
+<!--l. 3849--><p class="noindent" ><a 
  id="taillabelSECMULTIPLECENTERSMultiplePhaseCenters.html"></a>  
 </body></html> 

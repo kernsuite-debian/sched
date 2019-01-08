@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 11815--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 11828--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSATINITSatelliteInitialization.html" >next</a>] [<a 
 href="labelSECFRQCATFrequencyCatalog.html" >prev</a>] [<a 
 href="labelSECFRQCATFrequencyCatalog.html#taillabelSECFRQCATFrequencyCatalog.html" >prev-tail</a>] [<a 
@@ -19,17 +19,17 @@ href="#taillabelSECSETUPSSetupFiles.html">tail</a>] [<a
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSETUPSSetupFiles.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">3.6   </span> <a 
  id="x31-2470003.6"></a>Setup Files</h3>
-<!--l. 11817--><p class="noindent" >Setup files are used to provide station-specific input parameters. Most are for the VLBA, which requires
+<!--l. 11830--><p class="noindent" >Setup files are used to provide station-specific input parameters. Most are for the VLBA, which requires
 complete configuration information be present in each VLBA control file, and the VLA,
 which requires information for the frequency setup. For each scan in a schedule, the setup
 file is specified with <span 
 class="cmtt-10">SETUP</span>. Once specified, it need not be given again unless it changes.
 Several setup files may be used in a schedule &#8212; usually for switching between frequency
 bands.
-<!--l. 11826--><p class="noindent" ><span 
+<!--l. 11839--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will not run without a setup file specified for each scan.
-<!--l. 11829--><p class="noindent" >Setup files can be imbedded in the main program input, much like source and station catalogs. The
+<!--l. 11842--><p class="noindent" >Setup files can be imbedded in the main program input, much like source and station catalogs. The
 group of inputs immediately before the setup file should contain the parameter <span 
 class="cmtt-10">SETINIT </span>with an
 argument that gives this &#8220;setup file&#8221; (which may contain more than one group of stations) a name. This
@@ -37,7 +37,7 @@ procedure may be used multiple times to specify several &#8220;setup files&#8221
 given the imbedded file can be used as the argument to <span 
 class="cmtt-10">SETUP </span>as if it were an external
 file.
-<!--l. 11838--><p class="noindent" >The setup files can be used to control many aspects of the hardware setup at the stations. Mostly it is
+<!--l. 11851--><p class="noindent" >The setup files can be used to control many aspects of the hardware setup at the stations. Mostly it is
 used to set frequencies and recording modes, but it also has pulse cal detection, pointing, and a number
 of other items. Most parameters can be left unspecified and <span 
 class="cmcsc-10">SCHED</span>, with the help of the
@@ -68,7 +68,7 @@ class="cmtt-10">NETSIDE</span></a>, and <a
 href="#x31-2660003.6.4"><span 
 class="cmtt-10">FORMAT</span></a> and perhaps many others rather than taking the
 defaults.
-<!--l. 11859--><p class="noindent" >Each setup file can consist of several setup groups separated by &#8220;/&#8221;. Each group applies to the stations
+<!--l. 11872--><p class="noindent" >Each setup file can consist of several setup groups separated by &#8220;/&#8221;. Each group applies to the stations
 listed. This allows some parameters, such as <a 
 href="#x31-2650003.6.4"><span 
 class="cmtt-10">FIRSTLO</span></a>, to be station specific. However, if no station
@@ -81,7 +81,7 @@ is possible if only generic parameters are given. <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will figure out what stations are needed and
 establish the necessary setup information.
-<!--l. 11871--><p class="noindent" >If you don&#8217;t take the defaults, <span 
+<!--l. 11884--><p class="noindent" >If you don&#8217;t take the defaults, <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will check your setup against the information it has internally
 and in the frequency catalog. If your setup does not match one in the frequency catalog in
@@ -99,17 +99,17 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>complains, double check your parameters to be sure they are right. In
 such cases, it is best to email your setup to Craig Walker (cwalker@nrao.edu) for further
 checking.
-<!--l. 11888--><p class="noindent" >If only generic parameters such as those above are specified, multiple stations can be specified for a
+<!--l. 11901--><p class="noindent" >If only generic parameters such as those above are specified, multiple stations can be specified for a
 setup group. <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will actually take those multiple stations and create multiple setup groups before
 filling in the defaults, many of which will be station dependent.
                                                                                 
                                                                                 
-<!--l. 11894--><p class="noindent" >
+<!--l. 11907--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">3.6.1   </span> <a 
  id="x31-2480003.6.1"></a>Standard Setup Files</h4>
-<!--l. 11896--><p class="noindent" >Over 200 standard setup files have been created, covering many of the normal modes of observing. They
+<!--l. 11909--><p class="noindent" >Over 200 standard setup files have been created, covering many of the normal modes of observing. They
 are available at the same place as the code for <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>in a &#8220;setups&#8221; subdirectory. Users may opt to
@@ -135,13 +135,13 @@ class="cmtt-10">POL</span></a>. You need to know all of those just to pick the s
 use so why not make your own? In fact, as users get accustomed to doing this, many of
 the standard setups may be dropped. This file has not been updated from MARK5A to
 MARK5C.
-<!--l. 11915--><p class="noindent" >There are cases, however, when use of the standard files is recommended. These especially include
+<!--l. 11928--><p class="noindent" >There are cases, however, when use of the standard files is recommended. These especially include
 precisely defined, and somewhat complex cases like the Mark III standard modes (although MarkIII
 went the way of the dinosaur long ago. Also, if none of the standard files matches the exact needs of a
 project, there is likely to be one that is close and can be modified as required. This is generally
 safer than creating a setup file from scratch because it will be clear what parameters are
 required.
-<!--l. 11924--><p class="noindent" >The standard setup files take advantage of the defaulting ability of <span 
+<!--l. 11937--><p class="noindent" >The standard setup files take advantage of the defaulting ability of <span 
 class="cmcsc-10">SCHED</span>. If you are interested in
 what most of the setup parameters will actually be set to, the best way to do this is to run a simple
 dummy schedule that uses the setup and look at the details reported in the summary file. A simple file
@@ -151,7 +151,7 @@ href="labelSECSCHPARTheScheduleFile.html#x26-1410003.1.2"><span
 class="cmtt-10">OBSTYPE</span></a> set to <span 
 class="cmtt-10">VLBI</span>), although cover and
 correlator information will be required.
-<!--l. 11934--><p class="noindent" >Standard setup files are named according to the following conventions:
+<!--l. 11947--><p class="noindent" >Standard setup files are named according to the following conventions:
      <dl class="description"><dt class="description">
 <span 
 class="cmbx-10">&#8220;</span><span 
@@ -664,17 +664,17 @@ class="cmbx-10">cwalker@nrao.edu</span>
      by
      NRAO.
      </dd></dl>
-<!--l. 11994--><p class="noindent" >
+<!--l. 12007--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">3.6.2   </span> <a 
  id="x31-2490003.6.2"></a>Examples of Setup Files</h4>
-<!--l. 11996--><p class="noindent" >The standard setup files described above (Section&#x00A0;<a 
+<!--l. 12009--><p class="noindent" >The standard setup files described above (Section&#x00A0;<a 
 href="#x31-2480003.6.1">3.6.1<!--tex4ht:ref: SSEC:SETSTD --></a>) can be used as examples. However a few of
 them are shown here to show what they are like to someone who does not have easy access to the
 machine readable files.
-<!--l. 12001--><p class="noindent" >
+<!--l. 12014--><p class="noindent" >
                                                                                 
                                                                                 
-<!--l. 12003--><p class="noindent" >The first example is of a minimal setup file of a sort that might be imbedded in a <span 
+<!--l. 12016--><p class="noindent" >The first example is of a minimal setup file of a sort that might be imbedded in a <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>input file. It
 includes the lines needed for that imbedding. This specifies a 4 channel, 8 MHz/channel, dual
@@ -689,16 +689,16 @@ setini&#x00A0;=&#x00A0;egvlba.2cm&#x00A0;/
 &#x00A0;<br />&#x00A0;&#x00A0;band=&#8217;2cm&#8217;&#x00A0;&#x00A0;nchan=4&#x00A0;&#x00A0;bbfilt=8.0&#x00A0;&#x00A0;pol=DUAL&#x00A0;&#x00A0;bits=2&#x00A0;/
 &#x00A0;<br />endset&#x00A0;/
 </div>
-<!--l. 12015--><p class="nopar" >
-<!--l. 12017--><p class="noindent" >
+<!--l. 12028--><p class="nopar" >
+<!--l. 12030--><p class="noindent" >
                                                                                 
                                                                                 
-<!--l. 12019--><p class="noindent" >This example is for a Mark&#x00A0;III mode B observation. This shows a number of items being specified that
+<!--l. 12032--><p class="noindent" >This example is for a Mark&#x00A0;III mode B observation. This shows a number of items being specified that
 do not actually need to be specified since the defaults are reasonable. In particular, these are the track
 assignments and the pulse cal extractor assignments. The example just shows how one might specify all
 of these items if desired. Please start with the standard m3b6cm.set, rather than this, for any real
 observations.
-<!--l. 12027--><p class="noindent" >This example is definitely out of date in detail since the Mark III tape recording system was abandoned
+<!--l. 12040--><p class="noindent" >This example is definitely out of date in detail since the Mark III tape recording system was abandoned
 long ago. But is shows what can be done in terms of a detailed setup. Someday, it should be updated to
 a currently used system.
                                                                                 
@@ -748,11 +748,11 @@ a currently used system.
 &#x00A0;<br />station&#x00A0;&#x00A0;=&#x00A0;EB_VLBA
 &#x00A0;<br />firstlo&#x00A0;&#x00A0;=&#x00A0;4100.0&#x00A0;&#x00A0;&#x00A0;rchan&#x00A0;=&#x00A0;A&#x00A0;&#x00A0;lchan&#x00A0;=&#x00A0;C&#x00A0;&#x00A0;&#x00A0;&#x00A0;/
 </div>
-<!--l. 12078--><p class="nopar" >
-<!--l. 12080--><p class="noindent" >
+<!--l. 12091--><p class="nopar" >
+<!--l. 12093--><p class="noindent" >
                                                                                 
                                                                                 
-<!--l. 12082--><p class="noindent" >This example shows a setup file for dual frequency, wide spanned bandwidth, geodetic style
+<!--l. 12095--><p class="noindent" >This example shows a setup file for dual frequency, wide spanned bandwidth, geodetic style
 observations. Note that the firstlo has to be specified separately for each channel because it
 varies.
 <div class="verbatiminput">
@@ -1074,7 +1074,7 @@ class="cmtt-10">&#x00A0;/</span>
 </div>
 <h4 class="subsectionHead"><span class="titlemark">3.6.3   </span> <a 
  id="x31-2500003.6.3"></a>Summary List of Setup File Parameters</h4>
-<!--l. 12091--><p class="noindent" >A list of the setup parameters is given below, followed by detailed information on each setup
+<!--l. 12104--><p class="noindent" >A list of the setup parameters is given below, followed by detailed information on each setup
 paramater in Section&#x00A0;<a 
 href="#x31-2510003.6.4">3.6.4<!--tex4ht:ref: SSEC:SETDET --></a>. All of the parameters revert to the previous value if not specified
 for a station. This allows most to be specified only once per setup file. Some of the more
@@ -1091,7 +1091,7 @@ class="cmtt-10">_PT</span>&#8221;) should be given
 before the generic &#8220;<span 
 class="cmtt-10">VLBA</span>&#8221; station. All parameters can have different values for different
 stations.
-<!--l. 12105--><p class="noindent" >Note that the VLBA uses the concept of baseband channels. Many of the parameters take an array
+<!--l. 12118--><p class="noindent" >Note that the VLBA uses the concept of baseband channels. Many of the parameters take an array
 of arguments, one for each baseband channel. The corresponding elements of the arrays
 specify the required information for the baseband channel, such as the BBC from which the
 signal will come, the VLBA IF that BBC is attched to, the bandwidth of the BBC, and the
@@ -1102,11 +1102,11 @@ assigned to one BBC/sideband. In such cases, care should be taken to insure that
 frequency, bandwidth, and input VLBA IF are assigned for each such baseband channel. If this
 is not done, the on-line system can get confused about what signal is in each baseband
 channel.
-<!--l. 12117--><p class="noindent" >
+<!--l. 12130--><p class="noindent" >
      <dl class="list1"><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12118--><p class="noindent" ><a 
+     <!--l. 12131--><p class="noindent" ><a 
 href="#x31-2520003.6.4"><span 
 class="cmtt-10">AZCOLIM:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1117,7 +1117,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12119--><p class="noindent" ><a 
+     <!--l. 12132--><p class="noindent" ><a 
 href="#x31-2530003.6.4"><span 
 class="cmtt-10">BAND:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1131,7 +1131,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12120--><p class="noindent" ><a 
+     <!--l. 12133--><p class="noindent" ><a 
 href="#x31-2540003.6.4"><span 
 class="cmtt-10">BARREL:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1143,7 +1143,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12121--><p class="noindent" ><a 
+     <!--l. 12134--><p class="noindent" ><a 
 href="#x31-2550003.6.4"><span 
 class="cmtt-10">BBFILTER:</span></a>
      BBC
@@ -1155,7 +1155,7 @@ class="cmtt-10">BBFILTER:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12122--><p class="noindent" ><a 
+     <!--l. 12135--><p class="noindent" ><a 
 href="#x31-2560003.6.4"><span 
 class="cmtt-10">BBC:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1174,7 +1174,7 @@ class="cmtt-10">&#x00A0;</span>
                                                                                 
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12123--><p class="noindent" ><a 
+     <!--l. 12136--><p class="noindent" ><a 
 href="#x31-2570003.6.4"><span 
 class="cmtt-10">BBSYN:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1190,7 +1190,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12124--><p class="noindent" ><a 
+     <!--l. 12137--><p class="noindent" ><a 
 href="#x31-2580003.6.4"><span 
 class="cmtt-10">BBSYN2:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1206,7 +1206,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12125--><p class="noindent" ><a 
+     <!--l. 12138--><p class="noindent" ><a 
 href="#x31-2590003.6.4"><span 
 class="cmtt-10">BITS:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1221,7 +1221,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12126--><p class="noindent" ><a 
+     <!--l. 12139--><p class="noindent" ><a 
 href="#x31-2600003.6.4"><span 
 class="cmtt-10">DBE:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1240,7 +1240,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12127--><p class="noindent" ><a 
+     <!--l. 12140--><p class="noindent" ><a 
 href="#x31-2610003.6.4"><span 
 class="cmtt-10">DUALX:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1259,7 +1259,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12128--><p class="noindent" ><a 
+     <!--l. 12141--><p class="noindent" ><a 
 href="#x31-2620003.6.4"><span 
 class="cmtt-10">ELCOLIM:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1270,7 +1270,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12129--><p class="noindent" ><a 
+     <!--l. 12142--><p class="noindent" ><a 
 href="#x31-2630003.6.4"><span 
 class="cmtt-10">FE:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1286,7 +1286,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12130--><p class="noindent" ><a 
+     <!--l. 12143--><p class="noindent" ><a 
 href="#x31-2640003.6.4"><span 
 class="cmtt-10">FIRMFILE:</span></a>
      A
@@ -1302,7 +1302,7 @@ class="cmtt-10">FIRMFILE:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12131--><p class="noindent" ><a 
+     <!--l. 12144--><p class="noindent" ><a 
 href="#x31-2650003.6.4"><span 
 class="cmtt-10">FIRSTLO:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1323,7 +1323,7 @@ class="cmtt-10">FREQ</span>
                                                                                 
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12132--><p class="noindent" ><a 
+     <!--l. 12145--><p class="noindent" ><a 
 href="#x31-2660003.6.4"><span 
 class="cmtt-10">FORMAT:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1339,7 +1339,7 @@ class="cmtt-10">VLBA1:2</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12133--><p class="noindent" ><a 
+     <!--l. 12146--><p class="noindent" ><a 
 href="#x31-2670003.6.4"><span 
 class="cmtt-10">FREQOFF:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1360,7 +1360,7 @@ class="cmtt-10">FREQREF</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12135--><p class="noindent" ><a 
+     <!--l. 12148--><p class="noindent" ><a 
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1376,7 +1376,7 @@ class="cmtt-10">BBSYN</span>.
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12137--><p class="noindent" ><a 
+     <!--l. 12150--><p class="noindent" ><a 
 href="#x31-2690003.6.4"><span 
 class="cmtt-10">FRSWITCH:</span></a>
      Specifies
@@ -1385,7 +1385,7 @@ class="cmtt-10">FRSWITCH:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12138--><p class="noindent" ><a 
+     <!--l. 12151--><p class="noindent" ><a 
 href="#x31-2700003.6.4"><span 
 class="cmtt-10">IFCHAN:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1403,7 +1403,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12139--><p class="noindent" ><a 
+     <!--l. 12152--><p class="noindent" ><a 
 href="#x31-2710003.6.4"><span 
 class="cmtt-10">IFDIST:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1418,7 +1418,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12140--><p class="noindent" ><a 
+     <!--l. 12153--><p class="noindent" ><a 
 href="#x31-2720003.6.4"><span 
 class="cmtt-10">LCHAN:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1435,7 +1435,7 @@ class="cmtt-10">IFCHAN=L</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12141--><p class="noindent" ><a 
+     <!--l. 12154--><p class="noindent" ><a 
 href="#x31-2730003.6.4"><span 
 class="cmtt-10">LEVEL:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1448,7 +1448,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12142--><p class="noindent" ><a 
+     <!--l. 12155--><p class="noindent" ><a 
 href="#x31-2740003.6.4"><span 
 class="cmtt-10">LOGGING:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1461,7 +1461,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12143--><p class="noindent" ><a 
+     <!--l. 12156--><p class="noindent" ><a 
 href="#x31-2750003.6.4"><span 
 class="cmtt-10">LCP50CM:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1479,7 +1479,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12144--><p class="noindent" ><a 
+     <!--l. 12157--><p class="noindent" ><a 
 href="#x31-2760003.6.4"><span 
 class="cmtt-10">M4PATCH:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1492,7 +1492,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12145--><p class="noindent" ><a 
+     <!--l. 12158--><p class="noindent" ><a 
 href="#x31-2770003.6.4"><span 
 class="cmtt-10">MODETEST:</span></a>
      Allow
@@ -1505,7 +1505,7 @@ class="cmtt-10">MODETEST:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12146--><p class="noindent" ><a 
+     <!--l. 12159--><p class="noindent" ><a 
 href="#x31-2780003.6.4"><span 
 class="cmtt-10">NCHAN:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1518,7 +1518,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12147--><p class="noindent" ><a 
+     <!--l. 12160--><p class="noindent" ><a 
 href="#x31-2790003.6.4"><span 
 class="cmtt-10">NETSIDE:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1530,7 +1530,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12148--><p class="noindent" ><a 
+     <!--l. 12161--><p class="noindent" ><a 
 href="#x31-2800003.6.4"><span 
 class="cmtt-10">NOISE:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1545,7 +1545,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12149--><p class="noindent" ><a 
+     <!--l. 12162--><p class="noindent" ><a 
 href="#x31-2810003.6.4"><span 
 class="cmtt-10">NOISEFRQ:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1561,7 +1561,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12150--><p class="noindent" ><a 
+     <!--l. 12163--><p class="noindent" ><a 
 href="#x31-2820003.6.4"><span 
 class="cmtt-10">PERIOD:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1574,7 +1574,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12151--><p class="noindent" ><a 
+     <!--l. 12164--><p class="noindent" ><a 
 href="#x31-2830003.6.4"><span 
 class="cmtt-10">PCAL:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1589,7 +1589,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12152--><p class="noindent" ><a 
+     <!--l. 12165--><p class="noindent" ><a 
 href="#x31-2840003.6.4"><span 
 class="cmtt-10">PCALFR1:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1605,7 +1605,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12153--><p class="noindent" ><a 
+     <!--l. 12166--><p class="noindent" ><a 
 href="#x31-2840003.6.4"><span 
 class="cmtt-10">PCALFR1:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1623,7 +1623,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12155--><p class="noindent" ><a 
+     <!--l. 12168--><p class="noindent" ><a 
 href="#x31-2850003.6.4"><span 
 class="cmtt-10">PCALXB1:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1640,7 +1640,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12156--><p class="noindent" ><a 
+     <!--l. 12169--><p class="noindent" ><a 
 href="#x31-2850003.6.4"><span 
 class="cmtt-10">PCALXB2:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1657,7 +1657,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12158--><p class="noindent" ><a 
+     <!--l. 12171--><p class="noindent" ><a 
 href="#x31-2860003.6.4"><span 
 class="cmtt-10">POL:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1673,7 +1673,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12159--><p class="noindent" ><a 
+     <!--l. 12172--><p class="noindent" ><a 
 href="#x31-2870003.6.4"><span 
 class="cmtt-10">PTINCR:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1688,7 +1688,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12160--><p class="noindent" ><a 
+     <!--l. 12173--><p class="noindent" ><a 
 href="#x31-2880003.6.4"><span 
 class="cmtt-10">PTOFF:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1703,7 +1703,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12161--><p class="noindent" ><a 
+     <!--l. 12174--><p class="noindent" ><a 
 href="#x31-2720003.6.4"><span 
 class="cmtt-10">RCHAN:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1720,7 +1720,7 @@ class="cmtt-10">IFCHAN=R</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12162--><p class="noindent" ><a 
+     <!--l. 12175--><p class="noindent" ><a 
 href="#x31-2750003.6.4"><span 
 class="cmtt-10">RCP50CM:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1736,7 +1736,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12163--><p class="noindent" ><a 
+     <!--l. 12176--><p class="noindent" ><a 
 href="#x31-2890003.6.4"><span 
 class="cmtt-10">SAMPRATE:</span></a>
      Sample
@@ -1744,7 +1744,7 @@ class="cmtt-10">SAMPRATE:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12164--><p class="noindent" ><a 
+     <!--l. 12177--><p class="noindent" ><a 
 href="#x31-2900003.6.4"><span 
 class="cmtt-10">SIDEBAND:</span></a>
      BBC
@@ -1758,7 +1758,7 @@ class="cmtt-10">SIDEBAND:</span></a>
                                                                                 
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12165--><p class="noindent" ><a 
+     <!--l. 12178--><p class="noindent" ><a 
 href="#x31-2910003.6.4"><span 
 class="cmtt-10">STATION:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1767,7 +1767,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12166--><p class="noindent" ><a 
+     <!--l. 12179--><p class="noindent" ><a 
 href="#x31-2920003.6.4"><span 
 class="cmtt-10">STRING1:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1782,7 +1782,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12167--><p class="noindent" ><a 
+     <!--l. 12180--><p class="noindent" ><a 
 href="#x31-2920003.6.4"><span 
 class="cmtt-10">STRING2:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1794,7 +1794,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12168--><p class="noindent" ><a 
+     <!--l. 12181--><p class="noindent" ><a 
 href="#x31-2920003.6.4"><span 
 class="cmtt-10">STRING3:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1805,7 +1805,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12169--><p class="noindent" ><a 
+     <!--l. 12182--><p class="noindent" ><a 
 href="#x31-2920003.6.4"><span 
 class="cmtt-10">STRING4:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1817,7 +1817,7 @@ class="cmcsc-10">SCHED</span>.
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12170--><p class="noindent" ><a 
+     <!--l. 12183--><p class="noindent" ><a 
 href="#x31-2930003.6.4"><span 
 class="cmtt-10">SWTCHDUR:</span></a>
      Duration
@@ -1834,7 +1834,7 @@ class="cmtt-10">SWTCHDUR:</span></a>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12171--><p class="noindent" ><a 
+     <!--l. 12184--><p class="noindent" ><a 
 href="#x31-2940003.6.4"><span 
 class="cmtt-10">SYNTH:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1847,7 +1847,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12172--><p class="noindent" ><a 
+     <!--l. 12185--><p class="noindent" ><a 
 href="#x31-2950003.6.4"><span 
 class="cmtt-10">TPMODE:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1861,7 +1861,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12173--><p class="noindent" ><a 
+     <!--l. 12186--><p class="noindent" ><a 
 href="#x31-2960003.6.4"><span 
 class="cmtt-10">TPSPEED:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1877,7 +1877,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12174--><p class="noindent" ><a 
+     <!--l. 12187--><p class="noindent" ><a 
 href="#x31-2970003.6.4"><span 
 class="cmtt-10">TPSPEEDH:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1896,7 +1896,7 @@ class="cmtt-10">&#x00A0;</span>
 class="list">
                                                                                 
                                                                                 
-     <!--l. 12175--><p class="noindent" ><a 
+     <!--l. 12188--><p class="noindent" ><a 
 href="#x31-2980003.6.4"><span 
 class="cmtt-10">TPSPEEDL:</span></a><span 
 class="cmtt-10">&#x00A0;</span>
@@ -1913,7 +1913,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12176--><p class="noindent" ><a 
+     <!--l. 12189--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK1:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1932,7 +1932,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12177--><p class="noindent" ><a 
+     <!--l. 12190--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK2:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1946,7 +1946,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12178--><p class="noindent" ><a 
+     <!--l. 12191--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK3:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1960,7 +1960,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12179--><p class="noindent" ><a 
+     <!--l. 12192--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK4:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1976,7 +1976,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12180--><p class="noindent" ><a 
+     <!--l. 12193--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK5:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -1990,7 +1990,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12181--><p class="noindent" ><a 
+     <!--l. 12194--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK6:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -2004,7 +2004,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12182--><p class="noindent" ><a 
+     <!--l. 12195--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK7:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -2018,7 +2018,7 @@ class="cmtt-10">&#x00A0;</span>
      </dd><dt class="list">
    &#x00A0; </dt><dd 
 class="list">
-     <!--l. 12183--><p class="noindent" ><a 
+     <!--l. 12196--><p class="noindent" ><a 
 href="#x31-2990003.6.4"><span 
 class="cmtt-10">TRACK8:</span></a><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -2029,25 +2029,25 @@ class="cmtt-10">&#x00A0;</span>
      pass
      8
      (obsolete).</dd></dl>
-<!--l. 12189--><p class="noindent" >
+<!--l. 12202--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">3.6.4   </span> <a 
  id="x31-2510003.6.4"></a>Details of Setup File Parameters</h4>
                                                                                 
                                                                                 
-<!--l. 12191--><p class="noindent" >
+<!--l. 12204--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2520003.6.4"></a><span 
 class="cmtt-10">AZCOLIM</span></h5>
-<!--l. 12193--><p class="noindent" ><span 
+<!--l. 12206--><p class="noindent" ><span 
 class="cmtt-10">AZCOLIM </span>sets the azimuth collimation offset to add to the nominal one used by the VLBA on-line
 computers for pointing. Usually this will be <span 
 class="cmtt-10">0.0</span>. This allows the pointing for a VLBA antenna to be
 adjusted.
-<!--l. 12203--><p class="noindent" >
+<!--l. 12216--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12203--><p class="noindent" ><span 
+               <!--l. 12216--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                pointing
@@ -2058,7 +2058,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12203--><p class="noindent" ><span 
+               <!--l. 12216--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                real
@@ -2066,14 +2066,14 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12203--><p class="noindent" ><span 
+               <!--l. 12216--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0.0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12203--><p class="noindent" ><span 
+               <!--l. 12216--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2082,15 +2082,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12203--><p class="noindent" ><span 
+               <!--l. 12216--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">AZCOLIM=1.2</span></dd></dl>
-<!--l. 12206--><p class="noindent" >
+<!--l. 12219--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2530003.6.4"></a><span 
 class="cmtt-10">BAND</span></h5>
-<!--l. 12208--><p class="noindent" ><span 
+<!--l. 12221--><p class="noindent" ><span 
 class="cmtt-10">BAND </span>provides a simple way of requesting an observing frequency. <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>has an internal table of
@@ -2112,7 +2112,7 @@ class="cmtt-10">BBFILTER</span></a> and <a
 href="#x31-2860003.6.4"><span 
 class="cmtt-10">POL</span></a> parameters, the actual channel frequencies to use to center the observations
 at the desired frequency.
-<!--l. 12220--><p class="noindent" >The bands and centerfrequencies are in the table below. When a bandwidth is not zero, that
+<!--l. 12233--><p class="noindent" >The bands and centerfrequencies are in the table below. When a bandwidth is not zero, that
 center frequency is used if the observation total bandwidth is the given amount. This allows
 the center to shift with increasing bandwidth, which is especially useful at 21 cm where
 the radio astronomy band is near the edge of the tuning range for the preferred IF at the
@@ -2148,18 +2148,18 @@ VLBA.
 &#x00A0;<br />phased&#x00A0;VLA.&#x00A0;&#x00A0;Avoids&#x00A0;RFI&#x00A0;at&#x00A0;Jodrell.&#x00A0;&#x00A0;But&#x00A0;must&#x00A0;be&#x00A0;higher&#x00A0;to&#x00A0;fit
 &#x00A0;<br />in&#x00A0;the&#x00A0;VLA&#x00A0;IF&#8217;s.
 </div>
-<!--l. 12255--><p class="nopar" >
-<!--l. 12257--><p class="noindent" >Specifying the <span 
+<!--l. 12268--><p class="nopar" >
+<!--l. 12270--><p class="noindent" >Specifying the <span 
 class="cmtt-10">BAND </span>works well when most setup file parameters are defaulted. But if the user insists on
 specifying many of the other parameters, such as <span 
 class="cmtt-10">IFCHAN, BBC etc</span>, in non-standard ways, the program
 may not do the right thing. It is likely that this will generate an error when the setups are
 checked.
-<!--l. 12268--><p class="noindent" >
+<!--l. 12281--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12268--><p class="noindent" ><span 
+               <!--l. 12281--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                string
@@ -2173,7 +2173,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12268--><p class="noindent" ><span 
+               <!--l. 12281--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                One
                of
@@ -2184,7 +2184,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12268--><p class="noindent" ><span 
+               <!--l. 12281--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Blank,
                which
@@ -2198,7 +2198,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12268--><p class="noindent" ><span 
+               <!--l. 12281--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2207,16 +2207,16 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12268--><p class="noindent" ><span 
+               <!--l. 12281--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BAND=&#8217;2cm&#8217;</span></dd></dl>
-<!--l. 12270--><p class="noindent" >
+<!--l. 12283--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2540003.6.4"></a><span 
 class="cmtt-10">BARREL</span></h5>
-<!--l. 12272--><p class="noindent" >Barrel roll is not used on the disk based system so can be ignored in essentially all cases.
-<!--l. 12275--><p class="noindent" ><span 
+<!--l. 12285--><p class="noindent" >Barrel roll is not used on the disk based system so can be ignored in essentially all cases.
+<!--l. 12288--><p class="noindent" ><span 
 class="cmtt-10">BARREL </span>sets the mode of the barrel roll. The barrel roll is designed to protect data against bad
 recording tracks. Within each head group of 8 tracks, or in some modes, within a pair of head groups,
 the data for each &#8220;track&#8221; is actually recorded first on it&#8217;s assigned track, then the next frame (20,000
@@ -2231,10 +2231,10 @@ class="cmtt-10">roll</span><span
 class="cmtt-10">_auto</span>. The options for <span 
 class="cmtt-10">BARREL</span>
 are:
-<!--l. 12289--><p class="noindent" >Barrel roll should be ok for PCFS systems (VEX files). In Dec 2000 the definition of barrel rolling has
+<!--l. 12302--><p class="noindent" >Barrel roll should be ok for PCFS systems (VEX files). In Dec 2000 the definition of barrel rolling has
 been updated to reflect the discovery that the current (VLBA) practice is time reversed with respect to
 the documentation.
-<!--l. 12294--><p class="noindent" >Barrel roll is turned off for disk systems.
+<!--l. 12307--><p class="noindent" >Barrel roll is turned off for disk systems.
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">roll</span><span 
@@ -2289,14 +2289,14 @@ class="description">
                                                                                 
      can
      do.</dd></dl>
-<!--l. 12303--><p class="noindent" >One case where the user may need to set the roll is when the data will be correlated with 2048 point
+<!--l. 12316--><p class="noindent" >One case where the user may need to set the roll is when the data will be correlated with 2048 point
 FFT&#8217;s (1024 point output spectra). This cannot be done with a 16 track roll and so one of the lesser
 rolls should be forced.
-<!--l. 12313--><p class="noindent" >
+<!--l. 12326--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12313--><p class="noindent" ><span 
+               <!--l. 12326--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                string
@@ -2308,7 +2308,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12313--><p class="noindent" ><span 
+               <!--l. 12326--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                One
                of
@@ -2320,7 +2320,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12313--><p class="noindent" ><span 
+               <!--l. 12326--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">roll</span><span 
@@ -2328,7 +2328,7 @@ class="cmtt-10">_auto</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12313--><p class="noindent" ><span 
+               <!--l. 12326--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2337,22 +2337,22 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12313--><p class="noindent" ><span 
+               <!--l. 12326--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BARREL=roll</span><span 
 class="cmtt-10">_8</span></dd></dl>
                                                                                 
                                                                                 
-<!--l. 12315--><p class="noindent" >
+<!--l. 12328--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2550003.6.4"></a><span 
 class="cmtt-10">BBFILTER</span></h5>
-<!--l. 12317--><p class="noindent" ><span 
+<!--l. 12330--><p class="noindent" ><span 
 class="cmtt-10">BBFILTER </span>sets the baseband channel bandwidth. There is one value for each baseband channel. Any
 that are not specified will be set equal to the first so in the usual case that all channels have the same
 bandwidth, only one needs to be set.
-<!--l. 12322--><p class="noindent" >For the RDBE systems with the PFB personality (<span 
+<!--l. 12335--><p class="noindent" >For the RDBE systems with the PFB personality (<span 
 class="cmtt-10">DBE = RDBE</span><span 
 class="cmtt-10">_PFB</span>), the bandwidth must be 32 MHz.
 There are no options. For the DDC personality (<span 
@@ -2361,25 +2361,25 @@ class="cmtt-10">_DDC</span>), the baseband channel bandwidth
 can be anywhere between 1 and 128 MHz in factor of 2 steps. For the DBBC, the options are the
 factors of 2 between 1 and 16 MHz, with additional options at 32 and 512 MHz to be enabled in the
 future.
-<!--l. 12329--><p class="noindent" >For the original VLBA system and for MarkIV, the value must be a multiple of 2 times 0.0625&#x00A0;MHz up
+<!--l. 12342--><p class="noindent" >For the original VLBA system and for MarkIV, the value must be a multiple of 2 times 0.0625&#x00A0;MHz up
 to a maximum of 16&#x00A0;MHz. Up to 16 values can be accepted. If two or more baseband channels are
 assigned to the same BBC/sideband, they should have the same <span 
 class="cmtt-10">BBFILTER </span>assigned. If not the last will
 probably be used.
-<!--l. 12335--><p class="noindent" >If not specified, one half of the <a 
+<!--l. 12348--><p class="noindent" >If not specified, one half of the <a 
 href="#x31-2890003.6.4"><span 
 class="cmtt-10">SAMPRATE</span></a> will be used for all channels, if <span 
 class="cmtt-10">SAMPRATE </span>was
 specified.
-<!--l. 12339--><p class="noindent" >For MkIV DARs in the EVN the 1 MHz, 250 kHz and 62.5 kHz filters are only available as plug-ins and
+<!--l. 12352--><p class="noindent" >For MkIV DARs in the EVN the 1 MHz, 250 kHz and 62.5 kHz filters are only available as plug-ins and
 should be avoided if possible. Although the 500kHz and 125kHz filters are standard they are generally
 only available on the USB of the first few BBCs. Most stations have 4, and are required to obtain up to
 6.
-<!--l. 12354--><p class="noindent" >
+<!--l. 12367--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12354--><p class="noindent" ><span 
+               <!--l. 12367--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -2396,7 +2396,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12354--><p class="noindent" ><span 
+               <!--l. 12367--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">0.0625</span>,
@@ -2430,7 +2430,7 @@ class="cmtt-10">512</span>,
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12354--><p class="noindent" ><span 
+               <!--l. 12367--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -2460,7 +2460,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12354--><p class="noindent" ><span 
+               <!--l. 12367--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2469,7 +2469,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12354--><p class="noindent" ><span 
+               <!--l. 12367--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BBFILTER</span>
@@ -2505,7 +2505,7 @@ class="cmtt-10">2,</span>
 class="cmtt-10">2,</span>
                <span 
 class="cmtt-10">2</span>
-               <!--l. 12354--><p class="noindent" >which
+               <!--l. 12367--><p class="noindent" >which
                is
                same
                as
@@ -2515,16 +2515,16 @@ class="cmtt-10">BBFILTER</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">2</span></dd></dl>
-<!--l. 12356--><p class="noindent" >
+<!--l. 12369--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2560003.6.4"></a><span 
 class="cmtt-10">BBC</span></h5>
-<!--l. 12358--><p class="noindent" ><span 
+<!--l. 12371--><p class="noindent" ><span 
 class="cmtt-10">BBC </span>is used to specify the Base Band Converter (BBC) to which each baseband channel is assigned. A
 value can be given for every channel. If any or all values are missing, SCHED will try to set to
 reasonable default values for the digital backends and VLBA and MKIV format observations. This is
 the option most users should take.
-<!--l. 12365--><p class="noindent" >Note that BBC assignments are arbitrary for the RDBE and the old VLBA systems since all BBCs can
+<!--l. 12378--><p class="noindent" >Note that BBC assignments are arbitrary for the RDBE and the old VLBA systems since all BBCs can
 see all input IFs. However, for Mark&#x00A0;III and Mark&#x00A0;IV systems and the current version of
 the DBBC, there are strong constraints. For Mark&#x00A0;III/IV &#8220;astronomical patching&#8221;, which
 is the only one currently properly understood, the odd BBCs must be connected to IF1
@@ -2539,11 +2539,11 @@ also has constraints on patching of BBCs to IF as described in the <a
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html#x15-310002.4.2"><span 
 class="cmtt-10">DBBCVER</span></a> section of the
 manual.
-<!--l. 12387--><p class="noindent" >
+<!--l. 12400--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12387--><p class="noindent" ><span 
+               <!--l. 12400--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -2557,7 +2557,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12387--><p class="noindent" ><span 
+               <!--l. 12400--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Integers
                between
@@ -2581,14 +2581,14 @@ class="cmtt-10">8</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12387--><p class="noindent" ><span 
+               <!--l. 12400--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12387--><p class="noindent" ><span 
+               <!--l. 12400--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2597,17 +2597,17 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12387--><p class="noindent" ><span 
+               <!--l. 12400--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BBC=1,1,2,2,3,3,4,4,5,5,6,6,7,7</span></dd></dl>
-<!--l. 12390--><p class="noindent" >
+<!--l. 12403--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2570003.6.4"></a><span 
 class="cmtt-10">BBSYN</span></h5>
                                                                                 
                                                                                 
-<!--l. 12392--><p class="noindent" ><span 
+<!--l. 12405--><p class="noindent" ><span 
 class="cmtt-10">BBSYN </span>is used to set the frequency for the BBC or digital filter assigned to each baseband
 channel (subband channel in EVLA terminology). This number will be overridden if <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-990003.1.2"><span 
@@ -2632,15 +2632,15 @@ class="cmcsc-10">&#x00A0;</span>will complain. Please see <a
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF</span></a> for a discussion of required
 parameters.
-<!--l. 12411--><p class="noindent" >For MkIV all BBCs at a given station should fall in the range 100 - 220 (the &#8220;Low patch&#8221;) or 220 - 500
+<!--l. 12424--><p class="noindent" >For MkIV all BBCs at a given station should fall in the range 100 - 220 (the &#8220;Low patch&#8221;) or 220 - 500
 the &#8220;High patch&#8221;).
-<!--l. 12414--><p class="noindent" >For the VLBA legacy DAR and MkIV systems, the baseband frequency must be set on even 10 kHz
+<!--l. 12427--><p class="noindent" >For the VLBA legacy DAR and MkIV systems, the baseband frequency must be set on even 10 kHz
 frequencies.
-<!--l. 12417--><p class="noindent" >The future is with the digital backends - the RDBE for the VLBA and related systems
+<!--l. 12430--><p class="noindent" >The future is with the digital backends - the RDBE for the VLBA and related systems
 and the DBBC system from Noto being deployed in Europe and elsewhere. There are also
 systems in other parts of the world but more information is needed before those can be
 described.
-<!--l. 12422--><p class="noindent" >With the RDBE DDC personality, there are some IF frequencies to avoid. After sampling at 1024 GHz
+<!--l. 12435--><p class="noindent" >With the RDBE DDC personality, there are some IF frequencies to avoid. After sampling at 1024 GHz
 (the usable IF frequencies are between 512 and 1024 MHz), the firmware does a polyphase filter to
 narrow the bandwidth to match what the FPGA clock rate can handle (256 MHz in this case. A
 complex filter is used which allows output bandpasses of 256 MHz width. But the edge bands are
@@ -2651,7 +2651,7 @@ attempt to cross the boundary between two. That won&#8217;t work and <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will issue a
 warning.
-<!--l. 12434--><p class="noindent" >The DDC personality can provide 4 basebands per RDBE and there are two RDBE units at each
+<!--l. 12447--><p class="noindent" >The DDC personality can provide 4 basebands per RDBE and there are two RDBE units at each
 station. Those basebands can have bandwidths of the factors of 2 between 1 and 128.0 MHz. Spectral
 zoom mode in the DiFX correlator can be used to obtain narrower bandwidths. The total output bit
 rate has a maximum of 2048 Mbps. The values of <span 
@@ -2672,7 +2672,7 @@ settings. Note that any crd files to control the old system while the DDC is in 
 BBC frequencies rounded to the nearest 10 kHz because of hardware limitations in the
 legacy BBCs. That should be ok as data from the BBCs are most likely not going to be
 recorded.
-<!--l. 12456--><p class="noindent" >The PFB personality of the RDBE, (<span 
+<!--l. 12469--><p class="noindent" >The PFB personality of the RDBE, (<span 
 class="cmtt-10">DBE = RDBE</span><span 
 class="cmtt-10">_PFB</span>) has rather rigid baseband frequency options. A
 polyphase filter divides the 512-1024 band into 17 baseband channels, 15 of which have 32 MHz
@@ -2685,21 +2685,21 @@ has 2 IF inputs and puts out 2048 Mbps (512 MHz total bandwidth with 2 bit sampl
 and Nyquist sampling) in 16 total baseband channels. There is not yet any ability to vary
 the bit rate. The 16 channel can be chosen arbitrarly from all those produced from both
 IFs.
-<!--l. 12469--><p class="noindent" >The allowed <span 
+<!--l. 12482--><p class="noindent" >The allowed <span 
 class="cmtt-10">BBSYN </span>frequencies for the PFB personality are 1040.0 1008.0, 976.0, 944.0, 912.0, 880.0,
 848.0, 816.0, 784.0, 752.0, 720.0, 688.0, 656.0, 624.0, 592.0, and 560.0 and the bands must be lower
 sideband. The frequencies listed are at the top of the 32 MHz channel. The first is the one that will
 produce a corrupted baseband.
-<!--l. 12475--><p class="noindent" >The DBBC system is more of a plug replacement for the MarkIV. The DBBC has a range
+<!--l. 12488--><p class="noindent" >The DBBC system is more of a plug replacement for the MarkIV. The DBBC has a range
 of possible IF frequencies, but currently only 2 are supported (10-512 MHz and 512-1024
 MHz). Up to 16 <span 
 class="cmtt-10">BBSYN </span>frequencies can lie anywhere in the selected IF at a multiple of 10
 kHz.
-<!--l. 12485--><p class="noindent" >
+<!--l. 12498--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12485--><p class="noindent" ><span 
+               <!--l. 12498--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -2710,7 +2710,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12485--><p class="noindent" ><span 
+               <!--l. 12498--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                multiple
@@ -2723,7 +2723,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12485--><p class="noindent" ><span 
+               <!--l. 12498--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -2734,7 +2734,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12485--><p class="noindent" ><span 
+               <!--l. 12498--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                                                                                 
@@ -2745,27 +2745,27 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12485--><p class="noindent" ><span 
+               <!--l. 12498--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BBSYN=720.99,720.99,724.99,724.99</span></dd></dl>
-<!--l. 12488--><p class="noindent" >
+<!--l. 12501--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2580003.6.4"></a><span 
 class="cmtt-10">BBSYN2</span></h5>
-<!--l. 12490--><p class="noindent" >If frequency switching is specified, <span 
+<!--l. 12503--><p class="noindent" >If frequency switching is specified, <span 
 class="cmtt-10">BBSYN2 </span>is the set of frequencies for the second scan of the switching
 loop. Frequency setting using <span 
 class="cmtt-10">FREQREF </span>and any pcal defaults are not used for the second frequency set.
 <span 
 class="cmtt-10">BBSYN2 </span>must be specified for this frequency set.
-<!--l. 12496--><p class="noindent" >Frequency switching is not allowed when writing VEX files. Also, it is a little known and probably
+<!--l. 12509--><p class="noindent" >Frequency switching is not allowed when writing VEX files. Also, it is a little known and probably
 nearly unused option so it is not well tested and may well go away some day.
-<!--l. 12506--><p class="noindent" >
+<!--l. 12519--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12506--><p class="noindent" ><span 
+               <!--l. 12519--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -2776,7 +2776,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12506--><p class="noindent" ><span 
+               <!--l. 12519--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                multiple
@@ -2789,7 +2789,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12506--><p class="noindent" ><span 
+               <!--l. 12519--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -2811,7 +2811,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12506--><p class="noindent" ><span 
+               <!--l. 12519--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2820,19 +2820,19 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12506--><p class="noindent" ><span 
+               <!--l. 12519--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BBSYN2=728.99,728.99,732.99,732.99</span></dd></dl>
-<!--l. 12509--><p class="noindent" >
+<!--l. 12522--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2590003.6.4"></a><span 
 class="cmtt-10">BITS</span></h5>
-<!--l. 12511--><p class="noindent" ><span 
+<!--l. 12524--><p class="noindent" ><span 
 class="cmtt-10">BITS </span>sets the number of bits per sample for each baseband channel. If any channel is not specified, it
 will be set to the first. Since an experiment will typically use the same number of bits per sample for all
 channels, it is usually only necessary to specify one value.
-<!--l. 12516--><p class="noindent" >If <span 
+<!--l. 12529--><p class="noindent" >If <span 
 class="cmtt-10">BITS </span>is <span 
 class="cmtt-10">2</span>, the first magnitude bit is placed on assigned track plus 8 for <span 
 class="cmtt-10">FORMAT</span><span 
@@ -2844,11 +2844,11 @@ class="cmtt-10">FORMAT</span><span
 class="cmtt-10">&#x00A0;=</span>
 <span 
 class="cmtt-10">VLBA1:1</span>.
-<!--l. 12527--><p class="noindent" >
+<!--l. 12540--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12527--><p class="noindent" ><span 
+               <!--l. 12540--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -2864,7 +2864,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12527--><p class="noindent" ><span 
+               <!--l. 12540--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">1</span>
@@ -2874,7 +2874,7 @@ class="cmtt-10">2</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12527--><p class="noindent" ><span 
+               <!--l. 12540--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">1</span>
@@ -2900,7 +2900,7 @@ class="cmtt-10">1</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12527--><p class="noindent" ><span 
+               <!--l. 12540--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -2909,24 +2909,24 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12527--><p class="noindent" ><span 
+               <!--l. 12540--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">BITS=1</span></dd></dl>
-<!--l. 12529--><p class="noindent" >
+<!--l. 12542--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2600003.6.4"></a><span 
 class="cmtt-10">DBE</span></h5>
                                                                                 
                                                                                 
-<!--l. 12531--><p class="noindent" ><span 
+<!--l. 12544--><p class="noindent" ><span 
 class="cmtt-10">DBE </span>is used to specify the personality to use in a digital backend that is based on an FPGA. Such
 personalities can be changed quickly, so this parameter is not appropriate for the station catalog.
 However personality changes have not been integrated with the observing system yet so they will not be
 allowed within one key file. Use multiple key files if you must switch, and don&#8217;t do it often. The
 personality determines much about the capabilities of the hardware. In particular, it determines what
 baseband frequencies can be set.
-<!--l. 12540--><p class="noindent" >The possible options are:
+<!--l. 12553--><p class="noindent" >The possible options are:
      <dl class="description"><dt class="description">
  </dt><dd 
 class="description">
@@ -3386,14 +3386,14 @@ class="cmtt-10">DBBC</span></a>.
      firmware
      upgrades.
      </dd></dl>
-<!--l. 12592--><p class="noindent" ><span 
+<!--l. 12605--><p class="noindent" ><span 
 class="cmtt-10">DBE </span>should not be specified for <span 
 class="cmtt-10">DAR</span>&#8217;s other than the RDBE and DBBC. Note that it may be necessary
 to explicitly set <span 
 class="cmtt-10">DAR </span>to <span 
 class="cmtt-10">&#8217; &#8217; </span>(blank) if there are multiple segments to the setup file and an earlier one
 has it set to something else.
-<!--l. 12597--><p class="noindent" >When the DAR is the RDBE, the output channels and all the input channel information given to
+<!--l. 12610--><p class="noindent" >When the DAR is the RDBE, the output channels and all the input channel information given to
 <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>are written to the VEX file. But the crd files that control the old VLBA hardware also
@@ -3406,11 +3406,11 @@ match the RDBE requests. It sets the sample rate to the maximum of that requeste
 32 Ms/s. It sets the channel bandwidth to the lesser of the request and 16 MHz. It only
 writes the first 4 pcal extraction requests (avoiding going into channel numbers that are too
 high).
-<!--l. 12616--><p class="noindent" >
+<!--l. 12629--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12616--><p class="noindent" ><span 
+               <!--l. 12629--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                                                                                 
                                                                                 
@@ -3425,7 +3425,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12616--><p class="noindent" ><span 
+               <!--l. 12629--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                One
                of
@@ -3452,7 +3452,7 @@ class="cmtt-10">_DDC</span>&#8217;.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12616--><p class="noindent" ><span 
+               <!--l. 12629--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                &#8217;<span 
 class="cmtt-10">RDBE</span><span 
@@ -3484,7 +3484,7 @@ class="cmtt-10">_PFB</span>&#8217;
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12616--><p class="noindent" ><span 
+               <!--l. 12629--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -3499,33 +3499,33 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12616--><p class="noindent" ><span 
+               <!--l. 12629--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">DBE=&#8217;RDBE</span><span 
 class="cmtt-10">_DDC&#8217;</span></dd></dl>
-<!--l. 12619--><p class="noindent" >
+<!--l. 12632--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2610003.6.4"></a><span 
 class="cmtt-10">DUALX</span></h5>
-<!--l. 12621--><p class="noindent" ><span 
+<!--l. 12634--><p class="noindent" ><span 
 class="cmtt-10">DUALX </span>is a switch to turn on the mode where the B and D IFs are both assigned to RCP at 4 cm, but
 with separate first LOs. IF B uses <span 
 class="cmtt-10">SYNTH </span>1 while IF D uses <span 
 class="cmtt-10">SYNTH </span>3. This allows more than
 500&#x00A0;MHz to be spanned instantaneously in this band and is used for geodetic and astrometric
 observations.
-<!--l. 12632--><p class="noindent" >
+<!--l. 12645--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12632--><p class="noindent" ><span 
+               <!--l. 12645--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                None.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12632--><p class="noindent" ><span 
+               <!--l. 12645--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Do
                or
@@ -3537,7 +3537,7 @@ class="cmbx-10">Options:</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 12632--><p class="noindent" ><span 
+               <!--l. 12645--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                B
                is
@@ -3554,7 +3554,7 @@ class="cmtt-10">SYNTH</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12632--><p class="noindent" ><span 
+               <!--l. 12645--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -3563,22 +3563,22 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12632--><p class="noindent" ><span 
+               <!--l. 12645--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">DUALX</span></dd></dl>
-<!--l. 12635--><p class="noindent" >
+<!--l. 12648--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2620003.6.4"></a><span 
 class="cmtt-10">ELCOLIM</span></h5>
-<!--l. 12637--><p class="noindent" ><span 
+<!--l. 12650--><p class="noindent" ><span 
 class="cmtt-10">ELCOLIM </span>specifies the elevation collimation offset to be added to the one used by the VLBA on-line
 computers. It can be used to adjust the VLBA pointing.
-<!--l. 12646--><p class="noindent" >
+<!--l. 12659--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12646--><p class="noindent" ><span 
+               <!--l. 12659--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                pointing
@@ -3589,7 +3589,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12646--><p class="noindent" ><span 
+               <!--l. 12659--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                                                                                 
@@ -3599,14 +3599,14 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12646--><p class="noindent" ><span 
+               <!--l. 12659--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0.0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12646--><p class="noindent" ><span 
+               <!--l. 12659--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -3615,28 +3615,28 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12646--><p class="noindent" ><span 
+               <!--l. 12659--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">ELCOLIM=1.2</span></dd></dl>
-<!--l. 12650--><p class="noindent" >
+<!--l. 12663--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2630003.6.4"></a><span 
 class="cmtt-10">FE</span></h5>
-<!--l. 12652--><p class="noindent" ><span 
+<!--l. 12665--><p class="noindent" ><span 
 class="cmtt-10">FE </span>gives four front end specifications for VLBA antennas, one for each IF (A, B, C, and D). Note
 that the 2cm front end on the VLBA has 4 filters; the on-line system chooses which to use
 based on the frequency of baseband channel 1, with the dividing points for the filter choice
 are 12.9, 13.9, and 14.9&#x00A0;GHz. <span 
 class="cmtt-10">FE = omit </span>may be specified to cause a channel not to be
 used.
-<!--l. 12659--><p class="noindent" ><span 
+<!--l. 12672--><p class="noindent" ><span 
 class="cmtt-10">FE </span>can also be used for other stations, especially the VLA and any station that uses a VLBA backend.
 The 4 receiver names correspond to the first 4 IFs. <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>can provide appropriate defaults for the
 VLA based on the frequency requests.
-<!--l. 12664--><p class="noindent" >The front ends for the VLA and VLBA are listed here. The maximum ranges are given for the VLBA,
+<!--l. 12677--><p class="noindent" >The front ends for the VLA and VLBA are listed here. The maximum ranges are given for the VLBA,
 which may be considerably greater than the good ranges, especially at 13cm.
                                                                                 
                                                                                 
@@ -3657,12 +3657,12 @@ Name&#x00A0;(FE)&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;VLBA&#x00A0;Rang
 &#x00A0;<br />3mm&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;-&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;79.7-96.0&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;BD&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;---
 &#x00A0;<br />13cm&#x00A0;and&#x00A0;4cm&#x00A0;can&#x00A0;be&#x00A0;observed&#x00A0;together&#x00A0;on&#x00A0;the&#x00A0;VLBA&#x00A0;using&#x00A0;all&#x00A0;4&#x00A0;IFs.
 </div>
-<!--l. 12684--><p class="nopar" >
-<!--l. 12693--><p class="noindent" >
+<!--l. 12697--><p class="nopar" >
+<!--l. 12706--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12693--><p class="noindent" ><span 
+               <!--l. 12706--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                character
@@ -3675,7 +3675,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12693--><p class="noindent" ><span 
+               <!--l. 12706--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Band
                name
@@ -3709,7 +3709,7 @@ class="cmtt-10">omit</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12693--><p class="noindent" ><span 
+               <!--l. 12706--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -3724,7 +3724,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12693--><p class="noindent" ><span 
+               <!--l. 12706--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -3749,29 +3749,29 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12693--><p class="noindent" ><span 
+               <!--l. 12706--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FE(1)=&#8217;20cm&#8217;</span>
                <span 
 class="cmtt-10">FE(3)=&#8217;20cm&#8217;</span></dd></dl>
-<!--l. 12697--><p class="noindent" >
+<!--l. 12710--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2640003.6.4"></a><span 
 class="cmtt-10">FIRMFILE</span></h5>
-<!--l. 12699--><p class="noindent" >If you are not involved in VLBA testing, you don&#8217;t want to know about this parameter!
-<!--l. 12702--><p class="noindent" ><span 
+<!--l. 12712--><p class="noindent" >If you are not involved in VLBA testing, you don&#8217;t want to know about this parameter!
+<!--l. 12715--><p class="noindent" ><span 
 class="cmtt-10">FIRMFILE </span>is a way to specify the file name of the version of the digital backend firmware that will be
 used for an observation. It was requested after excessive confusion was encountered during intensive
 testing. It will cause a comment with the file name to be inserted in the <span 
 class="cmsl-10">VEX </span>file <span 
 class="cmtt-10">$TRACKS</span>
 section.
-<!--l. 12713--><p class="noindent" >
+<!--l. 12726--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12713--><p class="noindent" ><span 
+               <!--l. 12726--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                character
@@ -3790,7 +3790,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12713--><p class="noindent" ><span 
+               <!--l. 12726--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                If
                you
@@ -3808,13 +3808,13 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12713--><p class="noindent" ><span 
+               <!--l. 12726--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Blank
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12713--><p class="noindent" ><span 
+               <!--l. 12726--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Kept
                for
@@ -3829,7 +3829,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12713--><p class="noindent" ><span 
+               <!--l. 12726--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">firmfile</span>
@@ -3837,11 +3837,11 @@ class="cmtt-10">firmfile</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">&#8217;DDCxy7872203&#8217;</span></dd></dl>
-<!--l. 12716--><p class="noindent" >
+<!--l. 12729--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2650003.6.4"></a><span 
 class="cmtt-10">FIRSTLO</span></h5>
-<!--l. 12718--><p class="noindent" ><span 
+<!--l. 12731--><p class="noindent" ><span 
 class="cmtt-10">FIRSTLO </span>gives the LO sum for each baseband channel for all mixes other then the one that will be set if
 <span 
 class="cmtt-10">FREQ </span>or <span 
@@ -3856,13 +3856,13 @@ class="cmtt-10">FREQREF</span></a> for a discussion of required
 parameters. If a value is not specified for a channel, it will be set to the first. Since most
 observations use the same firstlo for all channels, it is usually only necessary to specify
 one.
-<!--l. 12731--><p class="noindent" >For the VLBA: For frequencies below 16&#x00A0;GHz this is just the front end synthesizer as specified by
+<!--l. 12744--><p class="noindent" >For the VLBA: For frequencies below 16&#x00A0;GHz this is just the front end synthesizer as specified by
 <span 
 class="cmtt-10">SYNTH</span>. For 1 cm, it is the sum of synthesizers 2 and 3. For 7 mm, it is the sum of synthesizer 1 and 3
 times synthesizer 3. For 4 mm, it is the sum of synthesizer 1 and 6 times synthesizer 3. At 90cm the
 value should be -500.0&#x00A0;MHz to make any frequency calculations come out right; that mix is an
 up-convert.
-<!--l. 12738--><p class="noindent" >If <span 
+<!--l. 12751--><p class="noindent" >If <span 
 class="cmtt-10">FIRSTLO </span>is not specified, <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will try to determine it from the <a 
@@ -3870,11 +3870,11 @@ href="labelSECFRQCATFrequencyCatalog.html#x30-2450003.5">frequency catalog</a>. 
 the usual case.
                                                                                 
                                                                                 
-<!--l. 12749--><p class="noindent" >
+<!--l. 12762--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12749--><p class="noindent" ><span 
+               <!--l. 12762--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -3885,7 +3885,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12749--><p class="noindent" ><span 
+               <!--l. 12762--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                valid
@@ -3894,7 +3894,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12749--><p class="noindent" ><span 
+               <!--l. 12762--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Will
                set
@@ -3926,7 +3926,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12749--><p class="noindent" ><span 
+               <!--l. 12762--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -3935,7 +3935,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12749--><p class="noindent" ><span 
+               <!--l. 12762--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FIRSTLO</span>
@@ -3945,16 +3945,16 @@ class="cmtt-10">=</span>
 class="cmtt-10">2400,</span>
                <span 
 class="cmtt-10">2400</span></dd></dl>
-<!--l. 12752--><p class="noindent" >
+<!--l. 12765--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2660003.6.4"></a><span 
 class="cmtt-10">FORMAT</span></h5>
-<!--l. 12754--><p class="noindent" ><span 
+<!--l. 12767--><p class="noindent" ><span 
 class="cmtt-10">FORMAT </span>is used to specify the recording format. Note that it is couched in terms of tracks despite the
 switch to disks because the concept is still used in Mark5A and in Mark5A+ playback of Mark5B.
 Options are: <div class="verse">
-        <!--l. 12757--><p class="noindent" >
-        <!--l. 12759--><p class="noindent" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;
+        <!--l. 12770--><p class="noindent" >
+        <!--l. 12772--><p class="noindent" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;
         <span 
 class="cmtt-10">&#x00A0;</span><span 
 class="cmtt-10">&#x00A0;</span><span 
@@ -4240,7 +4240,7 @@ class="cmtt-10">VLBA </span>modes and off
 in <span 
 class="cmtt-10">MARKIII </span>mode. The roll is within 8 or 16 track groups, advancing one track for each
 frame.
-<!--l. 12798--><p class="noindent" >The fan in modes, <span 
+<!--l. 12811--><p class="noindent" >The fan in modes, <span 
 class="cmtt-10">VLBA2:1 </span>and <span 
 class="cmtt-10">VLBA4:1 </span>were never implemented, so this paragraph is only retained for
 historical reasons. If using a fain in mode, give the same track assignment to 2 or 4 channels. In the fan
@@ -4249,7 +4249,7 @@ will be one channel per track for <span
 class="cmtt-10">VLBA2:1 </span>mode and two channels per track for <span 
 class="cmtt-10">VLBA4:1</span>
 mode.
-<!--l. 12806--><p class="noindent" >For the fan out modes, <span 
+<!--l. 12819--><p class="noindent" >For the fan out modes, <span 
 class="cmtt-10">VLBA1:2</span>, <span 
 class="cmtt-10">VLBA1:4</span>, <span 
 class="cmtt-10">MKIV1:2</span>, and <span 
@@ -4257,7 +4257,7 @@ class="cmtt-10">MKIV1:4</span>, give the first track assignment for
 the baseband channel. Sequential formatter track assignments are used for the other tracks associated
 with that baseband channel. The resulting recorder track assignments are then given below:
 <div class="verse">
-        <!--l. 12811--><p class="noindent" >
+        <!--l. 12824--><p class="noindent" >
         <span 
 class="cmtt-10">VLBA1:2</span>,
         <span 
@@ -4474,13 +4474,13 @@ class="cmtt-10">24</span>
 class="cmtt-10">32</span><br />
 </div>
 Note that MkIII modes are obsolete.
-<!--l. 12830--><p class="noindent" >Format NONE is used for VLBA testing, such as single dish pointing. When specified for VLBA
+<!--l. 12843--><p class="noindent" >Format NONE is used for VLBA testing, such as single dish pointing. When specified for VLBA
 data, the on-line system does not touch the formatter. This includes not readjusting the
 pcal detection. Format NONE will mainly be used by VLBA staff for testing and in high
 frequency projects that do reference pointing. If the reference pointing scan uses this format, no
 formatter reconfigures are done which can prevent the significant data loss that can happen at
 reconfigures.
-<!--l. 12839--><p class="noindent" >Note that it is not necessary to specify <span 
+<!--l. 12852--><p class="noindent" >Note that it is not necessary to specify <span 
 class="cmtt-10">FORMAT</span>. <span 
 class="cmtt-10">FORMAT </span>will be set equal to <span 
 class="cmtt-10">DAR </span>in the <a 
@@ -4488,11 +4488,11 @@ href="labelSECSTACATStationCatalogandLocationsCatalog.html#x28-2310003.3">statio
 Stations with <span 
 class="cmtt-10">DAR = VLBA4 </span>will write Mark&#x00A0;IV format on the tape. When the default format is taken,
 the barrel roll is turned off for formats other than VLBA.
-<!--l. 12851--><p class="noindent" >
+<!--l. 12864--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12851--><p class="noindent" ><span 
+               <!--l. 12864--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Text
                string
@@ -4504,7 +4504,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12851--><p class="noindent" ><span 
+               <!--l. 12864--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                See
                above
@@ -4520,7 +4520,7 @@ class="cmcsc-10">&#x00A0;</span>to
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12851--><p class="noindent" ><span 
+               <!--l. 12864--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                DAR
                from
@@ -4531,7 +4531,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12851--><p class="noindent" ><span 
+               <!--l. 12864--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -4540,15 +4540,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12851--><p class="noindent" ><span 
+               <!--l. 12864--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FORMAT=MARKIII</span></dd></dl>
-<!--l. 12854--><p class="noindent" >
+<!--l. 12867--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2670003.6.4"></a><span 
 class="cmtt-10">FREQOFF</span></h5>
-<!--l. 12856--><p class="noindent" ><span 
+<!--l. 12869--><p class="noindent" ><span 
 class="cmtt-10">FREQOFF </span>gives the increment to the LO sum for the baseband channel in MHz. This will only be used if
 <span 
 class="cmtt-10">FREQREF </span>is used. The LO sum for baseband channel <span 
@@ -4561,11 +4561,11 @@ class="cmtt-10">FIRSTLO</span>. Please see
 <a 
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF</span></a> for a discussion of required parameters.
-<!--l. 12871--><p class="noindent" >
+<!--l. 12884--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12871--><p class="noindent" ><span 
+               <!--l. 12884--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -4576,7 +4576,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12871--><p class="noindent" ><span 
+               <!--l. 12884--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                valid
@@ -4596,7 +4596,7 @@ class="cmtt-10">BBSYN</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12871--><p class="noindent" ><span 
+               <!--l. 12884--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0.0</span>
@@ -4606,7 +4606,7 @@ class="cmtt-10">0.0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12871--><p class="noindent" ><span 
+               <!--l. 12884--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -4615,15 +4615,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12871--><p class="noindent" ><span 
+               <!--l. 12884--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FREQOFF=-6.,-4.,-2.,0.,2.,4.,6.</span></dd></dl>
-<!--l. 12874--><p class="noindent" >
+<!--l. 12887--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2680003.6.4"></a><span 
 class="cmtt-10">FREQREF</span></h5>
-<!--l. 12876--><p class="noindent" ><span 
+<!--l. 12889--><p class="noindent" ><span 
 class="cmtt-10">FREQREF </span>is the LO sum to use for the baseband channel in MHz. <span 
 class="cmtt-10">FREQOFF </span>will be added to it.
 The LO sum is the sum of the <span 
@@ -4637,7 +4637,7 @@ class="cmtt-10">FREQREF</span>
 plus <span 
 class="cmtt-10">FREQOFF</span>, as long as the BBC settings stay within range and there are no sideband
 changes.
-<!--l. 12883--><p class="noindent" >To set pulse cals properly and to deal with non-VLBA stations correctly, it is best to know all of the
+<!--l. 12896--><p class="noindent" >To set pulse cals properly and to deal with non-VLBA stations correctly, it is best to know all of the
 LO sum, the first LO, and the BBC settings, along with all of the required sidebands. Strictly speaking,
 valid VLBA schedules can be written without knowing all these, but <span 
 class="cmcsc-10">SCHED</span><span 
@@ -4646,7 +4646,7 @@ significantly simpler and more reliable if all this information is required. Not
 be specified since they are related. There are four possible complete combinations, and if more values
 are specified than necessary then a consistency check will be done. These complete combinations are:
 <div class="verse">
-        <!--l. 12893--><p class="noindent" >
+        <!--l. 12906--><p class="noindent" >
         1.
         <span 
 class="cmtt-10">FREQREF</span>
@@ -4694,7 +4694,7 @@ class="cmtt-10">FIRSTLO</span><br />
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12907--><p class="noindent" ><span 
+               <!--l. 12920--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -4705,7 +4705,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12907--><p class="noindent" ><span 
+               <!--l. 12920--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                valid
@@ -4713,7 +4713,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12907--><p class="noindent" ><span 
+               <!--l. 12920--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0.0</span>
@@ -4742,7 +4742,7 @@ class="cmtt-10">FREQREF(1)</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12907--><p class="noindent" ><span 
+               <!--l. 12920--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -4751,7 +4751,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12907--><p class="noindent" ><span 
+               <!--l. 12920--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FREQREF</span>
@@ -4759,29 +4759,29 @@ class="cmtt-10">FREQREF</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">1662.49</span></dd></dl>
-<!--l. 12910--><p class="noindent" >
+<!--l. 12923--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2690003.6.4"></a><span 
 class="cmtt-10">FRSWITCH</span></h5>
-<!--l. 12912--><p class="noindent" ><span 
+<!--l. 12925--><p class="noindent" ><span 
 class="cmtt-10">FRSWITCH </span>is a switch that turns on frequency switching. If specified, a second group of synthesizer
 settings should be given in <span 
 class="cmtt-10">BBSYN2</span>. This is used for VLBA files only. In fact, the program will die if
 frequency switching is attempted when a VEX output file is required.
-<!--l. 12918--><p class="noindent" >In general, frequency switching is probably better handled with a scan loop. The <span 
+<!--l. 12931--><p class="noindent" >In general, frequency switching is probably better handled with a scan loop. The <span 
 class="cmtt-10">FRSWSITCH </span>option is
 not used often, if ever, and should only be used with care.
-<!--l. 12927--><p class="noindent" >
+<!--l. 12940--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12927--><p class="noindent" ><span 
+               <!--l. 12940--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                None.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12927--><p class="noindent" ><span 
+               <!--l. 12940--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Do
                                                                                 
@@ -4793,14 +4793,14 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12927--><p class="noindent" ><span 
+               <!--l. 12940--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Not
                set.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12927--><p class="noindent" ><span 
+               <!--l. 12940--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -4809,15 +4809,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12927--><p class="noindent" ><span 
+               <!--l. 12940--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">FRSWITCH</span></dd></dl>
-<!--l. 12930--><p class="noindent" >
+<!--l. 12943--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2700003.6.4"></a><span 
 class="cmtt-10">IFCHAN</span></h5>
-<!--l. 12932--><p class="noindent" ><span 
+<!--l. 12945--><p class="noindent" ><span 
 class="cmtt-10">IFCHAN </span>is used to specify the IF channel attached to each baseband channel for VLBA observations
 using VLBA data aquisition systems. For the VLBA, it should be <span 
 class="cmtt-10">A </span>or <span 
@@ -4836,7 +4836,7 @@ class="cmtt-10">D </span>are RCP. The new 4-8 GHz system (still called 6cm) can 
 all 4 IFs in 2 polarization pairs. The BBCs of the legacy backend can access any of the 4
 IFs. An RDBE can only access 2 (any 2), so the 2 RDBE option is needed to access all
 4.
-<!--l. 12943--><p class="noindent" >As an alternative to explicit specification of the IF, <span 
+<!--l. 12956--><p class="noindent" >As an alternative to explicit specification of the IF, <span 
 class="cmtt-10">R </span>or <span 
 class="cmtt-10">L </span>can be specified. Then if <span 
 class="cmtt-10">RCHAN </span>and <span 
@@ -4853,18 +4853,18 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>will then complain about a
 bad <span 
 class="cmtt-10">IFCHAN </span>specification.
-<!--l. 12950--><p class="noindent" >1N, 1A, 2N, 2A are allowed values for MkIV telescopes. See <a 
+<!--l. 12963--><p class="noindent" >1N, 1A, 2N, 2A are allowed values for MkIV telescopes. See <a 
 href="#x31-2560003.6.4"><span 
 class="cmtt-10">BBC</span></a> and the <a 
 href="labelSECFRQCATFrequencyCatalog.html#x30-2450003.5">frequency catalog</a> parameter
 <span 
 class="cmtt-10">IFNAME </span>for more details.
-<!--l. 12956--><p class="noindent" >A[1-4], B[1-4], C[1-4] and D[1-4] are all possible values for the DBBC. The letter gives the conditioning
+<!--l. 12969--><p class="noindent" >A[1-4], B[1-4], C[1-4] and D[1-4] are all possible values for the DBBC. The letter gives the conditioning
 module (A-D) to use, and the number gives the input (1-4) on that conditioning module to select. See
 the <a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html#x15-310002.4.2"><span 
 class="cmtt-10">DBBC</span></a> section of the manual for more details.
-<!--l. 12963--><p class="noindent" >The &#8220;geodetic&#8221; wired VLBA systems (all not controlled by VLBA software) have restrictions on their
+<!--l. 12976--><p class="noindent" >The &#8220;geodetic&#8221; wired VLBA systems (all not controlled by VLBA software) have restrictions on their
 IF assignments because the IF distributors only provide enough signals from each IF to feed 8 BBCs
 while these systems typically have 14 BBCs. The systems are wired so that BBCs 1 and 2 can see all 4
 IFs, BBCs 3-8 can see A and C, and BBCs 9-14 can see B and D. In addition, the racks can be switched
@@ -4875,7 +4875,7 @@ SCHED understands all this and should give the right default assignments. This i
 many reasons why, as noted below, it is best to let SCHED set many parameters including
 <span 
 class="cmtt-10">IFCHAN</span>.
-<!--l. 12975--><p class="noindent" >It should now be normal not to specify IFCHAN. <span 
+<!--l. 12988--><p class="noindent" >It should now be normal not to specify IFCHAN. <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will use the requested <a 
 href="#x31-2860003.6.4"><span 
@@ -4894,15 +4894,15 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>will get the obvious polarization channels, although use of
 <span 
 class="cmtt-10">POL </span>is recommended.
-<!--l. 12985--><p class="noindent" >As of early 2013, the VLA can provide 4 output basebands to the recording system. Each is expected to
+<!--l. 12998--><p class="noindent" >As of early 2013, the VLA can provide 4 output basebands to the recording system. Each is expected to
 come from a different IF so they should be assigned to A, and C for RCP and B and D for LCP.
 Eventually there will probably be an increase in the number and more than one channel will use the
 same IF.
-<!--l. 12998--><p class="noindent" >
+<!--l. 13011--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12998--><p class="noindent" ><span 
+               <!--l. 13011--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -4917,7 +4917,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12998--><p class="noindent" ><span 
+               <!--l. 13011--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">A</span>,
@@ -4954,7 +4954,7 @@ class="cmtt-10">&#8217;2A&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12998--><p class="noindent" ><span 
+               <!--l. 13011--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Will
                determine
@@ -4965,7 +4965,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12998--><p class="noindent" ><span 
+               <!--l. 13011--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -4974,25 +4974,25 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 12998--><p class="noindent" ><span 
+               <!--l. 13011--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">IFCHAN=A,C,A,C,A,C,A,C,A,C,A,C</span></dd></dl>
-<!--l. 13001--><p class="noindent" >
+<!--l. 13014--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2710003.6.4"></a><span 
 class="cmtt-10">IFDIST</span></h5>
-<!--l. 13003--><p class="noindent" ><span 
+<!--l. 13016--><p class="noindent" ><span 
 class="cmtt-10">IFDIST </span>specifies the attenuation to apply in the IF distributers. There is one value for each
 of the four IFs. This is only used to attenuate the signals from solar observations or to
 select alternate inputs, for example, for mm observations at VLBA sites with links to other
 antennas.
-<!--l. 13009--><p class="noindent" >This currently (Oct. 2001) is not implemented for VEX files.
-<!--l. 13020--><p class="noindent" >
+<!--l. 13022--><p class="noindent" >This currently (Oct. 2001) is not implemented for VEX files.
+<!--l. 13033--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13020--><p class="noindent" ><span 
+               <!--l. 13033--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                character
@@ -5017,7 +5017,7 @@ class="cmtt-10">20</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13020--><p class="noindent" ><span 
+               <!--l. 13033--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">0</span>,
@@ -5069,14 +5069,14 @@ class="cmtt-10">A20</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 13020--><p class="noindent" ><span 
+               <!--l. 13033--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13020--><p class="noindent" ><span 
+               <!--l. 13033--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5085,16 +5085,16 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13020--><p class="noindent" ><span 
+               <!--l. 13033--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">IFDIST=0,0,&#8217;A&#8217;,0</span></dd></dl>
-<!--l. 13023--><p class="noindent" >
+<!--l. 13036--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2720003.6.4"></a><span 
 class="cmtt-10">LCHAN </span>and <span 
 class="cmtt-10">RCHAN</span></h5>
-<!--l. 13025--><p class="noindent" ><span 
+<!--l. 13038--><p class="noindent" ><span 
 class="cmtt-10">LCHAN </span>specifies the <span 
 class="cmtt-10">IFCHAN </span>to use if <span 
 class="cmtt-10">IFCHAN=&#8217;L&#8217; </span>as in LCP. <span 
@@ -5106,11 +5106,11 @@ class="cmtt-10">IFCHAN </span>is bad. This allows IFCHAN to be
 specified by polarization which is more meaningful to the observer. It also makes it easier to
 deal with antennas, such as the VLA, that might have different IF assignments than the
 VLBA.
-<!--l. 13038--><p class="noindent" >
+<!--l. 13051--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13038--><p class="noindent" ><span 
+               <!--l. 13051--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                single
@@ -5118,7 +5118,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13038--><p class="noindent" ><span 
+               <!--l. 13051--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">A</span>,
@@ -5132,7 +5132,7 @@ class="cmtt-10">D</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13038--><p class="noindent" ><span 
+               <!--l. 13051--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                None.
                Must
@@ -5145,7 +5145,7 @@ class="cmtt-10">IFCHAN=&#8217;L&#8217;</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13038--><p class="noindent" ><span 
+               <!--l. 13051--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5154,17 +5154,17 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13038--><p class="noindent" ><span 
+               <!--l. 13051--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">LCHAN=A</span>
                <span 
 class="cmtt-10">RCHAN=C</span></dd></dl>
-<!--l. 13041--><p class="noindent" >
+<!--l. 13054--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2730003.6.4"></a><span 
 class="cmtt-10">LEVEL</span></h5>
-<!--l. 13043--><p class="noindent" ><span 
+<!--l. 13056--><p class="noindent" ><span 
 class="cmtt-10">LEVEL </span>specifies the setting of the attenuators in the base band converters (BBCs). Values between <span 
 class="cmtt-10">-1</span>
 and <span 
@@ -5177,12 +5177,12 @@ Only one value is accepted but <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>writes that value out separately for each baseband
 channel.
-<!--l. 13052--><p class="noindent" >This currently (Oct. 2001) has no effect on the VEX file.
-<!--l. 13060--><p class="noindent" >
+<!--l. 13065--><p class="noindent" >This currently (Oct. 2001) has no effect on the VEX file.
+<!--l. 13073--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13060--><p class="noindent" ><span 
+               <!--l. 13073--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                integer
@@ -5193,7 +5193,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13060--><p class="noindent" ><span 
+               <!--l. 13073--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">-1</span>
@@ -5207,14 +5207,14 @@ class="cmtt-10">256</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13060--><p class="noindent" ><span 
+               <!--l. 13073--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">-1</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13060--><p class="noindent" ><span 
+               <!--l. 13073--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5223,15 +5223,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13060--><p class="noindent" ><span 
+               <!--l. 13073--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">LEVEL=-1</span></dd></dl>
-<!--l. 13063--><p class="noindent" >
+<!--l. 13076--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2740003.6.4"></a><span 
 class="cmtt-10">LOGGING</span></h5>
-<!--l. 13065--><p class="noindent" ><span 
+<!--l. 13078--><p class="noindent" ><span 
 class="cmtt-10">LOGGING </span>specifies the type of logging to be done on the VLBA. <span 
 class="cmtt-10">STANDARD </span>is appropriate for normal
 observations of almost any kind. <span 
@@ -5250,17 +5250,17 @@ class="cmtt-10">NONE</span>, and <span
 class="cmtt-10">POINTING </span>are not case sensitive. Any special file name must match in case the
 name of the file loaded at the sites. Contact the chief VLBA operator to get special files
 made.
-<!--l. 13080--><p class="noindent" >One of the uses of this system is to allow monitoring of system temperatures at very short intervals.
+<!--l. 13093--><p class="noindent" >One of the uses of this system is to allow monitoring of system temperatures at very short intervals.
 Monitoring at 5 second intervals is ok with the <span 
 class="cmtt-10">STANDARD </span>logging. For 2 second points, a special file is
 available called <span 
 class="cmtt-10">dblog2</span>.
-<!--l. 13085--><p class="noindent" >This has no effect on the VEX file.
-<!--l. 13093--><p class="noindent" >
+<!--l. 13098--><p class="noindent" >This has no effect on the VEX file.
+<!--l. 13106--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13093--><p class="noindent" ><span 
+               <!--l. 13106--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Character
                string
@@ -5276,7 +5276,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13093--><p class="noindent" ><span 
+               <!--l. 13106--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">STANDARD</span>,
@@ -5303,14 +5303,14 @@ class="cmtt-10">POINTING</span>,
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13093--><p class="noindent" ><span 
+               <!--l. 13106--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">STANDARD</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13093--><p class="noindent" ><span 
+               <!--l. 13106--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5319,7 +5319,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13093--><p class="noindent" ><span 
+               <!--l. 13106--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">LOGGING</span>
@@ -5327,14 +5327,14 @@ class="cmtt-10">LOGGING</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">&#8217;dblog2&#8217;</span></dd></dl>
-<!--l. 13096--><p class="noindent" >
+<!--l. 13109--><p class="noindent" >
                                                                                 
                                                                                 
 <h5 class="subsubsectionHead"><a 
  id="x31-2750003.6.4"></a><span 
 class="cmtt-10">LCP50CM </span>and <span 
 class="cmtt-10">RCP50CM</span></h5>
-<!--l. 13098--><p class="noindent" ><span 
+<!--l. 13111--><p class="noindent" ><span 
 class="cmtt-10">LCP50CM </span>and <span 
 class="cmtt-10">RCP50CM </span>controls the LCP and RCP narrow-band (609 to 613&#x00A0;MHz) filter in the 50cm
 system on the VLBA. <span 
@@ -5343,18 +5343,18 @@ class="cmtt-10">NARROW </span>means use it. This band is in the
 UHF TV bands (channel 37) and at some sites the RFI without the filter is so bad that the system will
 saturate, even for the 90cm system (since the IF will saturate). The filter should be used if at all
 possible.
-<!--l. 13111--><p class="noindent" >
+<!--l. 13124--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13111--><p class="noindent" ><span 
+               <!--l. 13124--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Character
                string.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13111--><p class="noindent" ><span 
+               <!--l. 13124--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">BROAD</span>
@@ -5364,14 +5364,14 @@ class="cmtt-10">NARROW</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13111--><p class="noindent" ><span 
+               <!--l. 13124--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">NARROW</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13111--><p class="noindent" ><span 
+               <!--l. 13124--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5380,7 +5380,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13111--><p class="noindent" ><span 
+               <!--l. 13124--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">LCP50CM</span>
@@ -5394,19 +5394,19 @@ class="cmtt-10">RCP50CM</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">BROAD</span></dd></dl>
-<!--l. 13114--><p class="noindent" >
+<!--l. 13127--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2760003.6.4"></a><span 
 class="cmtt-10">M4PATCH</span></h5>
                                                                                 
                                                                                 
-<!--l. 13116--><p class="noindent" ><span 
+<!--l. 13129--><p class="noindent" ><span 
 class="cmtt-10">M4PATCH </span>allows specification of the patching at MarkIV stations. There are limited options so far -
 ASTRO and GEO1.
-<!--l. 13119--><p class="noindent" >ASTRO is the default and has the odd numbered VCs on IF 1 (IFCHAN 1N and 1A) and even
+<!--l. 13132--><p class="noindent" >ASTRO is the default and has the odd numbered VCs on IF 1 (IFCHAN 1N and 1A) and even
 numbered VCs on IF 2 (IFCHAN 2N and 2A). Note that 1N and 2A are often connected to the same
 thing. Same for 2N and 1A. IF 3 is not used.
-<!--l. 13124--><p class="noindent" >GEO1 is for a geodetic style patching. The pattern is:
+<!--l. 13137--><p class="noindent" >GEO1 is for a geodetic style patching. The pattern is:
                                                                                 
                                                                                 
 <div class="verbatim" id="verbatim-18">
@@ -5416,12 +5416,12 @@ thing. Same for 2N and 1A. IF 3 is not used.
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;"&#x00A0;&#x00A0;9-10&#x00A0;&#x00A0;&#x00A0;IF2&#x00A0;low&#x00A0;&#x00A0;=&#x00A0;2120-2240&#x00A0;MHz
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;"&#x00A0;&#x00A0;11-14&#x00A0;&#x00A0;IF2&#x00A0;high&#x00A0;=&#x00A0;2240-2520&#x00A0;MHz
 </div>
-<!--l. 13131--><p class="nopar" >
-<!--l. 13138--><p class="noindent" >
+<!--l. 13144--><p class="nopar" >
+<!--l. 13151--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13138--><p class="noindent" ><span 
+               <!--l. 13151--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Character
                string
@@ -5433,7 +5433,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13138--><p class="noindent" ><span 
+               <!--l. 13151--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">&#8217;&#8217;ASTRO&#8217;&#8217;</span>
@@ -5444,14 +5444,14 @@ class="cmtt-10">&#8217;&#8217;GEO1&#8217;&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13138--><p class="noindent" ><span 
+               <!--l. 13151--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">&#8217;&#8217;ASTRO&#8217;&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13138--><p class="noindent" ><span 
+               <!--l. 13151--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5462,7 +5462,7 @@ class="cmbx-10">Usage:</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 13138--><p class="noindent" ><span 
+               <!--l. 13151--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">M4PATCH</span>
@@ -5470,32 +5470,32 @@ class="cmtt-10">M4PATCH</span>
 class="cmtt-10">=</span>
                <span 
 class="cmtt-10">GEO1</span></dd></dl>
-<!--l. 13141--><p class="noindent" >
+<!--l. 13154--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2770003.6.4"></a><span 
 class="cmtt-10">MODETEST</span></h5>
-<!--l. 13143--><p class="noindent" ><span 
+<!--l. 13156--><p class="noindent" ><span 
 class="cmtt-10">MODETEST </span>was first used to allow testing of recording modes that were not ready for public release. It is
 being adapted for use whenever there are features under development that should not be used by
 normal scientific users. Either the features are still under test, or have not been deployed to sufficient
 antennas to allow science use. For example, it will be used while the new VLBA synthesizers are being
 tested and deployed.
-<!--l. 13156--><p class="noindent" >
+<!--l. 13169--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13156--><p class="noindent" ><span 
+               <!--l. 13169--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                None.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13156--><p class="noindent" ><span 
+               <!--l. 13169--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13156--><p class="noindent" ><span 
+               <!--l. 13169--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Defaults
                to
@@ -5509,7 +5509,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13156--><p class="noindent" ><span 
+               <!--l. 13169--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5520,31 +5520,31 @@ class="cmbx-10">Usage:</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 13156--><p class="noindent" ><span 
+               <!--l. 13169--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">MODETEST</span></dd></dl>
-<!--l. 13160--><p class="noindent" >
+<!--l. 13173--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2780003.6.4"></a><span 
 class="cmtt-10">NCHAN</span></h5>
-<!--l. 13162--><p class="noindent" ><span 
+<!--l. 13175--><p class="noindent" ><span 
 class="cmtt-10">NCHAN </span>gives the number of baseband channels. A baseband channel is the smallest unit that was once an
 analog signal. One sideband from one BBC is a baseband channel. Nothing prevents the user from
 assigning several channels to the same BBC/sideband. In such cases, the data in the two channels will
 be identical.
-<!--l. 13174--><p class="noindent" >
+<!--l. 13187--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13174--><p class="noindent" ><span 
+               <!--l. 13187--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                integer.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13174--><p class="noindent" ><span 
+               <!--l. 13187--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                integer
@@ -5567,7 +5567,7 @@ class="cmtt-10">16</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13174--><p class="noindent" ><span 
+               <!--l. 13187--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -5581,7 +5581,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13174--><p class="noindent" ><span 
+               <!--l. 13187--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5590,15 +5590,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13174--><p class="noindent" ><span 
+               <!--l. 13187--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">NCHAN=14</span></dd></dl>
-<!--l. 13177--><p class="noindent" >
+<!--l. 13190--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2790003.6.4"></a><span 
 class="cmtt-10">NETSIDE</span></h5>
-<!--l. 13179--><p class="noindent" ><span 
+<!--l. 13192--><p class="noindent" ><span 
 class="cmtt-10">NETSIDE </span>gives the net sideband. Usually to be used in conjunction with <span 
 class="cmtt-10">FREQREF </span>and <span 
 class="cmtt-10">FIRSTLO</span>. If
@@ -5610,8 +5610,8 @@ class="cmtt-10">NETSIDE </span>and the frequency settings. Please see
 <a 
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF</span></a> for a discussion of required parameters.
-<!--l. 13186--><p class="noindent" >If only one value is specified, it is used for all channels.
-<!--l. 13188--><p class="noindent" >Sched will attempt to make a default for <span 
+<!--l. 13199--><p class="noindent" >If only one value is specified, it is used for all channels.
+<!--l. 13201--><p class="noindent" >Sched will attempt to make a default for <span 
 class="cmtt-10">NETSIDE </span>if it is not specified. The default will depend on the
 number of channels in the setup file and the number of BBC&#8217;s available at the station. All
 upper sideband will be specified if possible. Upper/lower pairs will be specified otherwise
@@ -5622,11 +5622,11 @@ class="cmtt-10">SIDEBAND</span></a> is specified
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF</span></a> is absent (frequency might end up inconsistent with
 defaults).
-<!--l. 13206--><p class="noindent" >
+<!--l. 13219--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13206--><p class="noindent" ><span 
+               <!--l. 13219--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -5639,7 +5639,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13206--><p class="noindent" ><span 
+               <!--l. 13219--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">U</span>
@@ -5656,7 +5656,7 @@ class="cmtt-10">L</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13206--><p class="noindent" ><span 
+               <!--l. 13219--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -5681,7 +5681,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13206--><p class="noindent" ><span 
+               <!--l. 13219--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5690,15 +5690,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13206--><p class="noindent" ><span 
+               <!--l. 13219--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">NETSIDE=U,L,U,L,U,L,U,L</span></dd></dl>
-<!--l. 13210--><p class="noindent" >
+<!--l. 13223--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2800003.6.4"></a><span 
 class="cmtt-10">NOISE</span></h5>
-<!--l. 13212--><p class="noindent" ><span 
+<!--l. 13225--><p class="noindent" ><span 
 class="cmtt-10">NOISE </span>is the specification for each IF of the switching mode of the noise cals on the VLBA. The usual
 for VLBI is <span 
 class="cmtt-10">&#8217;low-s&#8217; </span>which means that the low noise cal, about 3&#x00A0;K, is switching continuously at 80&#x00A0;Hz
@@ -5710,12 +5710,12 @@ class="cmtt-10">&#8217;high-c&#8217; </span>are the same requests for the high (
                                                                                 
                                                                                 
 cals.
-<!--l. 13220--><p class="noindent" >This has no effect on the VEX file.
-<!--l. 13228--><p class="noindent" >
+<!--l. 13233--><p class="noindent" >This has no effect on the VEX file.
+<!--l. 13241--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13228--><p class="noindent" ><span 
+               <!--l. 13241--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                4
                character
@@ -5733,7 +5733,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13228--><p class="noindent" ><span 
+               <!--l. 13241--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">&#8217;off&#8217;</span>,
@@ -5748,7 +5748,7 @@ class="cmtt-10">&#8217;high-c&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13228--><p class="noindent" ><span 
+               <!--l. 13241--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -5762,7 +5762,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13228--><p class="noindent" ><span 
+               <!--l. 13241--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5773,28 +5773,28 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13228--><p class="noindent" ><span 
+               <!--l. 13241--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">NOISE=&#8217;low-s&#8217;,&#8217;low-s&#8217;,&#8217;low-s&#8217;,&#8217;low-s&#8217;</span></dd></dl>
-<!--l. 13230--><p class="noindent" >
+<!--l. 13243--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2810003.6.4"></a><span 
 class="cmtt-10">NOISEFRQ</span></h5>
-<!--l. 13232--><p class="noindent" >This is not a useful parameter (2013) as the Pie Town link is not in operation. Someday it may be
+<!--l. 13245--><p class="noindent" >This is not a useful parameter (2013) as the Pie Town link is not in operation. Someday it may be
 reactivated, although with different hardware.
-<!--l. 13236--><p class="noindent" ><span 
+<!--l. 13249--><p class="noindent" ><span 
 class="cmtt-10">NOISEFRQ </span>is used to tell the system to use either the VLBA or VLA noise tube switching frequency.
 This is for VLBA antennas only and actually only applies to Pie Town for when the Pie Town-VLA link
 is working. Note that the VLA switching frequency is 9.6 Hz and the VLBA frequency is 80
 Hz. This means, for example, that there will be 80 on and 80 off states per second on the
 VLBA.
-<!--l. 13243--><p class="noindent" >This has no effect on the VEX file.
-<!--l. 13250--><p class="noindent" >
+<!--l. 13256--><p class="noindent" >This has no effect on the VEX file.
+<!--l. 13263--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13250--><p class="noindent" ><span 
+               <!--l. 13263--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                1
                character
@@ -5807,7 +5807,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13250--><p class="noindent" ><span 
+               <!--l. 13263--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">&#8217;VLBA&#8217;</span>,
@@ -5816,14 +5816,14 @@ class="cmtt-10">&#8217;VLA&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13250--><p class="noindent" ><span 
+               <!--l. 13263--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">&#8217;VLBA&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13250--><p class="noindent" ><span 
+               <!--l. 13263--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                                                                                 
                                                                                 
@@ -5834,15 +5834,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13250--><p class="noindent" ><span 
+               <!--l. 13263--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">NOISEFRQ=&#8217;VLA&#8217;</span></dd></dl>
-<!--l. 13253--><p class="noindent" >
+<!--l. 13266--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2820003.6.4"></a><span 
 class="cmtt-10">PERIOD</span></h5>
-<!--l. 13255--><p class="noindent" ><span 
+<!--l. 13268--><p class="noindent" ><span 
 class="cmtt-10">PERIOD </span>gives the integration time for detected powers in the base band converters (BBCs). One value is
 accepted here although <span 
 class="cmcsc-10">SCHED </span>will write that value out separately for each baseband channel. It
@@ -5852,11 +5852,11 @@ class="cmtt-10">1 </span>or <span
 class="cmtt-10">2 </span>typical. A value of <span 
 class="cmtt-10">0 </span>implies do not
 integrate beyond the 1/80 sec cal cycle time.
-<!--l. 13269--><p class="noindent" >
+<!--l. 13282--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13269--><p class="noindent" ><span 
+               <!--l. 13282--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                integer
@@ -5869,7 +5869,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13269--><p class="noindent" ><span 
+               <!--l. 13282--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                integer
@@ -5880,7 +5880,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13269--><p class="noindent" ><span 
+               <!--l. 13282--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                1
                </dd><dt class="list">
@@ -5888,7 +5888,7 @@ class="cmbx-10">Default:</span>
                                                                                 
       </dt><dd 
 class="list">
-               <!--l. 13269--><p class="noindent" ><span 
+               <!--l. 13282--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5897,30 +5897,30 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13269--><p class="noindent" ><span 
+               <!--l. 13282--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PERIOD=2</span></dd></dl>
-<!--l. 13272--><p class="noindent" >
+<!--l. 13285--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2830003.6.4"></a><span 
 class="cmtt-10">PCAL</span></h5>
-<!--l. 13274--><p class="noindent" ><span 
+<!--l. 13287--><p class="noindent" ><span 
 class="cmtt-10">PCAL </span>sets the mode of the pulse cal generator on the VLBA. Note that this can also be
 controlled from the main schedule. Most setup files will set this to the 1 MHz setting. If
 it should be turned off, as for spectral line observations which might be confused by the
 presence of the tones, it is likely that the user will want it on for some scans (calibrators, for
 example) and off for others. In such cases, it is most convenient to control it from the main
 schedule.
-<!--l. 13283--><p class="noindent" >This currently (Oct 2001) cannot be controlled by means of the VEX file. Most MkIV stations only
+<!--l. 13296--><p class="noindent" >This currently (Oct 2001) cannot be controlled by means of the VEX file. Most MkIV stations only
 support &#8220;1MHz&#8221; or &#8220;off&#8221;. Around the EVN, 1 MHz insertion is the default and switching it off is still a
 manual operation at most stations that must be brought to the attention of the local Friend of
 VLBI.
-<!--l. 13296--><p class="noindent" >
+<!--l. 13309--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13296--><p class="noindent" ><span 
+               <!--l. 13309--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                4
                characters
@@ -5930,7 +5930,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13296--><p class="noindent" ><span 
+               <!--l. 13309--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">&#8217;</span>
@@ -5968,7 +5968,7 @@ class="cmtt-10">&#8217;5MHz&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13296--><p class="noindent" ><span 
+               <!--l. 13309--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">&#8217;</span>
@@ -5977,7 +5977,7 @@ class="cmtt-10">&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13296--><p class="noindent" ><span 
+               <!--l. 13309--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -5986,16 +5986,16 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13296--><p class="noindent" ><span 
+               <!--l. 13309--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PCAL=&#8217;5MHz&#8217;</span></dd></dl>
-<!--l. 13299--><p class="noindent" >
+<!--l. 13312--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2840003.6.4"></a><span 
 class="cmtt-10">PCALFR1 </span>and <span 
 class="cmtt-10">PCALFR2</span></h5>
-<!--l. 13301--><p class="noindent" >There are 16 pulse cal detectors in the VLBA formatters, each with the ability to detect signals from 2
+<!--l. 13314--><p class="noindent" >There are 16 pulse cal detectors in the VLBA formatters, each with the ability to detect signals from 2
 bit streams. Each can be set to detect a tone at a different frequency at any multiple of 10&#x00A0;kHz in the
 baseband. <span 
 class="cmtt-10">PCALFR1 </span>and <span 
@@ -6030,13 +6030,13 @@ class="cmtt-10">FREQ </span>or <span
 class="cmtt-10">DOPPLER </span>in the <span 
 class="cmcsc-10">SCHED </span>keyin
 file.
-<!--l. 13319--><p class="noindent" >The default will be to set up all available channels to detect, using sign bits only, first the tone near the
+<!--l. 13332--><p class="noindent" >The default will be to set up all available channels to detect, using sign bits only, first the tone near the
 lower edge of the band in each channel, then a second tone near the high edge of the band in each
 channel, and then state counts (sign and magnitude for 2 bit data) for each channel, then a third tone
 which is (usually) 1 MHz away from the first tone being detected. As many of these tones will be
 detected as possible up to a total number of detected signals that does not exceed the number of
 available detectors.
-<!--l. 13328--><p class="noindent" >There is usually no problem with setting the <span 
+<!--l. 13341--><p class="noindent" >There is usually no problem with setting the <span 
 class="cmtt-10">PCALFR </span>and <span 
 class="cmtt-10">PCALXB </span>parameters when <span 
 class="cmtt-10">PCAL</span>
@@ -6051,15 +6051,15 @@ the pulse cal detector parameters and they will be kept constant or make sure th
 pulse cal setup doesn&#8217;t change (keep constant the number of baseband channels, the channel
 bandwidth, and the pulse cal tone frequencies in the basebands (don&#8217;t change the kHz part of the
 frequency).
-<!--l. 13344--><p class="noindent" >Detection of Phase cal is not currently (Oct 2001) implemented on the PCFS, although the VEX file
+<!--l. 13357--><p class="noindent" >Detection of Phase cal is not currently (Oct 2001) implemented on the PCFS, although the VEX file
 has a way of specifying the desired detection. On MkIV telescopes this requires the installation of
 additional hardware, but even on PCFS controlled telescopes with VLBA hardware this is not yet
 supported.
-<!--l. 13356--><p class="noindent" >
+<!--l. 13369--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13356--><p class="noindent" ><span 
+               <!--l. 13369--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -6075,7 +6075,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13356--><p class="noindent" ><span 
+               <!--l. 13369--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                multiple
@@ -6093,7 +6093,7 @@ class="cmtt-10">16000</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13356--><p class="noindent" ><span 
+               <!--l. 13369--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                See
                above.
@@ -6119,7 +6119,7 @@ class="cmtt-10">PCALFR</span>s
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13356--><p class="noindent" ><span 
+               <!--l. 13369--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6128,16 +6128,16 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13356--><p class="noindent" ><span 
+               <!--l. 13369--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PCALFR1=10,10,10,10,7010,7010,7010,7010</span></dd></dl>
-<!--l. 13360--><p class="noindent" >
+<!--l. 13373--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2850003.6.4"></a><span 
 class="cmtt-10">PCALXB1 </span>and <span 
 class="cmtt-10">PCALXB2</span></h5>
-<!--l. 13362--><p class="noindent" ><span 
+<!--l. 13375--><p class="noindent" ><span 
 class="cmtt-10">PCALXB1 </span>and <span 
 class="cmtt-10">PCALXB2 </span>determine what the pulse cal detectors measure. There are 16 pulse cal detectors
 in each formatter and 1 formatter at each VLBA station. (<span 
@@ -6162,18 +6162,18 @@ the source of the second bit stream. &#8220;Channel number&#8221; means the same
 used as the index for most setup parameters. A detector can be turned off by specifying
 <span 
 class="cmtt-10">&#8217;off&#8217;</span>.
-<!--l. 13381--><p class="noindent" >Most users should not need to worry about setting the pcal detection parameters. <span 
+<!--l. 13394--><p class="noindent" >Most users should not need to worry about setting the pcal detection parameters. <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>defaults to
 a reasonable set which is described in the section on <a 
 href="#x31-2840003.6.4"><span 
 class="cmtt-10">PCALFR1 </span>and <span 
 class="cmtt-10">PCALFR2</span></a>.
-<!--l. 13395--><p class="noindent" >
+<!--l. 13408--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13395--><p class="noindent" ><span 
+               <!--l. 13408--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -6195,7 +6195,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13395--><p class="noindent" ><span 
+               <!--l. 13408--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">S1</span>,
@@ -6219,7 +6219,7 @@ class="cmtt-10">off</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 13395--><p class="noindent" ><span 
+               <!--l. 13408--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                See
                <a 
@@ -6231,7 +6231,7 @@ class="cmtt-10">PCALFR2</span></a>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13395--><p class="noindent" ><span 
+               <!--l. 13408--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6240,7 +6240,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13395--><p class="noindent" ><span 
+               <!--l. 13408--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PCALXB1=S1,S2,S3,S4,S5,S6,S7,off</span>,
@@ -6261,11 +6261,11 @@ class="cmtt-10">PCALXB1=S1,S2,S3,S4,S5,S6,S7,off</span>,
                mode
                E
                observation.</dd></dl>
-<!--l. 13397--><p class="noindent" >
+<!--l. 13410--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2860003.6.4"></a><span 
 class="cmtt-10">POL</span></h5>
-<!--l. 13399--><p class="noindent" ><span 
+<!--l. 13412--><p class="noindent" ><span 
 class="cmtt-10">POL </span>is used to specify the polarization of a channel. This may be used when asking <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>to set a lot
@@ -6279,7 +6279,7 @@ href="#x31-2720003.6.4"><span
 class="cmtt-10">LCHAN</span></a> are not used AND the setup does not correspond to
 one in the <a 
 href="labelSECFRQCATFrequencyCatalog.html#x30-2450003.5">frequency catalog.</a>.
-<!--l. 13408--><p class="noindent" ><span 
+<!--l. 13421--><p class="noindent" ><span 
 class="cmtt-10">POL </span>should be <span 
 class="cmtt-10">RCP, LCP, </span>or <span 
 class="cmtt-10">DUAL</span>. One value per channel can be given. Any channels not
@@ -6291,19 +6291,19 @@ class="cmcsc-10">&#x00A0;</span>will set alternate channels to <span
 class="cmtt-10">RCP </span>and
 <span 
 class="cmtt-10">LCP</span>.
-<!--l. 13414--><p class="noindent" >Actually, <span 
+<!--l. 13427--><p class="noindent" >Actually, <span 
 class="cmtt-10">POL </span>can also be <span 
 class="cmtt-10">R </span>or <span 
 class="cmtt-10">L </span>(meaning <span 
 class="cmtt-10">RCP </span>and <span 
 class="cmtt-10">LCP </span>respectively), but don&#8217;t tell anyone.
-<!--l. 13422--><p class="noindent" >
+<!--l. 13435--><p class="noindent" >
                                                                                 
                                                                                 
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13422--><p class="noindent" ><span 
+               <!--l. 13435--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                array
@@ -6316,7 +6316,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13422--><p class="noindent" ><span 
+               <!--l. 13435--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">RCP</span>,
@@ -6328,7 +6328,7 @@ class="cmtt-10">DUAL</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13422--><p class="noindent" ><span 
+               <!--l. 13435--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Will
                try
@@ -6344,7 +6344,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13422--><p class="noindent" ><span 
+               <!--l. 13435--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6353,17 +6353,17 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13422--><p class="noindent" ><span 
+               <!--l. 13435--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">POL=DUAL</span></dd></dl>
                                                                                 
                                                                                 
-<!--l. 13425--><p class="noindent" >
+<!--l. 13438--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2870003.6.4"></a><span 
 class="cmtt-10">PTINCR</span></h5>
-<!--l. 13427--><p class="noindent" ><span 
+<!--l. 13440--><p class="noindent" ><span 
 class="cmtt-10">PTINCR </span>is used to set the step size for pointing patterns on the VLBA in arc minutes. A 10-point
 pattern is used with off, half-power, on, half-power, and off positions in azimuth, and then in the same
 in elevation. <span 
@@ -6376,11 +6376,11 @@ class="cmtt-10">PTOFF </span>arcminutes off in azimuth and two times <span
 class="cmtt-10">PTINCR </span>off in elevation. This gives a
 smooth sequence in elevation which, at low elevation, significantly improves the baseline
 removal.
-<!--l. 13444--><p class="noindent" >
+<!--l. 13457--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13444--><p class="noindent" ><span 
+               <!--l. 13457--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                real
@@ -6393,7 +6393,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13444--><p class="noindent" ><span 
+               <!--l. 13457--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                number
@@ -6412,7 +6412,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13444--><p class="noindent" ><span 
+               <!--l. 13457--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -6425,7 +6425,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13444--><p class="noindent" ><span 
+               <!--l. 13457--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6434,24 +6434,24 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13444--><p class="noindent" ><span 
+               <!--l. 13457--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PTINCR=4.0</span></dd></dl>
-<!--l. 13448--><p class="noindent" >
+<!--l. 13461--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2880003.6.4"></a><span 
 class="cmtt-10">PTOFF</span></h5>
-<!--l. 13450--><p class="noindent" ><span 
+<!--l. 13463--><p class="noindent" ><span 
 class="cmtt-10">PTOFF </span>is used to set the distance to the off source position for pointing patterns on the VLBA in arc
 minutes. See <a 
 href="#x31-2870003.6.4"><span 
 class="cmtt-10">PTINCR</span></a> for more information.
-<!--l. 13461--><p class="noindent" >
+<!--l. 13474--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13461--><p class="noindent" ><span 
+               <!--l. 13474--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                real
@@ -6464,7 +6464,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13461--><p class="noindent" ><span 
+               <!--l. 13474--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                number
@@ -6485,14 +6485,14 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13461--><p class="noindent" ><span 
+               <!--l. 13474--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">6.0*PTINCR</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13461--><p class="noindent" ><span 
+               <!--l. 13474--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6501,35 +6501,35 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13461--><p class="noindent" ><span 
+               <!--l. 13474--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">PTOFF=36.0</span></dd></dl>
-<!--l. 13464--><p class="noindent" >
+<!--l. 13477--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2890003.6.4"></a><span 
 class="cmtt-10">SAMPRATE</span></h5>
-<!--l. 13466--><p class="noindent" ><span 
+<!--l. 13479--><p class="noindent" ><span 
 class="cmtt-10">SAMPRATE </span>is used to set the sample rate in million samples per second. Only one value is used for all
 baseband channels. This is usually, but not always, twice the baseband bandwidth specified with
 <a 
 href="#x31-2550003.6.4"><span 
 class="cmtt-10">BBFILTER</span></a>. Not used for Mark&#x00A0;II.
-<!--l. 13471--><p class="noindent" >If not specified, twice the maximum bandwidth will be used, if <a 
+<!--l. 13484--><p class="noindent" >If not specified, twice the maximum bandwidth will be used, if <a 
 href="#x31-2550003.6.4"><span 
 class="cmtt-10">BBFILTER</span></a> was specified.
-<!--l. 13474--><p class="noindent" >Note that the <span 
+<!--l. 13487--><p class="noindent" >Note that the <span 
 class="cmtt-10">SAMPRATE </span>should not be less than 2 Mbps for the VLBA (may change with
 Mark5C). That is the minimum track bit rate for the old tape systems and for the Mark5A
 and the fan-in capability was never activated so lower sample rates cannot be recorded.
 The user will need to specify the SP: SAMPRATE in such cases because the defaulting
 doesn&#8217;t deal with this restriction. It would be fixed, but the restriction will likely go away
 soon.
-<!--l. 13489--><p class="noindent" >
+<!--l. 13502--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13489--><p class="noindent" ><span 
+               <!--l. 13502--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Sample
                rate
@@ -6543,7 +6543,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13489--><p class="noindent" ><span 
+               <!--l. 13502--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">0.25</span>,
@@ -6565,7 +6565,7 @@ class="cmtt-10">32</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13489--><p class="noindent" ><span 
+               <!--l. 13502--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -6578,7 +6578,7 @@ class="cmtt-10">BBFILTER</span></a>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13489--><p class="noindent" ><span 
+               <!--l. 13502--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6587,29 +6587,29 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13489--><p class="noindent" ><span 
+               <!--l. 13502--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">SAMPRATE=4</span></dd></dl>
-<!--l. 13492--><p class="noindent" >
+<!--l. 13505--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2900003.6.4"></a><span 
 class="cmtt-10">SIDEBAND</span></h5>
-<!--l. 13494--><p class="noindent" ><span 
+<!--l. 13507--><p class="noindent" ><span 
 class="cmtt-10">SIDEBAND </span>is used to specify the baseband converter (BBC) sideband for each channel. This may not be
 the same as the net sideband if the first mix is lower sideband, as for the VLBA it always is at
 20cm and 13cm and can be at other bands. Please see <a 
 href="#x31-2680003.6.4"><span 
 class="cmtt-10">FREQREF</span></a> for a discussion of required
 parameters.
-<!--l. 13501--><p class="noindent" >If only one value is specified, it is used for all channels.
-<!--l. 13508--><p class="noindent" >
+<!--l. 13514--><p class="noindent" >If only one value is specified, it is used for all channels.
+<!--l. 13521--><p class="noindent" >
                                                                                 
                                                                                 
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13508--><p class="noindent" ><span 
+               <!--l. 13521--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                single
@@ -6621,7 +6621,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13508--><p class="noindent" ><span 
+               <!--l. 13521--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">U</span>
@@ -6631,7 +6631,7 @@ class="cmtt-10">L</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13508--><p class="noindent" ><span 
+               <!--l. 13521--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -6641,7 +6641,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13508--><p class="noindent" ><span 
+               <!--l. 13521--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6650,15 +6650,15 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13508--><p class="noindent" ><span 
+               <!--l. 13521--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">SIDEBAND=U,L,U,L,U,L,U,L</span></dd></dl>
-<!--l. 13511--><p class="noindent" >
+<!--l. 13524--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2910003.6.4"></a><span 
 class="cmtt-10">STATION</span></h5>
-<!--l. 13513--><p class="noindent" ><span 
+<!--l. 13526--><p class="noindent" ><span 
 class="cmtt-10">STATION </span>gives the names of the stations for which this group of setup parameters applies.
 <span 
 class="cmcsc-10">SCHED</span><span 
@@ -6669,14 +6669,14 @@ station dependent. Therefore, if only using very generic inputs, one can lump th
                                                                                 
                                                                                 
 if their final parameters are different.
-<!--l. 13523--><p class="noindent" >There are two defaults allowed, <span 
+<!--l. 13536--><p class="noindent" >There are two defaults allowed, <span 
 class="cmtt-10">VLBA </span>and <span 
 class="cmtt-10">&#8217; &#8217; </span>(or none specified). If no stations are specified, the
 program goes through the schedule and finds all stations that are in scans that request that setup file
 and that have not been specified in other groups within the setup file. Those stations (just <span 
 class="cmtt-10">VLBA</span>) for
 any VLBA stations) are added to the setup station list.
-<!--l. 13530--><p class="noindent" >Later, the program looks for a perfect match to the station. If it finds one, it uses that setup group. If
+<!--l. 13543--><p class="noindent" >Later, the program looks for a perfect match to the station. If it finds one, it uses that setup group. If
 not, it checks whether the station is a VLBA station (first 4 characters in the station name are <span 
 class="cmtt-10">VLBA</span>)
 and whether there was a <span 
@@ -6685,15 +6685,15 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>uses the parameters from the <span 
 class="cmtt-10">vlba</span>
 group.
-<!--l. 13536--><p class="noindent" >The old <span 
+<!--l. 13549--><p class="noindent" >The old <span 
 class="cmtt-10">station=default </span>option has been removed.
-<!--l. 13538--><p class="noindent" >Note that you cannot specify no stations for one setup group and some specific ones for another within
+<!--l. 13551--><p class="noindent" >Note that you cannot specify no stations for one setup group and some specific ones for another within
 the same file and expect anything reasonable to happen.
-<!--l. 13547--><p class="noindent" >
+<!--l. 13560--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13547--><p class="noindent" ><span 
+               <!--l. 13560--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Up
                to
@@ -6709,7 +6709,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13547--><p class="noindent" ><span 
+               <!--l. 13560--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                valid
@@ -6725,7 +6725,7 @@ class="cmtt-10">&#8217;VLBA&#8217;</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13547--><p class="noindent" ><span 
+               <!--l. 13560--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                All
                stations
@@ -6739,7 +6739,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13547--><p class="noindent" ><span 
+               <!--l. 13560--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                ???.
                Defaults
@@ -6749,28 +6749,28 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13547--><p class="noindent" ><span 
+               <!--l. 13560--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">STATION=&#8217;VLBA</span><span 
 class="cmtt-10">_PT&#8217;</span></dd></dl>
-<!--l. 13550--><p class="noindent" >
+<!--l. 13563--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2920003.6.4"></a> <span 
 class="cmtt-10">STRING1, STRING2, STRING3, </span>and <span 
 class="cmtt-10">STRING4</span></h5>
-<!--l. 13552--><p class="noindent" ><span 
+<!--l. 13565--><p class="noindent" ><span 
 class="cmtt-10">STRING1, STRING2, STRING3, </span>and <span 
 class="cmtt-10">STRING4 </span>are 80-character string that will be placed in the VLBA
 control file without modification. This allows for new scheduling parameters provided by the on-line
 group to be used before they get properly built into <span 
 class="cmcsc-10">SCHED</span>. Comments could be passed this way by
 preceding them &#8220;!*&#8221; and following them with &#8220;*!&#8221;.
-<!--l. 13564--><p class="noindent" >
+<!--l. 13577--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13564--><p class="noindent" ><span 
+               <!--l. 13577--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                Any
                80
@@ -6779,7 +6779,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13564--><p class="noindent" ><span 
+               <!--l. 13577--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                It
                just
@@ -6796,7 +6796,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13564--><p class="noindent" ><span 
+               <!--l. 13577--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Blank
                -
@@ -6809,7 +6809,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13564--><p class="noindent" ><span 
+               <!--l. 13577--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6818,7 +6818,7 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13564--><p class="noindent" ><span 
+               <!--l. 13577--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">STRING1=&#8217;</span>
@@ -6830,25 +6830,25 @@ class="cmtt-10">Special</span>
 class="cmtt-10">scan</span>
                <span 
 class="cmtt-10">*!&#8217;</span></dd></dl>
-<!--l. 13567--><p class="noindent" >
+<!--l. 13580--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2930003.6.4"></a><span 
 class="cmtt-10">SWTCHDUR</span></h5>
-<!--l. 13569--><p class="noindent" >For frequency switched observations, with <span 
+<!--l. 13582--><p class="noindent" >For frequency switched observations, with <span 
 class="cmtt-10">FRSWITCH </span>set, <span 
 class="cmtt-10">SWTCHDUR </span>gives the time spent on each switch
 cycle. The scan must be long enough to allow a full scan setup. 15 seconds is probably the minimum
 reasonable switch time. For observations to be processed on Mark&#x00A0;III correlators, there are additional
 restrictions on the possible integration times; multiples of 5 seconds are OK, as are some other
 times.
-<!--l. 13577--><p class="noindent" >The frequency switching mode in <span 
+<!--l. 13590--><p class="noindent" >The frequency switching mode in <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>is seldom if ever used so should be treated carefully.
-<!--l. 13585--><p class="noindent" >
+<!--l. 13598--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13585--><p class="noindent" ><span 
+               <!--l. 13598--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                                                                                 
@@ -6860,7 +6860,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13585--><p class="noindent" ><span 
+               <!--l. 13598--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                integer.
@@ -6871,7 +6871,7 @@ class="cmtt-10">15</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13585--><p class="noindent" ><span 
+               <!--l. 13598--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -6885,7 +6885,7 @@ class="cmtt-10">FRSWITCH</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13585--><p class="noindent" ><span 
+               <!--l. 13598--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6894,20 +6894,20 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13585--><p class="noindent" ><span 
+               <!--l. 13598--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">SWTCHDUR=15</span></dd></dl>
-<!--l. 13588--><p class="noindent" >
+<!--l. 13601--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2940003.6.4"></a><span 
 class="cmtt-10">SYNTH</span></h5>
-<!--l. 13590--><p class="noindent" ><span 
+<!--l. 13603--><p class="noindent" ><span 
 class="cmtt-10">SYNTH </span>is a 3 element array of frequency settings for the three 2-16&#x00A0;GHz synthesizers for the VLBA.
 This is the LO for the first mix. After this mix (or 2 mixes for 1.3cm and 7mm), the signal must be in
 the 500-1000&#x00A0;MHz IF band.
-<!--l. 13595--><p class="noindent" >Harmonic mixing issue:
-<!--l. 13597--><p class="noindent" >Internally generated RFI tones can result from mixing of harmonics of the front-end synthesizers on the
+<!--l. 13608--><p class="noindent" >Harmonic mixing issue:
+<!--l. 13610--><p class="noindent" >Internally generated RFI tones can result from mixing of harmonics of the front-end synthesizers on the
 VLBA. Under some circumstances, these tones can have amplitudes of several hundred in the
                                                                                 
                                                                                 
@@ -6917,28 +6917,28 @@ smoothing. They are also seen, more weakly, in the cross-correlations because of
 power in the affected channel. All three of the synthesizers are involved in producing these tones
 whether or not they are actually in use. So it matters how all synthesizers are set, not just the active
 ones.
-<!--l. 13609--><p class="noindent" >The tones are strongest when the frequencies that mix include the nominal output frequency of one of
+<!--l. 13622--><p class="noindent" >The tones are strongest when the frequencies that mix include the nominal output frequency of one of
 the synthesizers. They are also strongest, at least for the 4-8 GHz &#8221;6cm&#8221; receiver when the synthesizers
 are numbers 1 and 2, both of which feed the IF converter. Other harmonics, and synthesizer 3, which
 usually is used for the high frequency front ends, create tones that are much weaker. A
 complication is that, above 8.0 GHz, the synthesizer&#8217;s main oscillator is running at half
 the output frequency and doubler produces the final output. A birdy is seen at the half
 frequency.
-<!--l. 13619--><p class="noindent" >SCHED tries to warn of choices of front end frequencies (often obtained from the freq.dat file) that
+<!--l. 13632--><p class="noindent" >SCHED tries to warn of choices of front end frequencies (often obtained from the freq.dat file) that
 could cause problems. When SCHED is allowed to choose the frequencies of the unused synthesizers
 (Setup parameter SYNTH), it will try exhaustively to find benign frequencies and it should be able to
 in essentially all cases. So it is best to let SCHED choose.
-<!--l. 13626--><p class="noindent" >It is not yet clear which bands can be affected when SCHED is allowed to choose the unused synthesizer
+<!--l. 13639--><p class="noindent" >It is not yet clear which bands can be affected when SCHED is allowed to choose the unused synthesizer
 settings. Any case where only one synthesizer is in use (most observations below 16 GHz) will be ok as
 SCHED can find benign settings for the other two. If 2 IF pairs are in use in the new 6cm receiver,
 it is established that one can get in trouble with this issue - that is where it was found.
 S/X and high frequencies where synthesizer 3 is used in the front end have not yet been
 tested.
-<!--l. 13640--><p class="noindent" >
+<!--l. 13653--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13640--><p class="noindent" ><span 
+               <!--l. 13653--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                3
                frequencies
@@ -6947,7 +6947,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13640--><p class="noindent" ><span 
+               <!--l. 13653--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                N*500
                +-
@@ -6960,7 +6960,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13640--><p class="noindent" ><span 
+               <!--l. 13653--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -6973,7 +6973,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13640--><p class="noindent" ><span 
+               <!--l. 13653--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -6982,17 +6982,17 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13640--><p class="noindent" ><span 
+               <!--l. 13653--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">SYNTH=15.9,4.1,15.9</span></dd></dl>
-<!--l. 13643--><p class="noindent" >
+<!--l. 13656--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2950003.6.4"></a><span 
 class="cmtt-10">TPMODE</span></h5>
-<!--l. 13645--><p class="noindent" ><span 
+<!--l. 13658--><p class="noindent" ><span 
 class="cmtt-10">TPMODE </span>is an obsolete parameter since tape is no longer used.
-<!--l. 13647--><p class="noindent" ><span 
+<!--l. 13660--><p class="noindent" ><span 
 class="cmtt-10">TPMODE </span>sets the number of passes at each head index position. Allowed values are 1, 2, 4, and 8. For
 these cases, a maximum of 32, 16, 8, or 4 heads can be used at a time. <span 
 class="cmtt-10">TPMODE=1 </span>is appropriate for
@@ -7011,7 +7011,7 @@ be recorded on the tape. It is strongly advised that all setup files for a proje
 class="cmtt-10">TPMODE</span>. Note, however, that different stations can use different <span 
 class="cmtt-10">TPMODES </span>without wasting
 tape.
-<!--l. 13663--><p class="noindent" >The correct <span 
+<!--l. 13676--><p class="noindent" >The correct <span 
 class="cmtt-10">TPMODE </span>can be determined from the <a 
 href="#x31-2660003.6.4"><span 
 class="cmtt-10">FORMAT</span></a>, the number of bits per sample ( <a 
@@ -7025,12 +7025,12 @@ total number of tracks is divided into 32 to get <span
 class="cmtt-10">TPMODE</span>. For Mark&#x00A0;III, observations, the total number of
 heads available is normally 28, although the VLBA systems can record 32 tracks in Mark&#x00A0;III
 format.
-<!--l. 13674--><p class="noindent" ><span 
+<!--l. 13687--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will derive a reasonable default for <span 
 class="cmtt-10">TPMODE </span>in almost all cases so it is not necessary to specify
 it.
-<!--l. 13677--><p class="noindent" ><span 
+<!--l. 13690--><p class="noindent" ><span 
 class="cmtt-10">TPMODE </span>can be used to force a format if <span 
 class="cmtt-10">FORMAT </span>is not being specified, as is reasonable in station
 independent setup files. A fan out will be chosen that generates the requested number of passes
@@ -7038,25 +7038,25 @@ per head position. If the observation uses wide band, 2 head (Mark IV and VLBA4)
 2 tape (VLBA) mode, the fan out will be chosen assuming that all antennas have the 2
 head/tape capability. Later, for single drive stations, the number of channels will be cut in
 half.
-<!--l. 13685--><p class="noindent" >For S2 recorders <span 
+<!--l. 13698--><p class="noindent" >For S2 recorders <span 
 class="cmtt-10">TPMODE </span>denotes the number of groups the S2 recorder can use in the desired recording
 mode. In other words it is the total number of recorders divided by the number of recorders implied by
 the mode. It must be consistent with the S2 mode implied by the number of channels and bandwidth to
                                                                                 
                                                                                 
 be record.
-<!--l. 13696--><p class="noindent" >
+<!--l. 13709--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13696--><p class="noindent" ><span 
+               <!--l. 13709--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                An
                integer.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13696--><p class="noindent" ><span 
+               <!--l. 13709--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                <span 
 class="cmtt-10">1</span>,
@@ -7070,7 +7070,7 @@ class="cmtt-10">8</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13696--><p class="noindent" ><span 
+               <!--l. 13709--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -7085,7 +7085,7 @@ class="cmcsc-10">&#x00A0;</span>will
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13696--><p class="noindent" ><span 
+               <!--l. 13709--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -7094,20 +7094,20 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13696--><p class="noindent" ><span 
+               <!--l. 13709--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">TPMODE=2</span></dd></dl>
-<!--l. 13699--><p class="noindent" >
+<!--l. 13712--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2960003.6.4"></a><span 
 class="cmtt-10">TPSPEED</span></h5>
-<!--l. 13701--><p class="noindent" >The <span 
+<!--l. 13714--><p class="noindent" >The <span 
 class="cmtt-10">TPSPEED </span>and related parameters are even more obsolete now than noted below because tape is no
 longer used.
                                                                                 
                                                                                 
-<!--l. 13704--><p class="noindent" ><span 
+<!--l. 13717--><p class="noindent" ><span 
 class="cmtt-10">TPSPEED </span>is an obsolete form that has been replaced by <a 
 href="#x31-2970003.6.4"><span 
 class="cmtt-10">TPSPEEDH</span></a> and <a 
@@ -7115,13 +7115,13 @@ href="#x31-2980003.6.4"><span
 class="cmtt-10">TPSPEEDL</span></a>. It will cause an error
 message to be written. The value given will be used for <span 
 class="cmtt-10">TPSPEEDL</span>.
-<!--l. 13710--><p class="noindent" >
+<!--l. 13723--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2970003.6.4"></a><span 
 class="cmtt-10">TPSPEEDH</span></h5>
-<!--l. 13712--><p class="noindent" ><span 
+<!--l. 13725--><p class="noindent" ><span 
 class="cmtt-10">TPSPEEDH </span>is an obsolete parameter because tape is no longer used.
-<!--l. 13714--><p class="noindent" ><span 
+<!--l. 13727--><p class="noindent" ><span 
 class="cmtt-10">TPSPEEDH </span>tells <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>the recording speed of the tape in inches per second when recording at high
@@ -7135,12 +7135,12 @@ etc. The density at which the recording should be made is set by the <a
 href="labelSECTPINITapeInitializationFile.html#x29-2420003.4.1"><span 
 class="cmtt-10">DENSITY</span></a> parameter in the tape
 initialization inputs.
-<!--l. 13724--><p class="noindent" ><span 
+<!--l. 13737--><p class="noindent" ><span 
 class="cmtt-10">TPSPEEDH </span>and <span 
 class="cmtt-10">TPSPEEDL </span>will default to the correct values for tapes written on VLBA, Mark&#x00A0;III, Mark
 IV, VLBA4 and S2 systems. It should not be necessary to specify them and it is probably safer not to
 do so.
-<!--l. 13729--><p class="noindent" >The speeds currently in use are:
+<!--l. 13742--><p class="noindent" >The speeds currently in use are:
      <dl class="description"><dt class="description">
 <span 
 class="cmbx-10">67.5 ips</span> </dt><dd 
@@ -7366,13 +7366,13 @@ class="description">
      low
      density
      recordings.</dd></dl>
-<!--l. 13757--><p class="noindent" >The VLBA and VLA started using high density on all thin tapes on about 1 May 1996.
-<!--l. 13760--><p class="noindent" >Note that the recording speed determines the speed up factor on playback. All playback on the VLBA
+<!--l. 13770--><p class="noindent" >The VLBA and VLA started using high density on all thin tapes on about 1 May 1996.
+<!--l. 13773--><p class="noindent" >Note that the recording speed determines the speed up factor on playback. All playback on the VLBA
 correlator is done at the higher speed (160, 266.66 or 270 ips). Projects recorded at less than the highest
 speed will play back in less than real time. It is important that a reasonable fraction of projects have
 a speed up factor of more than unity or the correlator will not be able to keep up with
 observing.
-<!--l. 13768--><p class="noindent" >The VLBA control file only specifies <span 
+<!--l. 13781--><p class="noindent" >The VLBA control file only specifies <span 
 class="cmtt-10">STOP</span>, <span 
 class="cmtt-10">+RUN</span>, <span 
 class="cmtt-10">-RUN</span>, <span 
@@ -7383,11 +7383,11 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>has the values different from
 what the on-line system chooses to use, the direction and head position commands, along with tape
 changes, will be wrong and the project will be messed up.
-<!--l. 13781--><p class="noindent" >
+<!--l. 13794--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13781--><p class="noindent" ><span 
+               <!--l. 13794--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                real
@@ -7406,7 +7406,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13781--><p class="noindent" ><span 
+               <!--l. 13794--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                of
@@ -7416,7 +7416,7 @@ class="cmbx-10">Options:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13781--><p class="noindent" ><span 
+               <!--l. 13794--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Defaults
                to
@@ -7430,7 +7430,7 @@ class="cmbx-10">Default:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13781--><p class="noindent" ><span 
+               <!--l. 13794--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -7439,30 +7439,30 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13781--><p class="noindent" ><span 
+               <!--l. 13794--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">TPSPEED=80</span></dd></dl>
-<!--l. 13783--><p class="noindent" >
+<!--l. 13796--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2980003.6.4"></a><span 
 class="cmtt-10">TPSPEEDL</span></h5>
-<!--l. 13785--><p class="noindent" ><span 
+<!--l. 13798--><p class="noindent" ><span 
 class="cmtt-10">TPSPEEDL </span>is an obsolete parameter because tape is no longer used.
-<!--l. 13787--><p class="noindent" ><span 
+<!--l. 13800--><p class="noindent" ><span 
 class="cmtt-10">TPSPEEDL </span>tells <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>the recording speed of the tape in inches per second when recording at low
 density. See the discussion of <a 
 href="#x31-2970003.6.4"><span 
 class="cmtt-10">TPSPEEDH</span></a> for details.
-<!--l. 13797--><p class="noindent" >
+<!--l. 13810--><p class="noindent" >
                <dl class="list1"><dt class="list">
                                                                                 
                                                                                 
       </dt><dd 
 class="list">
-               <!--l. 13797--><p class="noindent" ><span 
+               <!--l. 13810--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                A
                real
@@ -7479,7 +7479,7 @@ class="cmbx-10">Argument:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13797--><p class="noindent" ><span 
+               <!--l. 13810--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                of
@@ -7492,7 +7492,7 @@ class="cmtt-10">TPSPEEDH</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13797--><p class="noindent" ><span 
+               <!--l. 13810--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                Defaults
                as
@@ -7509,7 +7509,7 @@ class="cmtt-10">TPSPEEDH</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13797--><p class="noindent" ><span 
+               <!--l. 13810--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -7520,16 +7520,16 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13797--><p class="noindent" ><span 
+               <!--l. 13810--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">TPSPEED=135</span></dd></dl>
-<!--l. 13801--><p class="noindent" >
+<!--l. 13814--><p class="noindent" >
 <h5 class="subsubsectionHead"><a 
  id="x31-2990003.6.4"></a> <span 
 class="cmtt-10">TRACK1, TRACK2, ... , TRACK7, </span>and <span 
 class="cmtt-10">TRACK8</span></h5>
-<!--l. 13803--><p class="noindent" >The <span 
+<!--l. 13816--><p class="noindent" >The <span 
 class="cmtt-10">TRACKn </span>parameters are mostly obsolete since tape is no longer used. For Mark5A disk
 systems, the track concept is retained, but as if there were only one pass, so <span 
 class="cmtt-10">TRACK1 </span>might still
@@ -7537,7 +7537,7 @@ be used. But <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>generally takes care of track assignments without input from the
 user.
-<!--l. 13809--><p class="noindent" >The <span 
+<!--l. 13822--><p class="noindent" >The <span 
 class="cmtt-10">TRACKn </span>parameters are arrays of track specifications for use during the <span 
 class="cmtt-10">n</span>th pass at a head
 position. One track is given for each baseband channel. For Mark&#x00A0;III, there is a one-to-one
@@ -7552,7 +7552,7 @@ only track mentioned in a <span
 class="cmtt-10">TRACKn </span>parameter is 2. If a fan-in mode is used, more than one
 channel should be given the same track specification. Fan-in modes are not yet tested or in
 use.
-<!--l. 13826--><p class="noindent" >For modes VLBA1:1, VLBA1:2, VLBA1:4, Mark&#x00A0;III mode B with ascending frequency order
+<!--l. 13839--><p class="noindent" >For modes VLBA1:1, VLBA1:2, VLBA1:4, Mark&#x00A0;III mode B with ascending frequency order
 (alternating sidebands), and Mark&#x00A0;III mode E, <span 
 class="cmtt-10">TRACK1 </span>can be left out. All of the <span 
 class="cmtt-10">TRACKn </span>commands
@@ -7563,11 +7563,11 @@ set the tracks for the requested mode. For the Mark&#x00A0;III modes, extra base
 and 1 for Mode E) can be specified and will be put on the edge tracks that are not normally used for
 Mark&#x00A0;III. For Mode B, they should follow the same alternating sideband pattern as the rest of the
 channels.
-<!--l. 13845--><p class="noindent" >
+<!--l. 13858--><p class="noindent" >
                <dl class="list1"><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                One
                integer
@@ -7580,7 +7580,7 @@ class="cmbx-10">Argument:</span>
 class="list">
                                                                                 
                                                                                 
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                Any
                integer
@@ -7593,7 +7593,7 @@ class="cmtt-10">33</span>.
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                <span 
 class="cmtt-10">0</span>
@@ -7608,7 +7608,7 @@ class="cmtt-10">0</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                Defaults
                to
@@ -7617,13 +7617,13 @@ class="cmbx-10">Usage:</span>
                </dd><dt class="list">
       </dt><dd 
 class="list">
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                <span 
 class="cmtt-10">TRACK1=4,18,6,20,8,22,10,24,12,26,14,28,16,30</span>
-               <!--l. 13845--><p class="noindent" ><span 
+               <!--l. 13858--><p class="noindent" ><span 
 class="cmtt-10">TRACK2=5,19,7,21,9,23,11,25,13,27,15,29,17,31</span>
-               <!--l. 13845--><p class="noindent" >This
+               <!--l. 13858--><p class="noindent" >This
                example
                is
                Mark&#x00A0;III
@@ -7631,12 +7631,12 @@ class="cmtt-10">TRACK2=5,19,7,21,9,23,11,25,13,27,15,29,17,31</span>
                B.</dd></dl>
                                                                                 
                                                                                 
-<!--l. 13848--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 13861--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSATINITSatelliteInitialization.html" >next</a>] [<a 
 href="labelSECFRQCATFrequencyCatalog.html" >prev</a>] [<a 
 href="labelSECFRQCATFrequencyCatalog.html#taillabelSECFRQCATFrequencyCatalog.html" >prev-tail</a>] [<a 
 href="labelSECSETUPSSetupFiles.html" >front</a>] [<a 
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSETUPSSetupFiles.html" >up</a>] </p></div>
-<!--l. 13848--><p class="noindent" ><a 
+<!--l. 13861--><p class="noindent" ><a 
  id="taillabelSECSETUPSSetupFiles.html"></a>   
 </body></html> 

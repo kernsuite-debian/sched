@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 10782--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 10795--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECTPINITapeInitializationFile.html" >next</a>] [<a 
 href="labelSECSRCCATSourceCatalog.html" >prev</a>] [<a 
 href="labelSECSRCCATSourceCatalog.html#taillabelSECSRCCATSourceCatalog.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECSTACATStationCatalogandLocationsCatalog.html">tail</a>] [<a
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSTACATStationCatalogandLocationsCatalog.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">3.3   </span> <a 
  id="x28-2310003.3"></a>Station Catalog and Locations Catalog</h3>
-<!--l. 10784--><p class="noindent" ><span 
+<!--l. 10797--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>uses a catalog to get station information such as names, positions, horizons, slew
 characteristics and more. This catalog is in keyin format. Station positions may be stored separately in
@@ -36,19 +36,19 @@ class="cmcsc-10">&#x00A0;</span>is at
 <a 
 href="catalogs/stations.dat" ><span 
 class="cmtt-10">$SCHED/catalogs/stations.dat</span></a>.
-<!--l. 10797--><p class="noindent" ><span 
+<!--l. 10810--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>input parameter <span 
 class="cmtt-10">STAFILE </span>is used to point to any desired external catalog. A file
 name of up to 80 characters can be specified. The default is the standard catalog for digital
 backends:
-<!--l. 10800--><p class="noindent" ><span 
+<!--l. 10813--><p class="noindent" ><span 
 class="cmtt-10">STAFILE=$SCHED/catalogs/stations</span><span 
 class="cmtt-10">_RDBE.dat</span>. Eventually that will be set back to
 <span 
 class="cmtt-10">STAFILE=$SCHED/catalogs/stations.dat </span>once the conversion of documentation and examples is
 complete.
-<!--l. 10804--><p class="noindent" >Station catalog information can be given in the main <span 
+<!--l. 10817--><p class="noindent" >Station catalog information can be given in the main <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>keyin file. If the keyword <span 
 class="cmtt-10">STACAT</span>
@@ -60,7 +60,7 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>keyin file before the all of the input for
 the first scan is complete. This allows the use of station codes to specify stations in each
 scan.
-<!--l. 10813--><p class="noindent" >Both in-line catalog entries and an external catalog may be used for the station catalog. This
+<!--l. 10826--><p class="noindent" >Both in-line catalog entries and an external catalog may be used for the station catalog. This
 would mainly be useful if there is a non-standard antenna in the schedule. That antenna&#8217;s
 parameters can be put in the in-line catalog while all other antennas are picked up from the
 external catalog. If you wish to prevent <span 
@@ -68,7 +68,7 @@ class="cmcsc-10">SCHED</span><span
 class="cmcsc-10">&#x00A0;</span>from looking in external catalogs, specify
 <span 
 class="cmtt-10">STAFILE=NONE</span>.
-<!--l. 10820--><p class="noindent" >It is only necessary to give one of <span 
+<!--l. 10833--><p class="noindent" >It is only necessary to give one of <span 
 class="cmtt-10">X</span>, <span 
 class="cmtt-10">Y</span>, and <span 
 class="cmtt-10">Z </span>or <span 
@@ -79,7 +79,7 @@ If both are given, the provided values will be used. If a conversion is done, th
 and the calculations are accurate at the cm level. Since WGS84 is tied to the ITRF, this
 should be a good way to convert GPS coordinates to the Earth centered coordinates used in
 VLBI.
-<!--l. 10828--><p class="noindent" >Some of the information that can be given in the station catalog can also be provided through a
+<!--l. 10841--><p class="noindent" >Some of the information that can be given in the station catalog can also be provided through a
 locations catalog. This is mostly position information. The locations catalog can be specified by
 <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1310003.1.2"><span 
@@ -102,12 +102,12 @@ class="cmtt-10">LOCFILE</span></a> if they keep the <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>standard catalogs in a non-standard
 place.
-<!--l. 10848--><p class="noindent" >The parameters of the station catalog are given below. Items that can be in the locations catalog are
+<!--l. 10861--><p class="noindent" >The parameters of the station catalog are given below. Items that can be in the locations catalog are
                                                                                 
                                                                                 
 noted. Lower case letters are optional. Entries for a station in the Station Catalog are terminated with
 a &#8220;/&#8221;.
-<!--l. 10853--><p class="noindent" >Version and station names:
+<!--l. 10866--><p class="noindent" >Version and station names:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">VERSION</span><span 
@@ -309,7 +309,7 @@ class="cmtt-10">STCode</span>.
      locations
      catalog.
      </dd></dl>
-<!--l. 10883--><p class="noindent" >Station location:
+<!--l. 10896--><p class="noindent" >Station location:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">FRAME</span><span 
@@ -695,7 +695,7 @@ class="description">
      <span 
 class="cmcsc-10">SCHED</span>).
      </dd></dl>
-<!--l. 10938--><p class="noindent" >Hardware types:
+<!--l. 10951--><p class="noindent" >Hardware types:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">CONtrol</span><span 
@@ -1062,7 +1062,7 @@ class="cmtt-10">DBE</span></a>
      setup
      file
      parameter.
-     <!--l. 10978--><p class="noindent" >The
+     <!--l. 10991--><p class="noindent" >The
      <span 
 class="cmtt-10">RDBE2</span>
      option
@@ -1304,7 +1304,7 @@ class="cmtt-10">TAPE </span>and <span
 class="cmtt-10">DISK</span>. This is meant to facilitate VLBA operations during the
      transition from tape to disk.
      </dd></dl>
-<!--l. 11046--><p class="noindent" >Horizon:
+<!--l. 11059--><p class="noindent" >Horizon:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">HOR</span><span 
@@ -1371,7 +1371,7 @@ class="cmcsc-10">SCHED</span>&#8217;s
      optimization
      mode.
      </dd></dl>
-<!--l. 11060--><p class="noindent" >Mount details and performance:
+<!--l. 11073--><p class="noindent" >Mount details and performance:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">MOUNT</span><span 
@@ -1832,7 +1832,7 @@ class="description">
      and
      deceleration.
      </dd></dl>
-<!--l. 11115--><p class="noindent" >Scan timing information:
+<!--l. 11128--><p class="noindent" >Scan timing information:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">TSETTLE</span><span 
@@ -2332,7 +2332,7 @@ class="cmtt-10">MINSETUP</span>
      DUMMY
      scans.
      </dd></dl>
-<!--l. 11170--><p class="noindent" >Below is a sample entry from the RDBE based version of the standard station catalog. The full catalog
+<!--l. 11183--><p class="noindent" >Below is a sample entry from the RDBE based version of the standard station catalog. The full catalog
                                                                                 
                                                                                 
 a can be examined <a 
@@ -2360,15 +2360,15 @@ version.
 &#x00A0;<br />&#x00A0;&#x00A0;/
 &#x00A0;<br />
 </div>
-<!--l. 11196--><p class="nopar" >
+<!--l. 11209--><p class="nopar" >
                                                                                 
                                                                                 
-<!--l. 11198--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 11211--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECTPINITapeInitializationFile.html" >next</a>] [<a 
 href="labelSECSRCCATSourceCatalog.html" >prev</a>] [<a 
 href="labelSECSRCCATSourceCatalog.html#taillabelSECSRCCATSourceCatalog.html" >prev-tail</a>] [<a 
 href="labelSECSTACATStationCatalogandLocationsCatalog.html" >front</a>] [<a 
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSTACATStationCatalogandLocationsCatalog.html" >up</a>] </p></div>
-<!--l. 11198--><p class="noindent" ><a 
+<!--l. 11211--><p class="noindent" ><a 
  id="taillabelSECSTACATStationCatalogandLocationsCatalog.html"></a>  
 </body></html> 

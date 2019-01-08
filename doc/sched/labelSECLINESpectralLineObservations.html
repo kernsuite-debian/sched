@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 3218--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3231--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECREFPOINTReferencePointing.html" >next</a>] [<a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html" >prev</a>] [<a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html#taillabelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECLINESpectralLineObservations.html">tail</a>] [<a
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECLINESpectralLineObservations.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">2.5   </span> <a 
  id="x16-330002.5"></a>Spectral Line Observations</h3>
-<!--l. 3220--><p class="noindent" ><span 
+<!--l. 3233--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>can set observing frequencies for spectral line observations based on velocities provided in the
 source catalog and rest frequencies provided in a separate type of input. This option is invoked by
@@ -45,19 +45,19 @@ href="labelSECSCHPARTheScheduleFile.html#x26-510003.1.2"><span
 class="cmtt-10">BW</span></a> parameter for some
 systems, unfortunately not including the new digital backends such as the RDBE on the
 VLBA.
-<!--l. 3240--><p class="noindent" >The reference frames supported by <span 
+<!--l. 3253--><p class="noindent" >The reference frames supported by <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>are the &#8220;Local Standard of Rest&#8221; or LSR <span 
 class="cmtt-10">VREF=L</span>,
 heliocentric <span 
 class="cmtt-10">VREF=H</span>, and geocentric <span 
 class="cmtt-10">VREF=G</span>.
-<!--l. 3244--><p class="noindent" >Note that channels assigned to the same BBC will be given the same frequency as the first
+<!--l. 3257--><p class="noindent" >Note that channels assigned to the same BBC will be given the same frequency as the first
 channel on that BBC, no matter what velocities etc are given for the other channels. This will
 be the case when there are upper/lower sideband pairs. Their frequencies cannot be set
 independently. Because of the different sidebands, they will, however, cover different velocity
 ranges.
-<!--l. 3251--><p class="noindent" >The frequencies derived from the Doppler calculations have to be rounded off to a value that
+<!--l. 3264--><p class="noindent" >The frequencies derived from the Doppler calculations have to be rounded off to a value that
 can be set on the available synthesizers. For the Mark&#x00A0;III/IV and legacy VLBA systems,
 frequencies can be set to the nearest 10 kHz. For the RDBE with the DDC personality
 on the VLBA, usable frequencies are multiples of 15.625 kHz. Note that, if there is a mix
@@ -70,7 +70,7 @@ class="cmtt-10">DOPPLER </span>when using the PFB. The parameter <a
 href="labelSECSCHPARTheScheduleFile.html#x26-810003.1.2"><span 
 class="cmtt-10">DOPINCR</span></a> can be used to control the
 rounding.
-<!--l. 3265--><p class="noindent" >The Doppler calculations are for the center of the Earth for the middle of the project. This implies that
+<!--l. 3278--><p class="noindent" >The Doppler calculations are for the center of the Earth for the middle of the project. This implies that
 the frequency for each source will be constant for the duration of the project. Experience
 over the years with spectral line VLBI has shown this to be the preferred observing mode
 since it minimizes the chances of mistakes at stations that do not have automatic frequency
@@ -80,7 +80,7 @@ class="cmcsc-10">CVEL </span>program in the
 NRAO spectral line software or with a task of the same name and with similar capability in
 <span 
 class="cmcsc-10">AIPS</span>.
-<!--l. 3276--><p class="noindent" >The LO sum used when Doppler calculations are requested are calculated by either the radio definition
+<!--l. 3289--><p class="noindent" >The LO sum used when Doppler calculations are requested are calculated by either the radio definition
 (<span 
 class="cmtt-10">VDEF=R </span>in the source catalog ) or the optical definition (<span 
 class="cmtt-10">VDEF=O </span>or <span 
@@ -95,13 +95,13 @@ lines in galactic sources are given in the radio definition in the LSR frame. Ex
 velocities, on the other hand, are typically in the optical definition in the heliocentric frame. The
 differences in the radio and optical definitions only matter at large (typically extragalactic)
 velocities.
-<!--l. 3290--><p class="noindent" ><span 
+<!--l. 3303--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will accept redshifts if <span 
 class="cmtt-10">VDEF=Z </span>in place of velocities, but be very careful that you have
 adequate accuracy to calculate proper frequencies - the bandwidths are typically very much smaller
 than the observing frequency so the velocities must be accurate.
-<!--l. 3296--><p class="noindent" >Internally, if Doppler calculation is requested, <span 
+<!--l. 3309--><p class="noindent" >Internally, if Doppler calculation is requested, <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>calculates the desired observing
 frequencies and puts them in the same array that would be used if <a 
@@ -121,7 +121,7 @@ href="labelSECFRQCATFrequencyCatalog.html#x30-2450003.5">frequency catalog</a>. 
 enough to the desired observing frequency that only final tuning of the BBCs is needed to
 get the exact desired frequency. For the VLBA with its 500 MHz IFs, this is not a serious
 concern.
-<!--l. 3312--><p class="noindent" >The number of channels desired is set with <a 
+<!--l. 3325--><p class="noindent" >The number of channels desired is set with <a 
 href="labelSECSETUPSSetupFiles.html#x31-2780003.6.4"><span 
 class="cmtt-10">NCHAN</span></a> in the setup file (<span 
 class="cmtt-10">NCHAN </span>in the main schedule is an
@@ -132,27 +132,27 @@ bandwidth, a velocity from the source catalog, and a rest frequency from the lin
 information. If a value is missing for any channel of any parameter, the value of that parameter for
 channel 1 will be used. This avoids the need, for example, of specifying lots of bandwidths when they
 are all the same.
-<!--l. 3323--><p class="noindent" >For continuum sources mixed in with line sources, specify <a 
+<!--l. 3336--><p class="noindent" >For continuum sources mixed in with line sources, specify <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-820003.1.2"><span 
 class="cmtt-10">NODOP</span></a> for that scan to avoid the Doppler
 calculations.
-<!--l. 3327--><p class="noindent" >Often it is desired to observe a continuum source at the same frequency as a line source for bandpass
+<!--l. 3340--><p class="noindent" >Often it is desired to observe a continuum source at the same frequency as a line source for bandpass
 calibration. This can be done by specifying the line source with <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-840003.1.2"><span 
 class="cmtt-10">DOPSRC</span></a> in the continuum source&#8217;s scan.
 The <span 
 class="cmtt-10">DOPSRC </span>will be used for the Doppler calculation.
-<!--l. 3334--><p class="noindent" >The important parameters in the <span 
+<!--l. 3347--><p class="noindent" >The important parameters in the <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>keyin file for Doppler frequency calculation are listed below.
 Detailed descriptions are given with the descriptions of other <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>parameters.
-<!--l. 3338--><p class="noindent" >
+<!--l. 3351--><p class="noindent" >
      <dl class="list1"><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3340--><p class="noindent" ><a 
+     <!--l. 3353--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-820003.1.2"><span 
 class="cmtt-10">DOPPLER</span>
      and
@@ -168,7 +168,7 @@ class="cmtt-10">NODOP</span></a>
      </dd><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3344--><p class="noindent" ><a 
+     <!--l. 3357--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-840003.1.2"><span 
 class="cmtt-10">DOPSRC</span></a>
      is
@@ -235,7 +235,7 @@ class="cmcsc-10">SCHED</span>&#x00A0;variables,
      </dd><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3351--><p class="noindent" ><a 
+     <!--l. 3364--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-810003.1.2"><span 
 class="cmtt-10">DOPINCR</span></a>
      is
@@ -254,7 +254,7 @@ class="cmtt-10">DOPINCR</span></a>
      </dd><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3355--><p class="noindent" ><a 
+     <!--l. 3368--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1290003.1.2"><span 
 class="cmtt-10">LINENAME</span></a>
      specifies
@@ -286,7 +286,7 @@ class="cmtt-10">LINEINIT</span>
      </dd><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3360--><p class="noindent" ><a 
+     <!--l. 3373--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-510003.1.2"><span 
 class="cmtt-10">BW</span></a>
                                                                                 
@@ -379,7 +379,7 @@ class="cmtt-10">BW</span>
      </dd><dt class="list">
      </dt><dd 
 class="list">
-     <!--l. 3373--><p class="noindent" ><a 
+     <!--l. 3386--><p class="noindent" ><a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1280003.1.2"><span 
 class="cmtt-10">LINEINIT</span></a>
      indicates
@@ -429,7 +429,7 @@ class="cmcsc-10">&#x00A0;</span>will
      the
      &#8220;/&#8221;.
      </dd></dl>
-<!--l. 3381--><p class="noindent" >The rest frequencies are specified in separate keyin inputs in the <span 
+<!--l. 3394--><p class="noindent" >The rest frequencies are specified in separate keyin inputs in the <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>keyin file following a
 &#8220;/&#8221; if <span 
@@ -469,11 +469,11 @@ class="cmtt-10">LINENAME</span>
      invoke
      this
      group.
-     <!--l. 3403--><p class="noindent" >
+     <!--l. 3416--><p class="noindent" >
                     <dl class="list2"><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3403--><p class="noindent" ><span 
+                    <!--l. 3416--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                     Name
                     of
@@ -484,20 +484,20 @@ class="cmbx-10">Argument:</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3403--><p class="noindent" ><span 
+                    <!--l. 3416--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                     Any
                     name.
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3403--><p class="noindent" ><span 
+                    <!--l. 3416--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                     None
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3403--><p class="noindent" ><span 
+                    <!--l. 3416--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                     Defaults
                     to
@@ -510,7 +510,7 @@ class="cmbx-10">Usage:</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3403--><p class="noindent" ><span 
+                    <!--l. 3416--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                     <span 
 class="cmtt-10">LINESET=&#8217;H2O&#8217;</span></dd></dl>
@@ -521,11 +521,11 @@ class="cmtt-10">LINESET=&#8217;H2O&#8217;</span></dd></dl>
 class="cmtt-10">RESTFREQ</span><span 
 class="cmbx-10">:</span> </dt><dd 
 class="description">Rest frequencies.
-     <!--l. 3413--><p class="noindent" >
+     <!--l. 3426--><p class="noindent" >
                     <dl class="list2"><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3413--><p class="noindent" ><span 
+                    <!--l. 3426--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                     Up
                     to
@@ -553,21 +553,21 @@ class="cmbx-10">Argument:</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3413--><p class="noindent" ><span 
+                    <!--l. 3426--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                     Any
                     value.
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3413--><p class="noindent" ><span 
+                    <!--l. 3426--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                     <span 
 class="cmtt-10">0</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3413--><p class="noindent" ><span 
+                    <!--l. 3426--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                     Defaults
                     to
@@ -578,7 +578,7 @@ class="cmbx-10">Usage:</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3413--><p class="noindent" ><span 
+                    <!--l. 3426--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                     <span 
 class="cmtt-10">RESTFREQ=22235.08</span></dd></dl>
@@ -589,30 +589,30 @@ class="cmbx-10">:</span> </dt><dd
 class="description">This parameter, on a separate line with a &#8220;/&#8221;, ends the restfrequency inputs much like the
      <span 
 class="cmtt-10">ENDCAT </span>parameter ends in-line source and station catalog inputs.
-     <!--l. 3425--><p class="noindent" >
+     <!--l. 3438--><p class="noindent" >
                     <dl class="list2"><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3425--><p class="noindent" ><span 
+                    <!--l. 3438--><p class="noindent" ><span 
 class="cmbx-10">Argument:</span>
                     None.
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3425--><p class="noindent" ><span 
+                    <!--l. 3438--><p class="noindent" ><span 
 class="cmbx-10">Options:</span>
                     None.
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3425--><p class="noindent" ><span 
+                    <!--l. 3438--><p class="noindent" ><span 
 class="cmbx-10">Default:</span>
                     Not
                     specified.
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3425--><p class="noindent" ><span 
+                    <!--l. 3438--><p class="noindent" ><span 
 class="cmbx-10">Usage:</span>
                     Defaults
                     to
@@ -643,14 +643,14 @@ class="cmbx-10">Usage:</span>
                     </dd><dt class="list">
           </dt><dd 
 class="list">
-                    <!--l. 3425--><p class="noindent" ><span 
+                    <!--l. 3438--><p class="noindent" ><span 
 class="cmbx-10">Example:</span>
                     <span 
 class="cmtt-10">ENDLINES</span>
                     <span 
 class="cmtt-10">/</span></dd></dl>
      </dd></dl>
-<!--l. 3429--><p class="noindent" >A fairly extensive list of possible rest frequencies is given below. These frequencies are not guaranteed.
+<!--l. 3442--><p class="noindent" >A fairly extensive list of possible rest frequencies is given below. These frequencies are not guaranteed.
 If anyone finds an error, please notify Craig Walker (cwalkernrao.edu).
                                                                                 
                                                                                 
@@ -695,8 +695,8 @@ If anyone finds an error, please notify Craig Walker (cwalkernrao.edu).
 &#x00A0;<br />endlines&#x00A0;/
 &#x00A0;<br />-----------------------------------------------------------------
 </div>
-<!--l. 3473--><p class="nopar" >
-<!--l. 3475--><p class="noindent" >The example below shows the <span 
+<!--l. 3486--><p class="nopar" >
+<!--l. 3488--><p class="noindent" >The example below shows the <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>input for a spectral line It is a modified version of the file used
 for a project by Phil Diamond in Dec 95. The modifications are to adjust for some of the new features
@@ -2664,12 +2664,12 @@ class="cmtt-10">&#x00A0;--------------------------------------------------------
 </div>
                                                                                 
                                                                                 
-<!--l. 3487--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3500--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECREFPOINTReferencePointing.html" >next</a>] [<a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html" >prev</a>] [<a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html#taillabelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html" >prev-tail</a>] [<a 
 href="labelSECLINESpectralLineObservations.html" >front</a>] [<a 
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECLINESpectralLineObservations.html" >up</a>] </p></div>
-<!--l. 3487--><p class="noindent" ><a 
+<!--l. 3500--><p class="noindent" ><a 
  id="taillabelSECLINESpectralLineObservations.html"></a>  
 </body></html> 
