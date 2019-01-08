@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 3836--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 3849--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECVLASchedulingtheVLA.html" >next</a>] [<a 
 href="labelSECMULTIPLECENTERSMultiplePhaseCenters.html" >prev</a>] [<a 
 href="labelSECMULTIPLECENTERSMultiplePhaseCenters.html#taillabelSECMULTIPLECENTERSMultiplePhaseCenters.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECGEOSEGAutomaticInsertionofGeodeticSegments.html">tail</a>] [<
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECGEOSEGAutomaticInsertionofGeodeticSegments.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">2.8   </span> <a 
  id="x19-360002.8"></a>Automatic Insertion of Geodetic Segments</h3>
-<!--l. 3838--><p class="noindent" >Phase referencing for weak source detection and astrometry depends on the ability to transfer
+<!--l. 3851--><p class="noindent" >Phase referencing for weak source detection and astrometry depends on the ability to transfer
 interferometer phase from a calibrator to a target. The largest source of error in that transfer is the
 atmosphere. The ionospheric component of the atmosphere can be calibrated using multiple observing
 bands or modeled with the help of GPS based ionospheric models. The non-dispersive tropospheric
@@ -30,7 +30,7 @@ observations of calibrators around the sky from which the clock offset and the z
 derived. AIPS task DELZN is typically used to make the solutions, although some users have their own
 programs for the purpose. These clusters of calibrator observations are called geodetic segments or
 DELZN segments.
-<!--l. 3854--><p class="noindent" >Constructing a geodetic segment can be tedious given that one wants low elevation observations at all
+<!--l. 3867--><p class="noindent" >Constructing a geodetic segment can be tedious given that one wants low elevation observations at all
 stations. The tropospheric effect scales roughly as secant(zenith angle) (hereafter SecZ). The elevations
 at each VLBI station are different and change rapidly with time. It is also best to have sources that are
 high at some stations and low at others to give robust SecZ fits. External programs have been written
@@ -39,14 +39,14 @@ mostly from Mark Reid of CfA. But any schedule with such segments is tightly con
 in time &#8212; any time shift will cause what were low elevation scans to become either high
 elevation scans or scans where the source is down. Plus gathering the required segments can be
 tedious.
-<!--l. 3867--><p class="noindent" >/schedb can build and insert geodetic segments automatically into schedules. This should drastically
+<!--l. 3880--><p class="noindent" >/schedb can build and insert geodetic segments automatically into schedules. This should drastically
 reduce the overhead in constructing such segments, and allows such segments to be made easily when
 the station list is not just the VLBA. Also the schedule can be time shifted easily, a possible benefit for
 dynamic scheduling. When there is a time shift, a different list of sources for each segment, optimized
 for the new time, will be built. It has also been found that this capability can be used to
 make short groups of scans that can be used for atmospheric opacity solutions by AIPS task
 APCAL.
-<!--l. 3877--><p class="noindent" >To request that a geodetic segment be built, the user should specify a scan with the parameter <a 
+<!--l. 3890--><p class="noindent" >To request that a geodetic segment be built, the user should specify a scan with the parameter <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1070003.1.2"><span 
 class="cmtt-10">GEOSEG</span></a>
 given with an argument that is the total duration of the segment (typical values are 20 to 45 minutes).
@@ -76,12 +76,12 @@ the segments, but without it some of the <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>checking that comes earlier will not be
 happy.
-<!--l. 3902--><p class="noindent" >The parameter <a 
+<!--l. 3915--><p class="noindent" >The parameter <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1060003.1.2"><span 
 class="cmtt-10">GEOPRT</span></a> can be used to cause some details about each trial source sequence tested to be
 printed to <span 
 class="cmsl-10">sched.runlog</span>. There are various levels of print possible.
-<!--l. 3907--><p class="noindent" >The algorithm used to construct geo segments is described in more detail below. It involves constructing
+<!--l. 3920--><p class="noindent" >The algorithm used to construct geo segments is described in more detail below. It involves constructing
                                                                                 
                                                                                 
 a number of trial segments and selecting the best. There are a number of control knobs sticking out
@@ -104,7 +104,7 @@ class="cmtt-10">GEOSLOW</span></a> (default 40 seconds) later than the third to
 last antenna to get there. The choice of the third-to-last antenna for the reference was an
 effort to deal with various awkward scenarios that can arise when not all antennas are in all
 scans.
-<!--l. 3931--><p class="noindent" >There is an example among the <span 
+<!--l. 3944--><p class="noindent" >There is an example among the <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>examples called <a 
 href="examples/egdelzn.key" ><span 
@@ -117,7 +117,7 @@ in the normal <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>catalog. Users are likely to just cut and paste that list into their
 schedules.
-<!--l. 3941--><p class="noindent" >The example <a 
+<!--l. 3954--><p class="noindent" >The example <a 
 href="examples/egdelzn.key" ><span 
 class="cmsl-10">egdelzn.key</span></a> includes three different source lists in <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1100003.1.2"><span 
@@ -127,11 +127,11 @@ sources. In testing, this list was found to be too sparse in some parts of the s
 the 2.3 and 8.4 GHz bands in which it was derived. The third list is based on the USNO
 1cm survey and is should be the right one to use at 22 GHz and up. It also has over 200
 sources.
-<!--l. 3953--><p class="noindent" ><span 
+<!--l. 3966--><p class="noindent" ><span 
 class="cmbx-10">The algorithm:</span>
-<!--l. 3955--><p class="noindent" >Note: There were minor changes to the algorithm when it got tested for 2 station observations. Those
+<!--l. 3968--><p class="noindent" >Note: There were minor changes to the algorithm when it got tested for 2 station observations. Those
 changes are not yet reflected in the description below.
-<!--l. 3959--><p class="noindent" >As long as <span 
+<!--l. 3972--><p class="noindent" >As long as <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>is producing good geodetic segments, the details of the algorithm shouldn&#8217;t matter
 too much to users. But some may wish to know, so it is described here. When starting to work on a
@@ -156,7 +156,7 @@ class="cmtt-10">GEOTRIES</span></a> of trial geodetic segments. A quality measur
 each segment is determined by setting up a least squares fit for SecZ and clock terms. The
 formal error on the fitted SecZ term for the station with the highest such error is the quality
 measure.
-<!--l. 3981--><p class="noindent" >An algorithm is used to construct each tested segment that tries to come up with a source set that
+<!--l. 3994--><p class="noindent" >An algorithm is used to construct each tested segment that tries to come up with a source set that
 works reasonably well. This makes constructing each segment slow, but means that not many need to
 be tested. The algorithm starts by locating the 5 closest sources in the top two priority bins to the
 preceding source in the schedule. &#8220;Close&#8221; here means in terms of slew time for the array. For the first
@@ -169,7 +169,7 @@ there is at least one low and one high source for each station. That usually tak
                                                                                 
                                                                                 
 scans.
-<!--l. 3997--><p class="noindent" >For later scans in the segment, all sources given in <a 
+<!--l. 4010--><p class="noindent" >For later scans in the segment, all sources given in <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1100003.1.2"><span 
 class="cmtt-10">GEOSRCS</span></a> that are up at enough stations (set by
 <a 
@@ -197,17 +197,17 @@ class="cmtt-10">GEOPRT=0 </span>but you will likely need to use the code to
 understand much of what is being spewed out, especially for a high value of <span 
 class="cmtt-10">GEOPRT </span>such as
 2.
-<!--l. 4026--><p class="noindent" >Note that, in the fits, any SecZ of more than 4 (about an elevation of 15 degrees) is treated as 4. This
+<!--l. 4039--><p class="noindent" >Note that, in the fits, any SecZ of more than 4 (about an elevation of 15 degrees) is treated as 4. This
 will make the quality of the fits seem somewhat lower but will place less emphasis on scans that are so
 low that the risk of failures is great.
-<!--l. 4031--><p class="noindent" >While selecting sources, normally no one source will be allowed to repeat. But sometimes there aren&#8217;t
+<!--l. 4044--><p class="noindent" >While selecting sources, normally no one source will be allowed to repeat. But sometimes there aren&#8217;t
 very many low elevation options and it may be desirable to allow repeats. Parameter <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1110003.1.2"><span 
 class="cmtt-10">GEOSREP</span></a>
 sets the minimum number of scans that must go by before a source is allowed to repeat.
 This was a problem for the original 60 source list, but much less so for the ICRF2 or 1cm
 sources.
-<!--l. 4039--><p class="noindent" >For each of the <a 
+<!--l. 4052--><p class="noindent" >For each of the <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1120003.1.2"><span 
 class="cmtt-10">GEOTRIES</span></a> trial segments, a quality measure is generated. <span 
 class="cmcsc-10">SCHED</span><span 
@@ -222,12 +222,12 @@ range of elevations at each site and a significant range of elevations across an
 scan.
                                                                                 
                                                                                 
-<!--l. 4054--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 4067--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECVLASchedulingtheVLA.html" >next</a>] [<a 
 href="labelSECMULTIPLECENTERSMultiplePhaseCenters.html" >prev</a>] [<a 
 href="labelSECMULTIPLECENTERSMultiplePhaseCenters.html#taillabelSECMULTIPLECENTERSMultiplePhaseCenters.html" >prev-tail</a>] [<a 
 href="labelSECGEOSEGAutomaticInsertionofGeodeticSegments.html" >front</a>] [<a 
 href="labelCHPADVICEINFORMATIONANDADVICEONSPECIFICTOPICS.html#labelSECGEOSEGAutomaticInsertionofGeodeticSegments.html" >up</a>] </p></div>
-<!--l. 4054--><p class="noindent" ><a 
+<!--l. 4067--><p class="noindent" ><a 
  id="taillabelSECGEOSEGAutomaticInsertionofGeodeticSegments.html"></a>  
 </body></html> 

@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 10496--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 10509--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSTACATStationCatalogandLocationsCatalog.html" >next</a>] [<a 
 href="labelSECSCHPARTheScheduleFile.html" >prev</a>] [<a 
 href="labelSECSCHPARTheScheduleFile.html#taillabelSECSCHPARTheScheduleFile.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECSRCCATSourceCatalog.html">tail</a>] [<a
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSRCCATSourceCatalog.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">3.2   </span> <a 
  id="x27-2300003.2"></a>Source Catalog</h3>
-<!--l. 10498--><p class="noindent" ><span 
+<!--l. 10511--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>uses catalogs to get source information such as names, positions, and velocities. These
 catalogs are in keyin format. Entries are terminated with a &#8220;/&#8221;. Some or all of the catalog may be
@@ -32,7 +32,7 @@ source positions will change, although likely by small amounts. But relative ast
 projects should either use their own source positions to keep them constant over long times, or
 include processing steps that account for any changes in the catalog positions (the preferred
 solution).
-<!--l. 10512--><p class="noindent" >As of Feb. 2015, there are two catalogs (plus older versions) included with the <span 
+<!--l. 10525--><p class="noindent" >As of Feb. 2015, there are two catalogs (plus older versions) included with the <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>distribution.
 One contains a recent astrometry solution from the Goddard Space Flight Center geodetic group.
@@ -50,19 +50,19 @@ dropped in Feb. 2015. If there is a <span
 class="cmsl-10">sources.vlba </span>in the distribution, it is either out of date,
 or is actually a symbolic link to one of the main files, put there to try not to break old
 schedules.
-<!--l. 10530--><p class="noindent" >The sources in the catalogs from the geodetic solutions are based on the International Celestial
+<!--l. 10543--><p class="noindent" >The sources in the catalogs from the geodetic solutions are based on the International Celestial
 Reference Frame version 2 or ICRF2 (these have <span 
 class="cmtt-10">CALCODE=V</span>). These have positional errors of a fraction
 of a milliarcsecond to a few milliarcseconds. They include sources from the standard geodetic observing
 program, sources from the VLBA calibrator survey, the Australian LBA survey, and various sources
 specially observed in the RDV project on the VLBA.
-<!--l. 10538--><p class="noindent" >Users of accurate positions from the geodetic catalog are encouraged to reference the original papers,
+<!--l. 10551--><p class="noindent" >Users of accurate positions from the geodetic catalog are encouraged to reference the original papers,
 some of which are listed in the catalog headers. Information about, and data from, the GSFC solutions
 can be found at <a 
 href="http://vlbi.gsfc.nasa.gov/dataresults_main.htm" >http://vlbi.gsfc.nasa.gov/dataresults_main.htm</a>. Catalogs and much other useful
 information provided by Leonid Petrov can be found at <a 
 href="http://astrogeo.org/" >http://astrogeo.org/</a>.
-<!--l. 10546--><p class="noindent" ><span 
+<!--l. 10559--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>input parameters <a 
 href="labelSECSCHPARTheScheduleFile.html#x26-1970003.1.2"><span 
@@ -70,15 +70,15 @@ class="cmtt-10">SRCFILE</span></a> and <a
 href="labelSECSCHPARTheScheduleFile.html#x26-1980003.1.2"><span 
 class="cmtt-10">SRCFILE2</span></a> are used to point to any desired external catalogs. A
 file name of up to 80 characters can be specified. The default source file is:
-<!--l. 10551--><p class="noindent" ><span 
+<!--l. 10564--><p class="noindent" ><span 
 class="cmtt-10">SRCFILE=$SCHED/catalogs/sources.petrov</span>.
-<!--l. 10551--><p class="noindent" >On unix systems with the environment variable SCHED properly defined, this is the standard catalog
+<!--l. 10564--><p class="noindent" >On unix systems with the environment variable SCHED properly defined, this is the standard catalog
 distributed with <span 
 class="cmcsc-10">SCHED</span>. Users of the html version of the manual can read the catalog by clicking
 <a 
 href="catalogs/sources.gsfc" >GSFC</a> or <a 
 href="catalogs/sources.petrov" >Petrov</a>.
-<!--l. 10558--><p class="noindent" >Source catalog information can be given in the main <span 
+<!--l. 10571--><p class="noindent" >Source catalog information can be given in the main <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>keyin file. If the keyword <span 
 class="cmtt-10">SRCCAT</span>
@@ -108,19 +108,19 @@ first, then in <span
 class="cmtt-10">SRCFILE</span>, then in <span 
 class="cmtt-10">SRCFILE2</span>. It will use data from the first place a source is
 found.
-<!--l. 10574--><p class="noindent" >The parameters for each entry in the source catalog are below. Lower case letters in this list are
+<!--l. 10587--><p class="noindent" >The parameters for each entry in the source catalog are below. Lower case letters in this list are
 optional. All catalog parameters except <span 
 class="cmtt-10">EQUINOX </span>and <span 
 class="cmtt-10">EPOCH </span>revert to a default unless specified for a
 source. <span 
 class="cmtt-10">EQUINOX </span>and <span 
 class="cmtt-10">EPOCH </span>default to the last specified.
-<!--l. 10579--><p class="noindent" >Note that the <a 
+<!--l. 10592--><p class="noindent" >Note that the <a 
 href="labelSECPLOTPlotting.html#x10-110001.5">plotting capabilities</a> of <span 
 class="cmcsc-10">SCHED</span>, specifically the RD plots, can be used to examine the
 distribution of sources in the catalog and to find catalog near any desired location. This is useful, for
 example, for finding phase calibrators near target sources.
-<!--l. 10586--><p class="noindent" ><span 
+<!--l. 10599--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>will use whichever equinox coordinates are provided in the catalog and determine J2000,
 B1950, and DATE coordinates. All of these coordinates are listed in the <span 
@@ -128,7 +128,7 @@ class="cmsl-10">.sum </span>file. Various stations
 require different equinox coordinates. For example, the VLBA only understands J2000 coordinates while
 some other sites only understand B1950, although those may all be gone by now. Sched uses the
 SLALIB routines to make the coordinate conversions.
-<!--l. 10594--><p class="noindent" >The J2000 and B1950 coordinates systems move relative to each other so an &#8220;observe&#8221; date is needed to
+<!--l. 10607--><p class="noindent" >The J2000 and B1950 coordinates systems move relative to each other so an &#8220;observe&#8221; date is needed to
 make an accurate conversion. This is the date at which the coordinates of the reference sources were
 determined. For example, the VLA calibrator list coordinates were determined in 1979.9
 originally, and all subsequent updates, based mainly on J2000 positions, were precessed to B1950
@@ -144,7 +144,7 @@ determined on the VLA. For purposes of pointing antennas, the value of this date
 used is not very important. But if you are trying to phase reference, phase the VLA at a
 high frequency, or derive positions for correlation, this is an issue that should be dealt with
 properly.
-<!--l. 10615--><p class="noindent" >The parameters of the source catalog are:
+<!--l. 10628--><p class="noindent" >The parameters of the source catalog are:
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">Source</span><span 
@@ -207,7 +207,7 @@ class="description">
      than
      8
      characters.
-     <!--l. 10625--><p class="noindent" >Be
+     <!--l. 10638--><p class="noindent" >Be
      a
      bit
      careful
@@ -320,7 +320,7 @@ class="description">
      commonly
      desired
      characters.
-     <!--l. 10636--><p class="noindent" >Note
+     <!--l. 10649--><p class="noindent" >Note
      that
      the
      number
@@ -1495,7 +1495,7 @@ class="description">
      GSFC
      solution.
      </dd></dl>
-<!--l. 10759--><p class="noindent" >Below is a sample of a few sources from the March 2005 source catalog, slightly reformatted to fit the
+<!--l. 10772--><p class="noindent" >Below is a sample of a few sources from the March 2005 source catalog, slightly reformatted to fit the
 page width.
                                                                                 
                                                                                 
@@ -1517,15 +1517,15 @@ SOURCE=&#8217;J1629-2026&#8217;
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;RAERR=&#x00A0;&#x00A0;&#x00A0;0.520&#x00A0;DECERR=&#x00A0;&#x00A0;&#x00A0;0.630&#x00A0;CALCODE=&#8217;V&#8217;
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;REMARKS=&#8217;VLBA&#x00A0;Calib&#x00A0;Survey&#x00A0;-&#x00A0;GSFC&#x00A0;sols.&#x00A0;-&#x00A0;VCS2&#x00A0;-&#x00A0;created&#x00A0;2004&#8217;&#x00A0;/
 </div>
-<!--l. 10779--><p class="nopar" >
+<!--l. 10792--><p class="nopar" >
                                                                                 
                                                                                 
-<!--l. 10782--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 10795--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSTACATStationCatalogandLocationsCatalog.html" >next</a>] [<a 
 href="labelSECSCHPARTheScheduleFile.html" >prev</a>] [<a 
 href="labelSECSCHPARTheScheduleFile.html#taillabelSECSCHPARTheScheduleFile.html" >prev-tail</a>] [<a 
 href="labelSECSRCCATSourceCatalog.html" >front</a>] [<a 
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECSRCCATSourceCatalog.html" >up</a>] </p></div>
-<!--l. 10782--><p class="noindent" ><a 
+<!--l. 10795--><p class="noindent" ><a 
  id="taillabelSECSRCCATSourceCatalog.html"></a>  
 </body></html> 

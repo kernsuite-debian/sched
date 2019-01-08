@@ -142,15 +142,15 @@ C
                MSGTXT = ' '              
                WRITE( MSGTXT, '( A, F8.3, A )' )
      1           'CHKDBBC: Invalid SAMPRATE specified: ', SAMPRATE(KS),
-     2           ' for DBE=DBBC_PFB. Must be 32.0 Msamp/s.'
+     2           ' for DBE=DBBC_PFB. Must be 64.0 Msamp/s.'
                CALL WLOG( 1, MSGTXT )
                ERRS = .TRUE.
             END IF
 C
-C           Bits per sample must be 2.
+C           Bits per sample must be 2 or 1.
 C
             DO ICH = 1, NCHAN(KS)
-               IF( BITS(ICH,KS) .NE. 2 ) THEN
+               IF( BITS(ICH,KS) .NE. 2 .AND.  BITS(ICH,KS) .NE. 1 ) THEN
                   MSGTXT = ' '
                   WRITE( MSGTXT, '( A, A, I3 )' )
      1               'CHKDBBC: BITS must be 2 for DBE=DBBC_PFB. ',
@@ -191,46 +191,35 @@ C
          IF( DBE(KS) .EQ. 'DBBC_DDC' ) THEN
 C
 C
-            DO IIF = 1,NIF
-               IF( NNIF(IIF) .GT. 8 ) THEN
-                  MSGTXT = ' '              
-                  WRITE( MSGTXT, '( A, A, I4 )' )
-     1              'CHKDBBC: For DBBC, NCHAN <= 8 per IF. ',
-     2              'Setup specified:', NCHAN(KS)
-                  CALL WLOG( 1, MSGTXT )
-                  ERRS = .TRUE.
-               END IF
-            END DO
 C
 C           Sample rate can have many values.
 C           These may need to shift down by 1 if we do complex
 C           sampling.
-C           Current version of DBBC only allows 1-16 MHz channels and
-C           Nyquist sampling, though a future 2048 Msps version of the
-C           firmware will enable 32 MHz channels.
+C           Current version of DBBC only allows 1-32 MHz channels and
+C           Nyquist sampling.
 C
-            IF( SAMPRATE(KS) .NE. 32.0 .AND.
-     1          SAMPRATE(KS) .NE. 16.0 .AND.
-     2          SAMPRATE(KS) .NE. 8.0 .AND.
-     3          SAMPRATE(KS) .NE. 4.0 .AND.
-     4          SAMPRATE(KS) .NE. 2.0 ) THEN
+            IF( SAMPRATE(KS) .NE. 64.0 .AND.
+     1          SAMPRATE(KS) .NE. 32.0 .AND.
+     2          SAMPRATE(KS) .NE. 16.0 .AND.
+     3          SAMPRATE(KS) .NE. 8.0 .AND.
+     4          SAMPRATE(KS) .NE. 4.0 .AND.
+     5          SAMPRATE(KS) .NE. 2.0 ) THEN
                MSGTXT = ' '              
                WRITE( MSGTXT, '( A, F8.3, A )' )
      1           'CHKDBBC: Invalid SAMPRATE specified: ', SAMPRATE(KS),
-     2           ' for DBE=DBBC_DDC. Must be 2 to 32 Msamp/s.'
+     2           ' for DBE=DBBC_DDC. Must be 2 to 64 Msamp/s.'
                CALL WLOG( 1, MSGTXT )
                ERRS = .TRUE.
             END IF
 C
-C           Bits per sample must be 2.
-C           1 bit recording is possible via channel selection. Don't
-C           currently support this.
+C           Bits per sample is 2, but 1 bit recording is
+C           possible via channel selection. 
 C
             DO ICH = 1, NCHAN(KS)
-               IF( BITS(ICH,KS) .NE. 2 ) THEN
+               IF( BITS(ICH,KS) .NE. 2 .AND. BITS(ICH,KS) .NE. 1) THEN
                   MSGTXT = ' '
                   WRITE( MSGTXT, '( A, A, I3 )' )
-     1               'CHKDBBC: BITS must be 2 for DBE=DBBC_DDC. ',
+     1               'CHKDBBC: BITS must be 2 or 1 for DBE=DBBC_DDC. ',
      2               '  Value specified is: ', BITS(ICH,KS)
                   CALL WLOG( 1, MSGTXT )
                   ERRS = .TRUE.
@@ -320,7 +309,7 @@ C        Check the frequencies and bandwidths.  This is pulled out
 C        so that it can be used again later on frequencies set in-line
 C        or using Doppler.
 C
-         CALL CHKDBFQ( KS, BBFILT(1,KS), BBSYN(1,KS), ERRS )
+         CALL CHKDBFQ( KS, BBFILT(1,KS), BBSYN(1,KS), ERRS, .TRUE. )
 C
       END IF
 C

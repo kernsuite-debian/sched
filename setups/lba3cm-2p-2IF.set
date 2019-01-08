@@ -10,6 +10,7 @@ freqoff  = 0, 0, 16, 16
 station  = ASKAP
 nchan    = 2
 bbfilter = 64.0
+pol      = dual
 freqref  = 8393
 freqoff  = 0,0
 /

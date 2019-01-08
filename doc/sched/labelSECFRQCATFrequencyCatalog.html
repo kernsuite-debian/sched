@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html,3,sec-filename --> 
 <meta name="src" content="sched.tex"> 
-<meta name="date" content="2015-03-11 23:21:00"> 
+<meta name="date" content="2018-09-17 11:11:00"> 
 <link rel="stylesheet" type="text/css" href="sched.css"> 
 </head><body 
 >
-<!--l. 11613--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 11626--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSETUPSSetupFiles.html" >next</a>] [<a 
 href="labelSECTPINITapeInitializationFile.html" >prev</a>] [<a 
 href="labelSECTPINITapeInitializationFile.html#taillabelSECTPINITapeInitializationFile.html" >prev-tail</a>] [<a 
@@ -19,7 +19,7 @@ href="#taillabelSECFRQCATFrequencyCatalog.html">tail</a>] [<a
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECFRQCATFrequencyCatalog.html" >up</a>] </p></div>
 <h3 class="sectionHead"><span class="titlemark">3.5   </span> <a 
  id="x30-2450003.5"></a>Frequency Catalog</h3>
-<!--l. 11615--><p class="noindent" ><span 
+<!--l. 11628--><p class="noindent" ><span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>is able to fill in many items in setup files based on knowledge of possible frequency setups at
 the stations as described in the frequency catalog. This allows the user to only specify basic
@@ -43,7 +43,7 @@ class="cmtt-10">BAND</span></a>. The frequency catalog also allows <span
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>to check user specified
 values against standard sets to warn of any oddities.
-<!--l. 11629--><p class="noindent" >Most users will not touch the frequency catalog. If they need a setup that does not conform to what is
+<!--l. 11642--><p class="noindent" >Most users will not touch the frequency catalog. If they need a setup that does not conform to what is
 in the catalog, they should just make the necessary <a 
 href="labelSECSETUPSSetupFiles.html#x31-2470003.6"><span 
 class="cmtt-10">setup files</span></a> and ignore the warnings after making
@@ -58,7 +58,7 @@ wants his/her own frequency catalog, use the input parameter <a
 href="labelSECSCHPARTheScheduleFile.html#x26-1000003.1.2"><span 
 class="cmtt-10">FREQFILE</span></a> to specify the file
 name.
-<!--l. 11644--><p class="noindent" >There is a lot of information about available frequencies, receivers, frequency ranges, filters etc,
+<!--l. 11657--><p class="noindent" >There is a lot of information about available frequencies, receivers, frequency ranges, filters etc,
 especially at the VLBA, in the standard frequency catalog. A table of information about possible setups
 for observations within a frequency range can be made by running <span 
 class="cmcsc-10">SCHED</span><span 
@@ -85,17 +85,17 @@ look at <span
 class="cmtt-10">$SCHED/catalogs/freq.dat </span>or, if reading the html version of the manual, click
 <a 
 href="catalogs/freq.dat" >here.</a>.
-<!--l. 11663--><p class="noindent" >
+<!--l. 11676--><p class="noindent" >
 <h4 class="subsectionHead"><span class="titlemark">3.5.1   </span> <a 
  id="x30-2460003.5.1"></a>List of Frequency File Parameters</h4>
-<!--l. 11665--><p class="noindent" >The parameters of the frequency file tell <span 
+<!--l. 11678--><p class="noindent" >The parameters of the frequency file tell <span 
 class="cmcsc-10">SCHED</span><span 
 class="cmcsc-10">&#x00A0;</span>over what frequency range the group if usable and on
 which stations. Most of the parameters are the same as parameters in the setup file since they are
 meant for direct substitution once the correct frequency group has been identified. There is no
 defaulting between groups of inputs &#8212; all parameters are reset to zero, blank, or some equivalent
 value.
-<!--l. 11672--><p class="noindent" >For the VLA, IF&#8217;s A and C will be assumed to apply to VLA27 while IF&#8217;s B and D will be assumed to
+<!--l. 11685--><p class="noindent" >For the VLA, IF&#8217;s A and C will be assumed to apply to VLA27 while IF&#8217;s B and D will be assumed to
 apply to VLA1. All standard frequency groups will have both VLA IF&#8217;s on the same frequency.
 Anything more complicated requires a setup file from the user.
      <dl class="description"><dt class="description">
@@ -316,7 +316,7 @@ class="description">
      in
      each
      IF.
-     <!--l. 11702--><p class="noindent" >For
+     <!--l. 11715--><p class="noindent" >For
                                                                                 
                                                                                 
      antennas
@@ -413,7 +413,7 @@ class="description">
      a
      single
      polarization.
-     <!--l. 11710--><p class="noindent" >For
+     <!--l. 11723--><p class="noindent" >For
      the
      <a 
 href="labelSECWIDEWideBandObservingRDBEDBBCVLBAandMarkIVModes.html#x15-310002.4.2"><span 
@@ -632,7 +632,7 @@ class="description">
      by
      each
      IF.
-     <!--l. 11735--><p class="noindent" >For
+     <!--l. 11748--><p class="noindent" >For
      Mark&#x00A0;IV
      systems,
      the
@@ -977,7 +977,7 @@ class="cmtt-10">VL</span>
      IF
      restrictions.
      </dd></dl>
-<!--l. 11787--><p class="noindent" >The following are OBSOLETE VLA parameters that should not be used.
+<!--l. 11800--><p class="noindent" >The following are OBSOLETE VLA parameters that should not be used.
      <dl class="description"><dt class="description">
 <span 
 class="cmtt-10">VLABAND</span> </dt><dd 
@@ -1069,12 +1069,12 @@ class="description">
      </dd></dl>
                                                                                 
                                                                                 
-<!--l. 11815--><div class="crosslinks"><p class="noindent">[<a 
+<!--l. 11828--><div class="crosslinks"><p class="noindent">[<a 
 href="labelSECSETUPSSetupFiles.html" >next</a>] [<a 
 href="labelSECTPINITapeInitializationFile.html" >prev</a>] [<a 
 href="labelSECTPINITapeInitializationFile.html#taillabelSECTPINITapeInitializationFile.html" >prev-tail</a>] [<a 
 href="labelSECFRQCATFrequencyCatalog.html" >front</a>] [<a 
 href="labelCHPINPUTTHESCHEDINPUTFILESIncludesparameterlists.html#labelSECFRQCATFrequencyCatalog.html" >up</a>] </p></div>
-<!--l. 11815--><p class="noindent" ><a 
+<!--l. 11828--><p class="noindent" ><a 
  id="taillabelSECFRQCATFrequencyCatalog.html"></a>  
 </body></html> 
