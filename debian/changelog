@@ -1,3 +1,11 @@
+sched (11.5-1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * add bad watch file
+  * New upstream version 11.5
+
+ -- KERN packaging <packaging@kernsuite.info>  Tue, 08 Jan 2019 11:31:43 +0200
+
 sched (11.4-1kern1bionic1) bionic; urgency=medium
 
   * upload to KERN-dev
