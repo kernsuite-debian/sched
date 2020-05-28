@@ -1,7 +1,7 @@
 !*  Schedule for VLBA_SC   *!
 !*  Experiment VT002    *!
 !* Schedule Version:       6.00 *!
-!* Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2 *!
+!* Processed by SCHED version:  11.60  Release 11.6; Feburary 2020 *!
 !* PI:       Rikako OKAYASU *!
 !* Address:  Institute of Space and Astronautical Science *!
 !*           3-1-1 Yoshinodai *!

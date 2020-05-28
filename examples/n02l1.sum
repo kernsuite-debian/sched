@@ -7,7 +7,7 @@ COVER INFORMATION:
   Start Day  42 is Mon  11 Feb 2002   MJD  52316          
 
   Schedule Version:       1.00
-  Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+  Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
   PI:       Cormac Reynolds
 
@@ -82,29 +82,29 @@ STATIONS USED IN SCHEDULE:
    Station  Code   Latitude Longitude  Elevation       X            Y            Z       Axis
                                                                                        Offset
 
-   EFLSBERG  Ef   50.52483   -6.88361     417.    4033947.235   486990.794  4900431.002  0.014
-   MEDICINA  Mc   44.52050  -11.64694      67.    4461369.672   919597.135  4449559.400  1.828
+   EFLSBERG  Ef   50.52484   -6.88362     417.    4033947.152   486990.896  4900431.060  0.013
+   MEDICINA  Mc   44.52050  -11.64694      67.    4461369.568   919597.249  4449559.470  1.828
    WSTRBORK  Wb   52.91533   -6.59396      70.    3828746.980   442591.850  5064923.080  4.950
-   ONSALA85  O8   57.39307  -11.91777      58.    3370965.879   711466.198  5349664.201  2.150
+   ONSALA85  O8   57.39307  -11.91777      58.    3370965.979   711466.127  5349664.146  2.150
    TORUN     Tr   53.09546  -18.56406     134.    3638558.510  1221969.720  5077036.760  0.000
    JODRELL1  Jb   53.23654    2.30858     179.    3822626.040  -154105.650  5086486.040  0.000
    CAMBG32M  Cm   52.16695   -0.03715      83.    3920356.150     2542.020  5014284.420  1.503
-   URUMQI    Ur   43.47151  -87.17814    2033.     228310.181  4631922.902  4367064.211  0.000
-   SHANGHAI  Sh   31.09916 -121.19966      29.   -2831687.427  4675733.468  3275327.497 -0.002
+   URUMQI    Ur   43.47151  -87.17814    2033.     228309.992  4631922.897  4367064.241 -0.003
+   SHANGHAI  Sh   31.09916 -121.19967      29.   -2831687.607  4675733.392  3275327.424 -0.002
 
 
    Plate tectonic motion adjustments for MJD  52316
    Station  Code      Station motions (m/yr)             Adjusted positions 
                      X       Y       Z     MJD0        X            Y            Z 
-   EFLSBERG  Ef  -0.0144  0.0167  0.0106  56658   4033947.407   486990.595  4900430.876
-   MEDICINA  Mc  -0.0183  0.0187  0.0115  56658   4461369.890   919596.912  4449559.262
+   EFLSBERG  Ef  -0.0143  0.0168  0.0108  58849   4033947.408   486990.597  4900430.868
+   MEDICINA  Mc  -0.0182  0.0188  0.0120  58849   4461369.893   919596.914  4449559.256
    WSTRBORK  Wb  -0.0135  0.0170  0.0087  50449   3828746.911   442591.937  5064923.125
-   ONSALA85  O8  -0.0144  0.0145  0.0105  56658   3370966.049   711466.025  5349664.076
+   ONSALA85  O8  -0.0136  0.0148  0.0108  54466   3370966.059   711466.040  5349664.082
    TORUN     Tr  -0.0160  0.0165  0.0075  50449   3638558.428  1221969.804  5077036.798
    JODRELL1  Jb  -0.0117  0.0170  0.0093  50449   3822625.980  -154105.563  5086486.088
    CAMBG32M  Cm  -0.0120  0.0173  0.0094  50449   3920356.089     2542.108  5014284.468
-   URUMQI    Ur  -0.0323 -0.0014  0.0049  56658    228310.565  4631922.919  4367064.153
-   SHANGHAI  Sh  -0.0300 -0.0110 -0.0116  56658  -2831687.070  4675733.599  3275327.635
+   URUMQI    Ur  -0.0324 -0.0017  0.0051  58849    228310.572  4631922.928  4367064.150
+   SHANGHAI  Sh  -0.0303 -0.0119 -0.0114  58849  -2831687.064  4675733.605  3275327.628
 
 
 
@@ -1203,11 +1203,11 @@ CATALOGS, FILES, and CODE VERSIONS
 
 Catalogs: 
   Station:   /home/orion/lbo/sched/trunk/sched/catalogs/stations_RDBE.dat
-                 Version:  2018Sep07-20:06:16
+                 Version:  2018Sep07-20:14:11
   Location:  /home/orion/lbo/sched/trunk/sched/catalogs/locations.dat
-                 Version:  2016Dec19-16:00:00
+                 Version:  2020Jan12
   Frequency: /home/orion/lbo/sched/trunk/sched/catalogs/freq_RDBE.dat
-                 Version:  2018Sep07-20:06:16
+                 Version:  2018Sep07-20:14:11
   Source:   /home/orion/lbo/sched/trunk/sched/catalogs/sources.gsfc
                  Version:  Not given
   Source2:  NONE
@@ -1221,11 +1221,11 @@ Other external files:
 
 
 Code versions: 
-  Release version:           11.50  Development version 11.5. Started Apr. 2
+  Release version:           11.60  Release 11.6; Feburary 2020
   Version of VEX standard:   1.50
   Version of VEX code:       0.87
   Version of plot code:      1.06
   Version of ephemeris code: 1.01
   Version of PGPLOT:        v5.3.1
 
-This schedule produced on: Fri Sep  7 14:06:24 2018      
+This schedule produced on: Tue Feb 11 14:05:57 2020      

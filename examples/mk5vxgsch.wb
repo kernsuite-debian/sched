@@ -6,7 +6,7 @@
 
 
 Schedule Version:       2.10
-Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
 PI:       Cormac
 

@@ -1,27 +1,19 @@
 #!/bin/bash
 
-if [ -z "$1" -o "$1" = "--help" ]; then
+version=$1
+
+if [ -z "$version" ]; then
    echo "*** usage: make-release-tarball version"
-   echo "version is like 11.5, etc."
-   echo ""
-   echo "Run from the tagged directory for the release (e.g.,"
-   echo ".../tags/sched_11.5) which will have a subdirectory named "
-   echo "'sched'.  A compressed tarball named sched_theVersion.tgz"
-   echo "will be created."
+   echo "       version is like 11.5, etc."
    exit 1
 fi
 
-version=$1
-
 mv sched sched_${version}
 
-tarball="sched_${version}.tgz"
-
-tar --exclude=".svn" --exclude="*.o" --exclude="~" --exclude="lib" \
+tar --exclude=".svn" --exclude="*.o" --exclude="*~" --exclude="lib" \
     --exclude="core*" --exclude="TEST" --exclude="RELATED_CODE" \
-    --exclude=".cvsignore" --exclude=".DS*" \
-    -czf ${tarball} sched_${version}
+    --exclude=".cvsignore" --exclude="*.out" --exclude=".DS*" \
+    --exclude="*.tgz" \
+    -czf sched_${version}.tgz sched_${version}
 
 mv sched_${version} sched
-
-echo "--> Created release tarball in ${tarball}."
