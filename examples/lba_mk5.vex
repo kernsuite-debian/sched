@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = lba_mk5;
@@ -163,11 +163,11 @@ def PARKES;
      site_name = PARKES;
      site_ID = Pa;
 *    elev=  414.67 long=-148:15:48. lat=-32:59:54.2
-     site_position =-4554232.53800 m: 2816758.86560 m:-3454034.96860 m;
-     site_velocity = -0.034250   m/yr: -0.003010   m/yr:  0.048370  m/yr;
+     site_position =-4554232.74080 m: 2816758.85900 m:-3454034.69880 m;
+     site_velocity = -0.033910   m/yr: -0.002640   m/yr:  0.047850  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def ATCA;
@@ -198,12 +198,12 @@ def HOB_DBBC;
      site_type = fixed;
      site_name = HOB_DBBC;
      site_ID = Ho;
-*    elev=   65.09 long=-147:26:25. lat=-42:48:12.9
-     site_position =-3950237.40300 m: 2522347.68410 m:-4311561.83350 m;
-     site_velocity = -0.039010   m/yr:  0.007960   m/yr:  0.041100  m/yr;
+*    elev=   65.08 long=-147:26:25. lat=-42:48:12.9
+     site_position =-3950237.61920 m: 2522347.73490 m:-4311561.59740 m;
+     site_velocity = -0.038070   m/yr:  0.008070   m/yr:  0.040870  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def CDDBBC;
@@ -222,24 +222,24 @@ def WARK12M;
      site_type = fixed;
      site_name = WARK12M;
      site_ID = Ww;
-*    elev=  127.92 long=-174:39:47. lat=-36:26:05.3
-     site_position =-5115324.46020 m:  477843.29000 m:-3767192.80130 m;
-     site_velocity = -0.021220   m/yr: -0.003070   m/yr:  0.036020  m/yr;
+*    elev=  127.90 long=-174:39:47. lat=-36:26:05.3
+     site_position =-5115324.57200 m:  477843.27700 m:-3767192.60920 m;
+     site_velocity = -0.020580   m/yr: -0.002310   m/yr:  0.033380  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def KATHERIN;
      site_type = fixed;
      site_name = KATHERIN;
      site_ID = Ke;
-*    elev=  189.27 long=-132:09:08. lat=-14:22:31.7
-     site_position =-4147354.69130 m: 4581542.37720 m:-1573303.15650 m;
-     site_velocity = -0.037710   m/yr: -0.011590   m/yr:  0.056300  m/yr;
+*    elev=  189.26 long=-132:09:08. lat=-14:22:31.7
+     site_position =-4147354.89050 m: 4581542.29550 m:-1573302.82970 m;
+     site_velocity = -0.034470   m/yr: -0.014170   m/yr:  0.055960  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def YARRAGAD;
@@ -247,11 +247,11 @@ def YARRAGAD;
      site_name = YARRAGAD;
      site_ID = Yg;
 *    elev=  248.23 long=-115:20:44. lat=-29:02:49.7
-     site_position =-2388896.18900 m: 5043350.00190 m:-3078590.80370 m;
-     site_velocity = -0.048140   m/yr:  0.009600   m/yr:  0.051060  m/yr;
+     site_position =-2388896.45380 m: 5043350.05840 m:-3078590.50920 m;
+     site_velocity = -0.045820   m/yr:  0.009200   m/yr:  0.050020  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def ASKAP;
@@ -270,12 +270,12 @@ def HART;
      site_type = fixed;
      site_name = HART;
      site_ID = Hh;
-*    elev= 1415.70 long=-027:41:07. lat=-25:53:23.1
-     site_position = 5085442.76080 m: 2668263.80910 m:-2768696.72920 m;
-     site_velocity = -0.001000   m/yr:  0.019200   m/yr:  0.016180  m/yr;
+*    elev= 1415.72 long=-027:41:07. lat=-25:53:23.1
+     site_position = 5085442.77210 m: 2668263.93000 m:-2768696.62990 m;
+     site_velocity = -0.000110   m/yr:  0.019660   m/yr:  0.016730  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg: 10.0: 14.0: 19.0: 23.0: 26.0: 29.0: 31.0: 55.0:
                                 63.0: 72.0: 95.0:104.0:110.0:114.0:119.0:125.0:
                                131.0:138.0:147.0:159.0:172.0:178.0:182.0:188.0:
@@ -298,7 +298,7 @@ def PARKES;
      axis_type = az : el;
      antenna_motion = el :  12.0 deg/min :  2 sec;  *    0.017 deg/sec/sec
      antenna_motion = az :  22.0 deg/min :  2 sec;  *    0.033 deg/sec/sec
-     axis_offset =   -0.02140 m;
+     axis_offset =   -0.01940 m;
 enddef;
 *
 def ATCA;
@@ -319,7 +319,7 @@ def HOB_DBBC;
      axis_type = x : yew;
      antenna_motion = x :  40.0 deg/min :  2 sec;  *    0.028 deg/sec/sec
      antenna_motion = y :  40.0 deg/min :  2 sec;  *    0.028 deg/sec/sec
-     axis_offset =    8.19440 m;
+     axis_offset =    8.19310 m;
 enddef;
 *
 def CDDBBC;
@@ -333,14 +333,14 @@ def WARK12M;
      axis_type = az : el;
      antenna_motion = el :  60.0 deg/min :  2 sec;  *    1.300 deg/sec/sec
      antenna_motion = az : 600.0 deg/min :  2 sec;  *    1.300 deg/sec/sec
-     axis_offset =    0.00000 m;
+     axis_offset =    0.00210 m;
 enddef;
 *
 def KATHERIN;
      axis_type = az : el;
      antenna_motion = el :  75.0 deg/min :  2 sec;  *    1.300 deg/sec/sec
      antenna_motion = az : 300.0 deg/min :  2 sec;  *    1.300 deg/sec/sec
-     axis_offset =    0.00000 m;
+     axis_offset =    0.00270 m;
 enddef;
 *
 def YARRAGAD;
@@ -361,7 +361,7 @@ def HART;
      axis_type = ha : dec;
      antenna_motion = dec :  30.0 deg/min : 20 sec;  *    0.071 deg/sec/sec
      antenna_motion = ha :  30.0 deg/min : 20 sec;  *    0.071 deg/sec/sec
-     axis_offset =    6.69440 m;
+     axis_offset =    6.69340 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;

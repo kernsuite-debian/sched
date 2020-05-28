@@ -6,7 +6,7 @@
 
 
 Schedule Version:       1.00
-Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
 PI:       J.M. Wrobel
 
@@ -580,7 +580,7 @@ Stop UT                  LST      EL    AZ   HA  UP   ParA  Dwell   GBytes    SY
 05 42 09  NGC4395      12 42 55  85.0 223.5  0.3      41.1    -9     1212   05 42 18
 05 45 19  ---          12 46 06  84.5 228.8  0.3      45.9   181     1223   05 42 18
 
-05 45 30  J1220+3431   12 46 17  84.1 244.0  0.4      60.3    -8     1223   05 45 38
+05 45 30  J1220+3431   12 46 17  84.1 244.0  0.4      60.2    -8     1223   05 45 38
 05 47 00  =1217+348    12 47 47  83.8 245.5  0.5      61.5    82     1229   05 45 38
 
 05 47 11  J1215+3448   12 47 58  83.2 251.2  0.5      66.5    -1     1229   05 47 12

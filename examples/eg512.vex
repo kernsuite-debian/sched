@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = eg512;
@@ -134,11 +134,11 @@ def VLBA_HN;
      site_name = VLBA_HN;
      site_ID = Hn;
 *    elev=  295.57 long= 071:59:11. lat= 42:56:01.0
-     site_position = 1446374.84630 m:-4447939.68770 m: 4322306.18960 m;
-     site_velocity = -0.016020   m/yr: -0.001650   m/yr:  0.004550  m/yr;
+     site_position = 1446374.75710 m:-4447939.69470 m: 4322306.20610 m;
+     site_velocity = -0.015660   m/yr: -0.001620   m/yr:  0.004160  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 30.0: 35.0: 40.0: 45.0: 65.0: 70.0: 80.0:
                                 85.0: 90.0: 95.0:100.0:105.0:110.0:115.0:120.0:
                                125.0:130.0:135.0:140.0:145.0:150.0:155.0:160.0:
@@ -160,11 +160,11 @@ def VLBA_SC;
      site_name = VLBA_SC;
      site_ID = Sc;
 *    elev=  -15.02 long= 064:35:01. lat= 17:45:23.7
-     site_position = 2607848.64360 m:-5488069.53530 m: 1932739.74710 m;
-     site_velocity =  0.006930   m/yr:  0.009350   m/yr:  0.012590  m/yr;
+     site_position = 2607848.69850 m:-5488069.48010 m: 1932739.81690 m;
+     site_velocity =  0.007700   m/yr:  0.009280   m/yr:  0.012480  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 10.0: 20.0: 25.0: 40.0: 45.0: 50.0: 55.0:
                                 60.0: 65.0: 70.0: 75.0: 80.0: 85.0: 95.0:100.0:
                                105.0:110.0:115.0:120.0:125.0:130.0:135.0:140.0:
@@ -186,11 +186,11 @@ def GBT_VLBA;
      site_name = GBT_VLBA;
      site_ID = Gb;
 *    elev=  823.66 long= 079:50:23. lat= 38:25:59.3
-     site_position =  882589.40020 m:-4924872.34840 m: 3943729.40420 m;
-     site_velocity = -0.014810   m/yr: -0.001290   m/yr:  0.002940  m/yr;
+     site_position =  882589.57400 m:-4924872.34400 m: 3943729.36600 m;
+     site_velocity = -0.014720   m/yr: -0.001220   m/yr:  0.002670  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2001y336d;
+     site_position_epoch =   52245;
 enddef;
 *------------------------------------------------------------------------------
 $ANTENNA;
@@ -202,7 +202,7 @@ def VLBA_HN;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13000 m;
+     axis_offset =    2.12990 m;
 enddef;
 *
 def VLBA_SC;
@@ -212,14 +212,14 @@ def VLBA_SC;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13520 m;
+     axis_offset =    2.13550 m;
 enddef;
 *
 def GBT_VLBA;
      axis_type = az : el;
      antenna_motion = el :  18.0 deg/min : 20 sec;  *    0.050 deg/sec/sec
      antenna_motion = az :  36.0 deg/min : 20 sec;  *    0.050 deg/sec/sec
-     axis_offset =   -0.08780 m;
+     axis_offset =   -0.08300 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;
@@ -267,7 +267,7 @@ def 3C454.3;
 *    GSFC 2016a X/S astro solution,  41272 observations.
      ra = 22h53m57.7479385s; dec =  16d08'53.560908"; ref_coord_frame = J2000;
 *    ra = 22h51m29.5197390s; dec =  15d52'54.348080"; ref_coord_frame = B1950;
-*    ra = 22h53m48.2454146s; dec =  16d07'54.662219"; ref_coord_frame = Date;
+*    ra = 22h53m48.2454146s; dec =  16d07'54.662218"; ref_coord_frame = Date;
 enddef;
 *------------------------------------------------------------------------------
 $FREQ;

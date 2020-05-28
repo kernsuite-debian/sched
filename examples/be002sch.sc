@@ -6,7 +6,7 @@
 
 
 Schedule Version:       1.00
-Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
 PI:       Craig Walker
 
@@ -643,7 +643,7 @@ Stop UT                  LST      EL    AZ   HA  UP   ParA  Dwell   GBytes    SY
  Next BBC frequencies:    882.49   882.49   890.49   890.49
 
 08 00 42  3C84         05 43 31  51.2 315.4  2.4     116.8   114      148   08 00 37
-08 03 42  ---          05 46 31  50.7 315.0  2.4     115.9   180      149   08 00 37
+08 03 42  ---          05 46 31  50.7 315.0  2.4     116.0   180      149   08 00 37
 
  Next scan frequencies:  8413.49  8413.49  8421.49  8421.49
  Next BBC frequencies:    813.49   813.49   821.49   821.49

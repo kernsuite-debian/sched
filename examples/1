@@ -1,0 +1,10 @@
+rm: cannot remove ‘*.*.sum’: No such file or directory
+rm: cannot remove ‘*obs.*’: No such file or directory
+rm: cannot remove ‘*.*.vex’: No such file or directory
+rm: cannot remove ‘*.v2d’: No such file or directory
+rm: cannot remove ‘*.par’: No such file or directory
+rm: cannot remove ‘sched.runlog’: No such file or directory
+/bin/rm: cannot remove ‘doptgt.com’: No such file or directory
+/usr/local/setups: No such file or directory.
+/usr/local/setups: No such file or directory.
+PLANET_DATA: Undefined variable.

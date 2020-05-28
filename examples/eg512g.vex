@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = eg512g;
@@ -152,11 +152,11 @@ def VLBA_HN;
      site_name = VLBA_HN;
      site_ID = Hn;
 *    elev=  295.57 long= 071:59:11. lat= 42:56:01.0
-     site_position = 1446374.84630 m:-4447939.68770 m: 4322306.18960 m;
-     site_velocity = -0.016020   m/yr: -0.001650   m/yr:  0.004550  m/yr;
+     site_position = 1446374.75710 m:-4447939.69470 m: 4322306.20610 m;
+     site_velocity = -0.015660   m/yr: -0.001620   m/yr:  0.004160  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 30.0: 35.0: 40.0: 45.0: 65.0: 70.0: 80.0:
                                 85.0: 90.0: 95.0:100.0:105.0:110.0:115.0:120.0:
                                125.0:130.0:135.0:140.0:145.0:150.0:155.0:160.0:
@@ -178,11 +178,11 @@ def VLBA_SC;
      site_name = VLBA_SC;
      site_ID = Sc;
 *    elev=  -15.02 long= 064:35:01. lat= 17:45:23.7
-     site_position = 2607848.64360 m:-5488069.53530 m: 1932739.74710 m;
-     site_velocity =  0.006930   m/yr:  0.009350   m/yr:  0.012590  m/yr;
+     site_position = 2607848.69850 m:-5488069.48010 m: 1932739.81690 m;
+     site_velocity =  0.007700   m/yr:  0.009280   m/yr:  0.012480  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 10.0: 20.0: 25.0: 40.0: 45.0: 50.0: 55.0:
                                 60.0: 65.0: 70.0: 75.0: 80.0: 85.0: 95.0:100.0:
                                105.0:110.0:115.0:120.0:125.0:130.0:135.0:140.0:
@@ -203,12 +203,12 @@ def VLBA_NL;
      site_type = fixed;
      site_name = VLBA_NL;
      site_ID = Nl;
-*    elev=  222.24 long= 091:34:26. lat= 41:46:17.1
-     site_position = -130872.51770 m:-4762317.10010 m: 4226850.99910 m;
-     site_velocity = -0.015800   m/yr:  0.001400   m/yr: -0.001980  m/yr;
+*    elev=  222.22 long= 091:34:26. lat= 41:46:17.1
+     site_position = -130872.60440 m:-4762317.09070 m: 4226850.97730 m;
+     site_velocity = -0.015370   m/yr:  0.001300   m/yr: -0.002380  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 75.0: 80.0: 85.0:100.0:105.0:110.0:115.0:
                                120.0:125.0:130.0:135.0:140.0:145.0:150.0:155.0:
                                160.0:165.0:170.0:190.0:195.0:200.0:220.0:225.0:
@@ -223,12 +223,12 @@ def VLBA_FD;
      site_type = fixed;
      site_name = VLBA_FD;
      site_ID = Fd;
-*    elev= 1606.43 long= 103:56:41. lat= 30:38:06.1
-     site_position =-1324009.34290 m:-5332181.96440 m: 3231962.39050 m;
-     site_velocity = -0.013080   m/yr:  0.000390   m/yr: -0.004370  m/yr;
+*    elev= 1606.42 long= 103:56:41. lat= 30:38:06.1
+     site_position =-1324009.41200 m:-5332181.95760 m: 3231962.34920 m;
+     site_velocity = -0.012560   m/yr:  0.000440   m/yr: -0.005050  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 10.0: 15.0: 20.0: 30.0: 35.0: 40.0: 45.0:
                                 50.0: 55.0: 60.0: 65.0: 70.0: 75.0: 80.0: 85.0:
                                 90.0: 95.0:100.0:105.0:110.0:115.0:150.0:155.0:
@@ -249,12 +249,12 @@ def VLBA_LA;
      site_type = fixed;
      site_name = VLBA_LA;
      site_ID = La;
-*    elev= 1962.44 long= 106:14:44. lat= 35:46:30.4
-     site_position =-1449752.60190 m:-4975298.58510 m: 3709123.84080 m;
-     site_velocity = -0.014680   m/yr:  0.000490   m/yr: -0.004580  m/yr;
+*    elev= 1962.43 long= 106:14:44. lat= 35:46:30.4
+     site_position =-1449752.68140 m:-4975298.57780 m: 3709123.79710 m;
+     site_velocity = -0.014230   m/yr:  0.000450   m/yr: -0.005270  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 75.0: 80.0: 85.0:130.0:135.0:145.0:150.0:
                                250.0:255.0:300.0:305.0:315.0:320.0:340.0:345.0:
                                360.0;
@@ -267,12 +267,12 @@ def MEDICINA;
      site_type = fixed;
      site_name = MEDICINA;
      site_ID = Mc;
-*    elev=   67.15 long=-011:38:49. lat= 44:31:13.8
-     site_position = 4461369.67180 m:  919597.13490 m: 4449559.39950 m;
-     site_velocity = -0.018320   m/yr:  0.018710   m/yr:  0.011530  m/yr;
+*    elev=   67.14 long=-011:38:49. lat= 44:31:13.8
+     site_position = 4461369.56820 m:  919597.24890 m: 4449559.47020 m;
+     site_velocity = -0.018160   m/yr:  0.018750   m/yr:  0.012000  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def NOTO;
@@ -280,11 +280,11 @@ def NOTO;
      site_name = NOTO;
      site_ID = Nt;
 *    elev=  143.21 long=-014:59:20. lat= 36:52:33.8
-     site_position = 4934562.81750 m: 1321201.55280 m: 3806484.75550 m;
-     site_velocity = -0.017690   m/yr:  0.017480   m/yr:  0.015430  m/yr;
+     site_position = 4934562.71540 m: 1321201.66010 m: 3806484.84610 m;
+     site_velocity = -0.017530   m/yr:  0.017640   m/yr:  0.015820  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg: 10.0: 30.0: 70.0:100.0:120.0:150.0:180.0:300.0:
                                310.0:360.0;
      horizon_map_el =  8.0 deg:  7.0:  6.0:  9.0:  6.5:  5.0:  6.0:  5.0:  5.0:
@@ -307,12 +307,12 @@ def ONSALA60;
      site_type = fixed;
      site_name = ONSALA60;
      site_ID = O6;
-*    elev=   59.32 long=-011:55:34. lat= 57:23:45.0
-     site_position = 3370605.78000 m:  711917.72510 m: 5349830.91560 m;
-     site_velocity = -0.014360   m/yr:  0.014530   m/yr:  0.010520  m/yr;
+*    elev=   59.34 long=-011:55:34. lat= 57:23:45.0
+     site_position = 3370605.70350 m:  711917.81460 m: 5349830.98520 m;
+     site_velocity = -0.014230   m/yr:  0.014510   m/yr:  0.010890  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *------------------------------------------------------------------------------
 $ANTENNA;
@@ -324,7 +324,7 @@ def VLBA_HN;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13000 m;
+     axis_offset =    2.12990 m;
 enddef;
 *
 def VLBA_SC;
@@ -334,7 +334,7 @@ def VLBA_SC;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13520 m;
+     axis_offset =    2.13550 m;
 enddef;
 *
 def VLBA_NL;
@@ -354,7 +354,7 @@ def VLBA_FD;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13180 m;
+     axis_offset =    2.13170 m;
 enddef;
 *
 def VLBA_LA;
@@ -364,21 +364,21 @@ def VLBA_LA;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13220 m;
+     axis_offset =    2.13100 m;
 enddef;
 *
 def MEDICINA;
      axis_type = az : el;
      antenna_motion = el :  30.0 deg/min :  3 sec;  *    0.310 deg/sec/sec
      antenna_motion = az :  45.0 deg/min :  3 sec;  *    0.820 deg/sec/sec
-     axis_offset =    1.82790 m;
+     axis_offset =    1.82780 m;
 enddef;
 *
 def NOTO;
      axis_type = az : el;
      antenna_motion = el :  30.0 deg/min :  2 sec;  * 1000.000 deg/sec/sec
      antenna_motion = az :  43.0 deg/min :  2 sec;  * 1000.000 deg/sec/sec
-     axis_offset =    1.83130 m;
+     axis_offset =    1.82960 m;
 enddef;
 *
 def JODRELL2;
@@ -392,7 +392,7 @@ def ONSALA60;
      axis_type = az : el;
      antenna_motion = el :  57.0 deg/min :  5 sec;  *    0.400 deg/sec/sec
      antenna_motion = az : 180.0 deg/min :  5 sec;  *    0.300 deg/sec/sec
-     axis_offset =   -0.00830 m;
+     axis_offset =   -0.00220 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;
@@ -1259,7 +1259,7 @@ scan No0045;
      station=Fd:    0 sec:  185 sec:  657.300 GB:   : &ccw  : 1;
      station=La:    0 sec:  185 sec:  657.042 GB:   : &ccw  : 1;
      station=Mc:    0 sec:  185 sec:  654.016 GB:   :       : 1;
-     station=Nt:    0 sec:  185 sec:  655.063 GB:   :       : 1;
+     station=Nt:    0 sec:  185 sec:  655.062 GB:   :       : 1;
      station=Jb:    9 sec:  185 sec:  654.016 GB:   :       : 1;
      station=O6:    0 sec:  185 sec:  654.016 GB:   :       : 1;
 endscan;

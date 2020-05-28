@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = EO999;
@@ -178,11 +178,11 @@ def EFLSBERG;
      site_name = EFLSBERG;
      site_ID = Ef;
 *    elev=  416.71 long=-006:53:01. lat= 50:31:29.4
-     site_position = 4033947.23550 m:  486990.79430 m: 4900431.00170 m;
-     site_velocity = -0.014410   m/yr:  0.016730   m/yr:  0.010600  m/yr;
+     site_position = 4033947.15250 m:  486990.89610 m: 4900431.06040 m;
+     site_velocity = -0.014310   m/yr:  0.016750   m/yr:  0.010770  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg: 10.0: 20.0: 30.0: 40.0: 50.0: 60.0: 70.0: 80.0:
                                 90.0:100.0:110.0:120.0:130.0:140.0:150.0:160.0:
                                170.0:180.0:190.0:200.0:210.0:220.0:230.0:240.0:
@@ -200,23 +200,23 @@ def ONSALA85;
      site_name = ONSALA85;
      site_ID = O8;
 *    elev=   58.47 long=-011:55:04. lat= 57:23:35.1
-     site_position = 3370965.87870 m:  711466.19780 m: 5349664.20060 m;
-     site_velocity = -0.014360   m/yr:  0.014530   m/yr:  0.010520  m/yr;
+     site_position = 3370965.97850 m:  711466.12720 m: 5349664.14610 m;
+     site_velocity = -0.013610   m/yr:  0.014790   m/yr:  0.010840  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2008y001d;
+     site_position_epoch =   54466;
 enddef;
 *
 def MEDICINA;
      site_type = fixed;
      site_name = MEDICINA;
      site_ID = Mc;
-*    elev=   67.15 long=-011:38:49. lat= 44:31:13.8
-     site_position = 4461369.67180 m:  919597.13490 m: 4449559.39950 m;
-     site_velocity = -0.018320   m/yr:  0.018710   m/yr:  0.011530  m/yr;
+*    elev=   67.14 long=-011:38:49. lat= 44:31:13.8
+     site_position = 4461369.56820 m:  919597.24890 m: 4449559.47020 m;
+     site_velocity = -0.018160   m/yr:  0.018750   m/yr:  0.012000  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def TORUN;
@@ -237,24 +237,24 @@ def SHANGHAI;
      site_type = fixed;
      site_name = SHANGHAI;
      site_ID = Sh;
-*    elev=   29.41 long=-121:11:58. lat= 31:05:57.0
-     site_position =-2831687.42730 m: 4675733.46810 m: 3275327.49710 m;
-     site_velocity = -0.030020   m/yr: -0.011000   m/yr: -0.011610  m/yr;
+*    elev=   29.40 long=-121:11:58. lat= 31:05:57.0
+     site_position =-2831687.60660 m: 4675733.39220 m: 3275327.42390 m;
+     site_velocity = -0.030320   m/yr: -0.011870   m/yr: -0.011390  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def URUMQI;
      site_type = fixed;
      site_name = URUMQI;
      site_ID = Ur;
-*    elev= 2033.42 long=-087:10:41. lat= 43:28:17.4
-     site_position =  228310.18110 m: 4631922.90180 m: 4367064.21100 m;
-     site_velocity = -0.032280   m/yr: -0.001420   m/yr:  0.004910  m/yr;
+*    elev= 2033.43 long=-087:10:41. lat= 43:28:17.4
+     site_position =  228309.99220 m: 4631922.89750 m: 4367064.24070 m;
+     site_velocity = -0.032430   m/yr: -0.001720   m/yr:  0.005050  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *------------------------------------------------------------------------------
 $ANTENNA;
@@ -277,7 +277,7 @@ def EFLSBERG;
      axis_type = az : el;
      antenna_motion = el :  15.0 deg/min : 16 sec;  *    0.018 deg/sec/sec
      antenna_motion = az :  25.0 deg/min : 16 sec;  *    0.018 deg/sec/sec
-     axis_offset =    0.01430 m;
+     axis_offset =    0.01310 m;
 enddef;
 *
 def ONSALA85;
@@ -291,7 +291,7 @@ def MEDICINA;
      axis_type = az : el;
      antenna_motion = el :  30.0 deg/min :  3 sec;  *    0.310 deg/sec/sec
      antenna_motion = az :  45.0 deg/min :  3 sec;  *    0.820 deg/sec/sec
-     axis_offset =    1.82790 m;
+     axis_offset =    1.82780 m;
 enddef;
 *
 def TORUN;
@@ -305,14 +305,14 @@ def SHANGHAI;
      axis_type = az : el;
      antenna_motion = el :  36.0 deg/min :  2 sec;  *    0.280 deg/sec/sec
      antenna_motion = az :  60.0 deg/min :  2 sec;  *    0.500 deg/sec/sec
-     axis_offset =   -0.00190 m;
+     axis_offset =   -0.00220 m;
 enddef;
 *
 def URUMQI;
      axis_type = az : el;
      antenna_motion = el :  30.0 deg/min :  2 sec;  *    0.500 deg/sec/sec
      antenna_motion = az :  60.0 deg/min :  2 sec;  *    0.500 deg/sec/sec
-     axis_offset =    0.00000 m;
+     axis_offset =   -0.00270 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;

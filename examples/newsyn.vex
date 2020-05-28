@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = newsyn;
@@ -385,12 +385,12 @@ def VLBA_NL;
      site_type = fixed;
      site_name = VLBA_NL;
      site_ID = Nl;
-*    elev=  222.24 long= 091:34:26. lat= 41:46:17.1
-     site_position = -130872.51770 m:-4762317.10010 m: 4226850.99910 m;
-     site_velocity = -0.015800   m/yr:  0.001400   m/yr: -0.001980  m/yr;
+*    elev=  222.22 long= 091:34:26. lat= 41:46:17.1
+     site_position = -130872.60440 m:-4762317.09070 m: 4226850.97730 m;
+     site_velocity = -0.015370   m/yr:  0.001300   m/yr: -0.002380  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 75.0: 80.0: 85.0:100.0:105.0:110.0:115.0:
                                120.0:125.0:130.0:135.0:140.0:145.0:150.0:155.0:
                                160.0:165.0:170.0:190.0:195.0:200.0:220.0:225.0:
@@ -405,12 +405,12 @@ def VLBA_LA;
      site_type = fixed;
      site_name = VLBA_LA;
      site_ID = La;
-*    elev= 1962.44 long= 106:14:44. lat= 35:46:30.4
-     site_position =-1449752.60190 m:-4975298.58510 m: 3709123.84080 m;
-     site_velocity = -0.014680   m/yr:  0.000490   m/yr: -0.004580  m/yr;
+*    elev= 1962.43 long= 106:14:44. lat= 35:46:30.4
+     site_position =-1449752.68140 m:-4975298.57780 m: 3709123.79710 m;
+     site_velocity = -0.014230   m/yr:  0.000450   m/yr: -0.005270  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 75.0: 80.0: 85.0:130.0:135.0:145.0:150.0:
                                250.0:255.0:300.0:305.0:315.0:320.0:340.0:345.0:
                                360.0;
@@ -423,12 +423,12 @@ def VLBA_KP;
      site_type = fixed;
      site_name = VLBA_KP;
      site_ID = Kp;
-*    elev= 1902.00 long= 111:36:44. lat= 31:57:22.7
-     site_position =-1995678.85710 m:-5037317.70490 m: 3357328.01740 m;
-     site_velocity = -0.013980   m/yr:  0.000800   m/yr: -0.006120  m/yr;
+*    elev= 1901.99 long= 111:36:44. lat= 31:57:22.7
+     site_position =-1995678.93100 m:-5037317.69820 m: 3357327.96450 m;
+     site_velocity = -0.013440   m/yr:  0.000670   m/yr: -0.006850  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 45.0: 50.0: 55.0: 60.0: 65.0: 70.0: 75.0:
                                 80.0: 85.0: 90.0: 95.0:105.0:110.0:115.0:120.0:
                                150.0:155.0:165.0:170.0:180.0:185.0:215.0:220.0:
@@ -445,12 +445,12 @@ def VLBA_OV;
      site_type = fixed;
      site_name = VLBA_OV;
      site_ID = Ov;
-*    elev= 1196.32 long= 118:16:37. lat= 37:13:53.9
-     site_position =-2409150.42450 m:-4478573.12200 m: 3838617.33550 m;
-     site_velocity = -0.018850   m/yr:  0.006590   m/yr: -0.003180  m/yr;
+*    elev= 1196.31 long= 118:16:37. lat= 37:13:53.9
+     site_position =-2409150.52770 m:-4478573.07980 m: 3838617.29990 m;
+     site_velocity = -0.018330   m/yr:  0.006500   m/yr: -0.003940  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 10.0: 15.0: 20.0: 25.0: 30.0: 35.0: 40.0:
                                 45.0: 50.0: 60.0: 65.0: 70.0: 75.0: 80.0: 85.0:
                                 90.0: 95.0:100.0:105.0:110.0:115.0:120.0:125.0:
@@ -471,12 +471,12 @@ def VLBA_BR;
      site_type = fixed;
      site_name = VLBA_BR;
      site_ID = Br;
-*    elev=  250.49 long= 119:40:59. lat= 48:07:52.4
-     site_position =-2112065.22540 m:-3705356.51540 m: 4726813.66950 m;
-     site_velocity = -0.015110   m/yr:  0.000420   m/yr: -0.007020  m/yr;
+*    elev=  250.47 long= 119:40:59. lat= 48:07:52.4
+     site_position =-2112065.30820 m:-3705356.51420 m: 4726813.61240 m;
+     site_velocity = -0.014730   m/yr:  0.000110   m/yr: -0.007690  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
      horizon_map_az =  0.0 deg:  5.0: 10.0: 15.0: 25.0: 30.0: 40.0: 45.0: 70.0:
                                 75.0:120.0:125.0:130.0:135.0:155.0:160.0:185.0:
                                190.0:195.0:220.0:225.0:235.0:240.0:245.0:250.0:
@@ -508,7 +508,7 @@ def VLBA_LA;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13220 m;
+     axis_offset =    2.13100 m;
 enddef;
 *
 def VLBA_KP;
@@ -518,7 +518,7 @@ def VLBA_KP;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13140 m;
+     axis_offset =    2.13090 m;
 enddef;
 *
 def VLBA_OV;
@@ -528,7 +528,7 @@ def VLBA_OV;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13070 m;
+     axis_offset =    2.13090 m;
 enddef;
 *
 def VLBA_BR;
@@ -538,7 +538,7 @@ def VLBA_BR;
      pointing_sector = &ccw  : az : -90.00 deg:  90.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 1
      pointing_sector = &n    : az :  90.00 deg: 270.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 2
      pointing_sector = &cw   : az : 270.00 deg: 450.00 deg: el :  2.25 deg: 90.00 deg; * cable wrap zone 3
-     axis_offset =    2.13020 m;
+     axis_offset =    2.13040 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;

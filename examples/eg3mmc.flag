@@ -108,7 +108,7 @@ ant_name='Pt' timerang=187,08,32,41, 187,08,32,47  reason='Slewing expected.' /
 ant_name='Pt' timerang=187,08,33,54, 187,08,34,01  reason='Slewing expected.' /
 ant_name='Pt' timerang=187,08,43,59, 187,08,44,07  reason='Slewing expected.' /
 ant_name='Pt' timerang=187,08,56,41, 187,08,56,47  reason='Slewing expected.' /
-ant_name='Pt' timerang=187,08,57,54, 187,08,58,01  reason='Slewing expected.' /
+ant_name='Pt' timerang=187,08,57,54, 187,08,58,00  reason='Slewing expected.' /
 ant_name='Pt' timerang=187,09,07,59, 187,09,08,07  reason='Slewing expected.' /
 ant_name='Pt' timerang=187,09,21,54, 187,09,22,00  reason='Slewing expected.' /
 

@@ -1,7 +1,7 @@
 VEX_rev = 1.5;
-*    SCHED vers: Development version 11.5. Started Apr. 2
+*    SCHED vers: Release 11.6; Feburary 2020
 *    VEX/SCHED:  1.5.87
-*    Other versions: Sched:  11.5  Plot: 1.06  JPL-ephem: 1.01
+*    Other versions: Sched:  11.6  Plot: 1.06  JPL-ephem: 1.01
 *------------------------------------------------------------------------------
 $GLOBAL;
      ref $EXPER = lbah2o;
@@ -224,12 +224,12 @@ def HOB_DBBC;
      site_type = fixed;
      site_name = HOB_DBBC;
      site_ID = Ho;
-*    elev=   65.09 long=-147:26:25. lat=-42:48:12.9
-     site_position =-3950237.40300 m: 2522347.68410 m:-4311561.83350 m;
-     site_velocity = -0.039010   m/yr:  0.007960   m/yr:  0.041100  m/yr;
+*    elev=   65.08 long=-147:26:25. lat=-42:48:12.9
+     site_position =-3950237.61920 m: 2522347.73490 m:-4311561.59740 m;
+     site_velocity = -0.038070   m/yr:  0.008070   m/yr:  0.040870  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *
 def PARKES;
@@ -237,11 +237,11 @@ def PARKES;
      site_name = PARKES;
      site_ID = Pa;
 *    elev=  414.67 long=-148:15:48. lat=-32:59:54.2
-     site_position =-4554232.53800 m: 2816758.86560 m:-3454034.96860 m;
-     site_velocity = -0.034250   m/yr: -0.003010   m/yr:  0.048370  m/yr;
+     site_position =-4554232.74080 m: 2816758.85900 m:-3454034.69880 m;
+     site_velocity = -0.033910   m/yr: -0.002640   m/yr:  0.047850  m/yr;
 *    First line below is VEX standard format.  Use only when readers are ready.
-*    site_position_epoch = 2014y001d;
-     site_position_epoch =   56658;
+*    site_position_epoch = 2020y001d;
+     site_position_epoch =   58849;
 enddef;
 *------------------------------------------------------------------------------
 $ANTENNA;
@@ -271,14 +271,14 @@ def HOB_DBBC;
      axis_type = x : yew;
      antenna_motion = x :  40.0 deg/min :  2 sec;  *    0.028 deg/sec/sec
      antenna_motion = y :  40.0 deg/min :  2 sec;  *    0.028 deg/sec/sec
-     axis_offset =    8.19440 m;
+     axis_offset =    8.19310 m;
 enddef;
 *
 def PARKES;
      axis_type = az : el;
      antenna_motion = el :  12.0 deg/min :  2 sec;  *    0.017 deg/sec/sec
      antenna_motion = az :  22.0 deg/min :  2 sec;  *    0.033 deg/sec/sec
-     axis_offset =   -0.02140 m;
+     axis_offset =   -0.01940 m;
 enddef;
 *------------------------------------------------------------------------------
 $DAS;

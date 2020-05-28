@@ -1,8 +1,11 @@
-This tarball was created 26-Sep-2018 and contains a very slightly
-modified version of the software from the previous packaging:
+This tarball was created 12-May-2020 and contains a data-only
+update to sched. This was motivated by the publication of
+GSFC 2019d data for antenna locations.
 
-o Updated the "banner" displayed by the program when executed.
+There are only extremely minor mods to the code itsel (e.g., version number
+change, warning message about the antenna location mods, etc.).  Users should
+not see any changes to their output except for those caused by the geodetic
+database modifications.
 
-o The OSX binary was rebuilt using static linking to avoid the need
-  to install various unusual (for a Mac) shared libraries.
+
 

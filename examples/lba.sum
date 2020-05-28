@@ -7,7 +7,7 @@ COVER INFORMATION:
   Start Day 344 is Thu  10 Dec 2009   MJD  55175          
 
   Schedule Version:       1.00
-  Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+  Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
   PI:       Cormac Reynolds
 
@@ -82,20 +82,20 @@ STATIONS USED IN SCHEDULE:
    Station  Code   Latitude Longitude  Elevation       X            Y            Z       Axis
                                                                                        Offset
 
-   PARKES    Pa  -32.99839 -148.26352     415.   -4554232.538  2816758.866 -3454034.969 -0.021
+   PARKES    Pa  -32.99839 -148.26352     415.   -4554232.741  2816758.859 -3454034.699 -0.019
    ATCA      At  -30.31288 -149.56476     252.   -4751639.860  2791700.357 -3200491.113  0.000
    MOPRA     Mp  -31.26781 -149.09964     867.   -4682769.059  2802619.042 -3291759.338  0.000
-   HOB_DBBC  Ho  -42.80358 -147.44052      65.   -3950237.403  2522347.684 -4311561.833  8.194
+   HOB_DBBC  Ho  -42.80357 -147.44052      65.   -3950237.619  2522347.735 -4311561.597  8.193
    CDDBBC    Cd  -31.86769 -133.80983     165.   -3753442.746  3912709.753 -3348067.609  0.002
 
 
    Plate tectonic motion adjustments for MJD  55175
    Station  Code      Station motions (m/yr)             Adjusted positions 
                      X       Y       Z     MJD0        X            Y            Z 
-   PARKES    Pa  -0.0343 -0.0030  0.0484  56658  -4554232.399  2816758.878 -3454035.165
+   PARKES    Pa  -0.0339 -0.0026  0.0479  58849  -4554232.400  2816758.886 -3454035.180
    ATCA      At  -0.0310 -0.0046  0.0420  50449  -4751640.261  2791700.297 -3200490.570
    MOPRA     Mp  -0.0370 -0.0090  0.0450  50499  -4682769.533  2802618.927 -3291758.762
-   HOB_DBBC  Ho  -0.0390  0.0080  0.0411  56658  -3950237.245  2522347.652 -4311562.000
+   HOB_DBBC  Ho  -0.0381  0.0081  0.0409  58849  -3950237.236  2522347.654 -4311562.009
    CDDBBC    Cd  -0.0417  0.0027  0.0499  50449  -3753443.286  3912709.788 -3348066.964
 
 
@@ -697,11 +697,11 @@ CATALOGS, FILES, and CODE VERSIONS
 
 Catalogs: 
   Station:   /home/orion/lbo/sched/trunk/sched/catalogs/stations_RDBE.dat
-                 Version:  2018Sep07-20:06:16
+                 Version:  2018Sep07-20:14:11
   Location:  /home/orion/lbo/sched/trunk/sched/catalogs/locations.dat
-                 Version:  2016Dec19-16:00:00
+                 Version:  2020Jan12
   Frequency: /home/orion/lbo/sched/trunk/sched/catalogs/freq_RDBE.dat
-                 Version:  2018Sep07-20:06:16
+                 Version:  2018Sep07-20:14:11
   Source:   /home/orion/lbo/sched/trunk/sched/catalogs/sources.gsfc
                  Version:  Not given
   Source2:  NONE
@@ -715,11 +715,11 @@ Other external files:
 
 
 Code versions: 
-  Release version:           11.50  Development version 11.5. Started Apr. 2
+  Release version:           11.60  Release 11.6; Feburary 2020
   Version of VEX standard:   1.50
   Version of VEX code:       0.87
   Version of plot code:      1.06
   Version of ephemeris code: 1.01
   Version of PGPLOT:        v5.3.1
 
-This schedule produced on: Fri Sep  7 14:07:05 2018      
+This schedule produced on: Tue Feb 11 14:06:37 2020      

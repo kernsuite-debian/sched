@@ -6,7 +6,7 @@
 
 
 Schedule Version:       1.00
-Processed by SCHED version:  11.50  Development version 11.5. Started Apr. 2
+Processed by SCHED version:  11.60  Release 11.6; Feburary 2020
 
 PI:       A.N. Observer
 
@@ -466,7 +466,7 @@ Stop UT                  LST      EL    AZ   HA  UP   ParA  Dwell   GBytes    SY
 16 08 00  J0132+4325   23 38 15  68.8 105.5 -1.9     -52.8   -13      548   No stop 
 16 10 00  =0129+431    23 40 16  69.1 106.1 -1.9     -52.6   107      552   16 08 01
 
-16 11 00  J0132+4325   23 41 16  69.3 106.4 -1.9     -52.5    54      552   16 10 55
+16 11 00  J0132+4325   23 41 16  69.2 106.4 -1.9     -52.5    54      552   16 10 55
 16 13 00  =0129+431    23 43 16  69.5 107.0 -1.8     -52.3   120      556   16 10 56
 
 16 13 00  B0128+437    23 43 16  70.1 106.3 -1.8     -53.2   -14      556   No stop 

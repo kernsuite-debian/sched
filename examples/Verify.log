@@ -1,0 +1,72 @@
+===================================================
+Be sure that the SCHED environment variable is set.
+Currently set to  /home/orion/lbo/sched/trunk/sched
+===================================================
+ 
+Running SCHED from /home/orion/lbo/sched/trunk/sched/bin/
+rm: cannot remove ‘*.*.sum’: No such file or directory
+rm: cannot remove ‘*obs.*’: No such file or directory
+rm: cannot remove ‘*.*.vex’: No such file or directory
+rm: cannot remove ‘*.v2d’: No such file or directory
+rm: cannot remove ‘*.par’: No such file or directory
+rm: cannot remove ‘sched.runlog’: No such file or directory
+/bin/rm: cannot remove ‘doptgt.com’: No such file or directory
+All output will be in testruns.out
+*********** Processing eg1024.key ********************
+*********** Processing eg2head.key *******************
+*********** Processing eg3mma.key ********************
+*********** Processing eg3mmb.key ********************
+*********** Processing eg3mmc.key ********************
+************** Processing eg3mm_rd2.key **************
+************* Processing eg512g.key ******************
+************ Processing eg512.key ********************
+************ Processing eg5cm.key ********************
+*********** Processing egglobal.key ******************
+********** Processing egglobalOH.key *****************
+************ Processing eglst.key ********************
+*********** Processing egmk5vex.key ******************
+************* Processing egOH.key ********************
+*********** Processing egplan.key ********************
+*********** Processing egvlba.key ********************
+************* Processing eg24.key ********************
+************ Processing egddc.key ********************
+************ Processing egddc2.key ********************
+****** Processing piggyback.key for MARK5A*************
+/usr/local/setups: No such file or directory.
+****** Processing piggyback.key for MARK5C*************
+/usr/local/setups: No such file or directory.
+*********** Processing egcwide.key *******************
+*********** Processing egrdbe2.key *******************
+*********** Processing rdbepfb.key *******************
+************ Processing newsyn.key ********************
+*********** Processing egcent.key ********************
+*********** Processing egdelzn.key *******************
+*********** Processing n2227.key *******************
+********* Processing pfbsettst.key *****************
+********* Processing tstsets.key *******************
+*********** Processing egvsop.key ********************
+****** Processing evn_cont_strong.key ****************
+****** Processing evn_cont_strong_pol.key ************
+******* Processing evn_cont_weak_256.key *************
+********* Processing evn_cont_weak_512.key ***********
+******** Processing evn_cont_weak_snap.key ***********
+********* Processing evn_line_hi.key *****************
+********* Processing evn_line_meth.key ***************
+*********** Processing hsa21cm.key *******************
+*********** Processing hsa1cm.key ********************
+*********** Processing manual_1.key *******************
+*********** Processing manual_2.key ******************
+********** Processing manual_line.key ****************
+********** Processing manual_simp.key ****************
+************ Processing mt506.key ********************
+************ Processing dq415.key ********************
+************ Processing dqhiel.key *******************
+*********** Processing planvla.key *******************
+*********** Processing vips11.key ********************
+************* Processing jvla.key ********************
+************ Processing hsaddc.key *******************
+************** Processing lba.key ********************
+************ Processing lba_h2o.key ****************
+************ Processing lba_oh.key *****************
+************ Processing lba_mk5.key ******************
+PLANET_DATA: Undefined variable.
